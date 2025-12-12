@@ -1,0 +1,118 @@
+[ 2025-12-12 23:33:26,949 ] 14 visions.backends - INFO - Pandas backend loaded 2.3.3
+[ 2025-12-12 23:33:26,984 ] 25 visions.backends - INFO - Numpy backend loaded 2.3.5
+[ 2025-12-12 23:33:26,986 ] 37 visions.backends - INFO - Pyspark backend NOT loaded
+[ 2025-12-12 23:33:26,986 ] 43 visions.backends - INFO - Python backend loaded
+[ 2025-12-13 00:34:54,564 ] 27 root - INFO - Entered the data ingestion method or component
+[ 2025-12-13 00:34:54,564 ] 29 root - INFO - Read the Dataset as dataframe
+[ 2025-12-13 00:34:54,577 ] 35 root - INFO - Train test split initiated
+[ 2025-12-13 00:34:54,616 ] 41 root - INFO - Ingestion of the data is completed
+[ 2025-12-13 00:35:09,241 ] 104 root - INFO - Train data shape: (820, 14)
+[ 2025-12-13 00:35:09,242 ] 105 root - INFO - Train data columns: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal', 'target']
+[ 2025-12-13 00:35:09,247 ] 111 root - INFO - Test data shape: (205, 14)
+[ 2025-12-13 00:35:09,248 ] 112 root - INFO - Test data columns: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal', 'target']
+[ 2025-12-13 00:35:09,248 ] 114 root - INFO - Read train and test data completed
+[ 2025-12-13 00:35:09,248 ] 126 root - INFO - Obtaining preprocessing object
+[ 2025-12-13 00:35:09,249 ] 81 root - INFO - Categorical columns: []
+[ 2025-12-13 00:35:09,249 ] 82 root - INFO - Numerical columns: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal']
+[ 2025-12-13 00:35:09,286 ] 139 root - INFO - Applying preprocessing object on training and testing dataframes.
+[ 2025-12-13 00:35:09,310 ] 166 root - INFO - Saved preprocessing object.
+[ 2025-12-13 00:35:28,454 ] 32 root - INFO - Split training and test input data
+[ 2025-12-13 00:35:39,731 ] 40 root - INFO - Best model params for Random Forest: {'n_estimators': 256}
+[ 2025-12-13 00:35:39,852 ] 50 root - INFO - Random Forest - Train Score: 1.0, Test Score: 0.9853658536585366
+[ 2025-12-13 00:35:39,917 ] 40 root - INFO - Best model params for Decision Tree: {'criterion': 'gini'}
+[ 2025-12-13 00:35:39,929 ] 50 root - INFO - Decision Tree - Train Score: 1.0, Test Score: 0.9853658536585366
+[ 2025-12-13 00:35:39,991 ] 50 root - INFO - Logistic Regression - Train Score: 0.8719512195121951, Test Score: 0.7951219512195122
+[ 2025-12-13 00:35:44,564 ] 40 root - INFO - Best model params for AdaBoost Classifier: {'learning_rate': 0.5, 'n_estimators': 256}
+[ 2025-12-13 00:35:44,692 ] 50 root - INFO - AdaBoost Classifier - Train Score: 0.9097560975609756, Test Score: 0.8292682926829268
+[ 2025-12-13 00:45:08,801 ] 27 root - INFO - Entered the data ingestion method or component
+[ 2025-12-13 00:45:08,801 ] 29 root - INFO - Read the Dataset as dataframe
+[ 2025-12-13 00:45:08,815 ] 35 root - INFO - Train test split initiated
+[ 2025-12-13 00:45:08,835 ] 41 root - INFO - Ingestion of the data is completed
+[ 2025-12-13 00:45:21,903 ] 104 root - INFO - Train data shape: (820, 14)
+[ 2025-12-13 00:45:21,903 ] 105 root - INFO - Train data columns: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal', 'target']
+[ 2025-12-13 00:45:21,908 ] 111 root - INFO - Test data shape: (205, 14)
+[ 2025-12-13 00:45:21,908 ] 112 root - INFO - Test data columns: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal', 'target']
+[ 2025-12-13 00:45:21,908 ] 114 root - INFO - Read train and test data completed
+[ 2025-12-13 00:45:21,910 ] 126 root - INFO - Obtaining preprocessing object
+[ 2025-12-13 00:45:21,910 ] 81 root - INFO - Categorical columns: []
+[ 2025-12-13 00:45:21,910 ] 82 root - INFO - Numerical columns: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal']
+[ 2025-12-13 00:45:21,913 ] 139 root - INFO - Applying preprocessing object on training and testing dataframes.
+[ 2025-12-13 00:45:21,934 ] 166 root - INFO - Saved preprocessing object.
+[ 2025-12-13 00:45:29,093 ] 32 root - INFO - Split training and test input data
+[ 2025-12-13 00:45:37,713 ] 40 root - INFO - Best model params for Random Forest: {'n_estimators': 32}
+[ 2025-12-13 00:45:37,734 ] 50 root - INFO - Random Forest - Train Score: 1.0, Test Score: 0.9853658536585366
+[ 2025-12-13 00:45:37,810 ] 40 root - INFO - Best model params for Decision Tree: {'criterion': 'gini'}
+[ 2025-12-13 00:45:37,818 ] 50 root - INFO - Decision Tree - Train Score: 1.0, Test Score: 0.9853658536585366
+[ 2025-12-13 00:45:37,847 ] 50 root - INFO - Logistic Regression - Train Score: 0.8621951219512195, Test Score: 0.8146341463414634
+[ 2025-12-13 00:45:42,449 ] 40 root - INFO - Best model params for AdaBoost Classifier: {'learning_rate': 0.5, 'n_estimators': 256}
+[ 2025-12-13 00:45:42,570 ] 50 root - INFO - AdaBoost Classifier - Train Score: 0.9097560975609756, Test Score: 0.8292682926829268
+[ 2025-12-13 00:45:42,572 ] 475 root - ERROR - Training Error: too many values to unpack (expected 2)
+[ 2025-12-13 00:51:55,763 ] 27 root - INFO - Entered the data ingestion method or component
+[ 2025-12-13 00:51:55,763 ] 29 root - INFO - Read the Dataset as dataframe
+[ 2025-12-13 00:51:55,778 ] 35 root - INFO - Train test split initiated
+[ 2025-12-13 00:51:55,796 ] 41 root - INFO - Ingestion of the data is completed
+[ 2025-12-13 00:52:08,402 ] 104 root - INFO - Train data shape: (820, 14)
+[ 2025-12-13 00:52:08,402 ] 105 root - INFO - Train data columns: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal', 'target']
+[ 2025-12-13 00:52:08,406 ] 111 root - INFO - Test data shape: (205, 14)
+[ 2025-12-13 00:52:08,408 ] 112 root - INFO - Test data columns: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal', 'target']
+[ 2025-12-13 00:52:08,408 ] 114 root - INFO - Read train and test data completed
+[ 2025-12-13 00:52:08,410 ] 126 root - INFO - Obtaining preprocessing object
+[ 2025-12-13 00:52:08,410 ] 81 root - INFO - Categorical columns: []
+[ 2025-12-13 00:52:08,410 ] 82 root - INFO - Numerical columns: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal']
+[ 2025-12-13 00:52:08,412 ] 139 root - INFO - Applying preprocessing object on training and testing dataframes.
+[ 2025-12-13 00:52:08,425 ] 166 root - INFO - Saved preprocessing object.
+[ 2025-12-13 00:52:17,195 ] 32 root - INFO - Split training and test input data
+[ 2025-12-13 00:52:26,658 ] 40 root - INFO - Best model params for Random Forest: {'n_estimators': 32}
+[ 2025-12-13 00:52:26,678 ] 50 root - INFO - Random Forest - Train Score: 1.0, Test Score: 0.9853658536585366
+[ 2025-12-13 00:52:26,777 ] 40 root - INFO - Best model params for Decision Tree: {'criterion': 'gini'}
+[ 2025-12-13 00:52:26,787 ] 50 root - INFO - Decision Tree - Train Score: 1.0, Test Score: 0.9853658536585366
+[ 2025-12-13 00:52:26,818 ] 50 root - INFO - Logistic Regression - Train Score: 0.8719512195121951, Test Score: 0.7951219512195122
+[ 2025-12-13 00:52:32,357 ] 40 root - INFO - Best model params for AdaBoost Classifier: {'learning_rate': 0.5, 'n_estimators': 256}
+[ 2025-12-13 00:52:32,475 ] 50 root - INFO - AdaBoost Classifier - Train Score: 0.9097560975609756, Test Score: 0.8292682926829268
+[ 2025-12-13 00:52:32,476 ] 118 root - INFO - Best found model: Random Forest
+[ 2025-12-13 00:55:19,808 ] 27 root - INFO - Entered the data ingestion method or component
+[ 2025-12-13 00:55:19,808 ] 29 root - INFO - Read the Dataset as dataframe
+[ 2025-12-13 00:55:19,822 ] 35 root - INFO - Train test split initiated
+[ 2025-12-13 00:55:19,844 ] 41 root - INFO - Ingestion of the data is completed
+[ 2025-12-13 00:55:32,660 ] 104 root - INFO - Train data shape: (820, 14)
+[ 2025-12-13 00:55:32,660 ] 105 root - INFO - Train data columns: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal', 'target']
+[ 2025-12-13 00:55:32,685 ] 111 root - INFO - Test data shape: (205, 14)
+[ 2025-12-13 00:55:32,685 ] 112 root - INFO - Test data columns: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal', 'target']
+[ 2025-12-13 00:55:32,685 ] 114 root - INFO - Read train and test data completed
+[ 2025-12-13 00:55:32,685 ] 126 root - INFO - Obtaining preprocessing object
+[ 2025-12-13 00:55:32,686 ] 81 root - INFO - Categorical columns: []
+[ 2025-12-13 00:55:32,686 ] 82 root - INFO - Numerical columns: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal']
+[ 2025-12-13 00:55:32,687 ] 139 root - INFO - Applying preprocessing object on training and testing dataframes.
+[ 2025-12-13 00:55:32,704 ] 166 root - INFO - Saved preprocessing object.
+[ 2025-12-13 00:55:37,355 ] 32 root - INFO - Split training and test input data
+[ 2025-12-13 00:55:38,857 ] 40 root - INFO - Best model params for Random Forest: {'n_estimators': 16}
+[ 2025-12-13 00:55:38,867 ] 50 root - INFO - Random Forest - Train Score: 1.0, Test Score: 0.9853658536585366
+[ 2025-12-13 00:55:38,924 ] 40 root - INFO - Best model params for Decision Tree: {'criterion': 'gini'}
+[ 2025-12-13 00:55:38,928 ] 50 root - INFO - Decision Tree - Train Score: 1.0, Test Score: 0.9853658536585366
+[ 2025-12-13 00:55:38,940 ] 50 root - INFO - Logistic Regression - Train Score: 0.8719512195121951, Test Score: 0.7951219512195122
+[ 2025-12-13 00:55:43,442 ] 40 root - INFO - Best model params for AdaBoost Classifier: {'learning_rate': 0.5, 'n_estimators': 256}
+[ 2025-12-13 00:55:43,569 ] 50 root - INFO - AdaBoost Classifier - Train Score: 0.9097560975609756, Test Score: 0.8292682926829268
+[ 2025-12-13 00:55:43,570 ] 118 root - INFO - Best found model: Random Forest
+[ 2025-12-13 01:02:21,965 ] 27 root - INFO - Entered the data ingestion method or component
+[ 2025-12-13 01:02:21,966 ] 29 root - INFO - Read the Dataset as dataframe
+[ 2025-12-13 01:02:21,979 ] 35 root - INFO - Train test split initiated
+[ 2025-12-13 01:02:22,000 ] 41 root - INFO - Ingestion of the data is completed
+[ 2025-12-13 01:02:35,387 ] 104 root - INFO - Train data shape: (820, 14)
+[ 2025-12-13 01:02:35,388 ] 105 root - INFO - Train data columns: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal', 'target']
+[ 2025-12-13 01:02:35,393 ] 111 root - INFO - Test data shape: (205, 14)
+[ 2025-12-13 01:02:35,393 ] 112 root - INFO - Test data columns: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal', 'target']
+[ 2025-12-13 01:02:35,393 ] 114 root - INFO - Read train and test data completed
+[ 2025-12-13 01:02:35,393 ] 126 root - INFO - Obtaining preprocessing object
+[ 2025-12-13 01:02:35,393 ] 81 root - INFO - Categorical columns: []
+[ 2025-12-13 01:02:35,393 ] 82 root - INFO - Numerical columns: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal']
+[ 2025-12-13 01:02:35,394 ] 139 root - INFO - Applying preprocessing object on training and testing dataframes.
+[ 2025-12-13 01:02:35,412 ] 166 root - INFO - Saved preprocessing object.
+[ 2025-12-13 01:02:39,258 ] 32 root - INFO - Split training and test input data
+[ 2025-12-13 01:02:49,638 ] 40 root - INFO - Best model params for Random Forest: {'n_estimators': 64}
+[ 2025-12-13 01:02:49,670 ] 50 root - INFO - Random Forest - Train Score: 1.0, Test Score: 0.9853658536585366
+[ 2025-12-13 01:02:49,792 ] 40 root - INFO - Best model params for Decision Tree: {'criterion': 'gini'}
+[ 2025-12-13 01:02:49,799 ] 50 root - INFO - Decision Tree - Train Score: 1.0, Test Score: 0.9853658536585366
+[ 2025-12-13 01:02:49,814 ] 50 root - INFO - Logistic Regression - Train Score: 0.8719512195121951, Test Score: 0.7951219512195122
+[ 2025-12-13 01:02:54,176 ] 40 root - INFO - Best model params for AdaBoost Classifier: {'learning_rate': 0.5, 'n_estimators': 256}
+[ 2025-12-13 01:02:54,288 ] 50 root - INFO - AdaBoost Classifier - Train Score: 0.9097560975609756, Test Score: 0.8292682926829268
+[ 2025-12-13 01:02:54,288 ] 118 root - INFO - Best found model: Random Forest

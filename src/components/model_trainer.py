@@ -95,17 +95,30 @@ class ModelTrainer:
             else:
                 raise CustomException("Unsupported problem type")
 
+            # Evaluate Models
             model_report = evaluate_models(X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test, 
                                            models=models, param=params, metric=metric, problem_type=problem_type)
 
+            # --- Logic to find Best Model (Robust to return types) ---
+            best_model_name = ""
+            
+            # Helper to extract test score safely whether it's a float or a list [train_score, test_score]
+            def get_score(value):
+                if isinstance(value, list) or isinstance(value, tuple) or isinstance(value, np.ndarray):
+                    return value[-1] # Assume last item is test score
+                return value # Assume it's a single float score
+
             if problem_type in ['regression', 'classification']:
-                best_model_score = max(model_report.values(), key=lambda x: x[1])[1]  # Use test score for comparison
-                best_model_name = max(model_report.items(), key=lambda x: x[1][1])[0]
+                # Find best model based on the extracted score
+                best_model_name = max(model_report.items(), key=lambda x: get_score(x[1]))[0]
             else:  # clustering
-                best_model_score = max(model_report.values())
+                # Clustering usually returns single silhouette score
                 best_model_name = max(model_report, key=model_report.get)
 
-            return best_model_name, best_model_score, model_report
+            logging.info(f"Best found model: {best_model_name}")
+
+            # RETURN ONLY 2 ITEMS to match app.py expectation
+            return model_report, best_model_name
 
         except Exception as e:
             logging.error(f"Exception occurred in model training: {e}")

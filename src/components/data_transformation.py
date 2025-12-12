@@ -8,7 +8,7 @@ import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.preprocessing import OneHotEncoder, StandardScaler, MinMaxScaler, OrdinalEncoder
 
 from src.exception import CustomException
 from src.logger import logging
@@ -20,32 +20,68 @@ class DataTransformationConfig:
     preprocessor_obj_file_path = os.path.join("artifacts", "preprocessor.pkl")
 
 class DataTransformation:
-    def __init__(self):
+    def __init__(self, imputation_strategy='median', outlier_strategy='capping',
+                 scaling_strategy='StandardScaler', encoding_strategy='OneHotEncoder',
+                 remove_outliers=False, handle_missing=True):
+        
         self.data_transformation_config = DataTransformationConfig()
+        
+        # User preferences for preprocessing
+        self.imputation_strategy = imputation_strategy
+        self.outlier_strategy = outlier_strategy
+        self.scaling_strategy = scaling_strategy
+        self.encoding_strategy = encoding_strategy
+        self.remove_outliers = remove_outliers
+        self.handle_missing = handle_missing
 
     def get_data_transformer_object(self, numerical_columns, categorical_columns):
         '''
-        This function is responsible for data transformation
+        Build preprocessing pipeline based on user preferences
         '''
         try:
+            # 1. Configure Imputer
+            if self.handle_missing:
+                imputer_strategy = self.imputation_strategy if self.imputation_strategy in \
+                                 ['mean', 'median', 'most_frequent'] else 'median'
+                num_imputer = SimpleImputer(strategy=imputer_strategy)
+            else:
+                num_imputer = SimpleImputer(strategy='median')
+            
+            # 2. Configure Scaler
+            if self.scaling_strategy == 'MinMaxScaler':
+                scaler = MinMaxScaler()
+            else:
+                scaler = StandardScaler()
+
+            # 3. Create Numerical Pipeline
             num_pipeline = Pipeline(
                 steps=[
-                    ("imputer", SimpleImputer(strategy="median")),
-                    ("scaler", StandardScaler())
+                    ("imputer", num_imputer),
+                    ("scaler", scaler)
                 ]
             )
 
+            # 4. Configure Encoder
+            if self.encoding_strategy == 'OrdinalEncoder':
+                # Use OrdinalEncoder for ordinal strategies
+                encoder = OrdinalEncoder(handle_unknown='use_encoded_value', unknown_value=-1)
+            else:
+                # Default to OneHotEncoder
+                encoder = OneHotEncoder(handle_unknown='ignore')
+
+            # 5. Create Categorical Pipeline
             cat_pipeline = Pipeline(
                 steps=[
                     ("imputer", SimpleImputer(strategy="most_frequent")),
-                    ("one_hot_encoder", OneHotEncoder(handle_unknown='ignore')),
-                    ("scaler", StandardScaler(with_mean=False))
+                    ("encoder", encoder),
+                    ("scaler", StandardScaler(with_mean=False) if self.encoding_strategy != 'OrdinalEncoder' else 'passthrough')
                 ]
             )
 
             logging.info(f"Categorical columns: {categorical_columns}")
             logging.info(f"Numerical columns: {numerical_columns}")
 
+            # 6. Combine into ColumnTransformer
             preprocessor = ColumnTransformer(
                 transformers=[
                     ("num_pipeline", num_pipeline, numerical_columns),
