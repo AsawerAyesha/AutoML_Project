@@ -440,7 +440,7 @@ def page_model_training():
     with st.container(border=True):
         st.write("### Algorithms Queued")
         cols = st.columns(4)
-        models = ["Logistic Regression", "Decision Tree", "Random Forest", "SVM", "KNN", "Naive Bayes", "XGBoost"]
+        models = ["Logistic Regression", "Decision Tree", "Random Forest", "SVM", "KNN", "Naive Bayes", "OneR"]
         for i, m in enumerate(models):
             cols[i%4].markdown(f"- {m}")
             
@@ -467,6 +467,11 @@ def page_model_training():
                 # This fixes the tuple unpacking errors and copy() errors later
                 st.session_state.model_results = train_results[0]
                 
+                # 3. Extract X_test and y_test for ROC curve visualization
+                test_array = st.session_state.test_array
+                st.session_state.X_test = test_array[:, :-1]
+                st.session_state.y_test = test_array[:, -1]
+                
                 st.write("📊 Calculating Metrics...")
                 status.update(label="✅ Training Successfully Completed!", state="complete", expanded=False)
                 time.sleep(1)
@@ -481,6 +486,9 @@ def page_model_training():
 # PAGE 6: COMPARISON DASHBOARD
 # ============================================================================
 def page_model_comparison():
+    import matplotlib.pyplot as plt
+    from sklearn.metrics import roc_curve, auc
+    
     render_progress_bar(5)
     st.title("🏆 Leaderboard & Analysis")
     
@@ -532,17 +540,203 @@ def page_model_comparison():
         subset=[c for c in df_results.columns if c != 'Model'], 
         axis=0, 
         color='#D6EAF8' 
-    ).format("{:.4f}", subset=[c for c in df_results.columns if c != 'Model'])
+    ).format("{:.4f}", subset=[c for c in df_results.columns if c not in ['Model', 'confusion_matrix', 'model', 'y_test_pred']])
     
     st.dataframe(styled_df, use_container_width=True, hide_index=True)
 
+    # CSV Download Button
+    st.markdown("### 📥 Export Results")
+    col1, col2, col3 = st.columns([2, 1, 1])
+    
+    # Prepare CSV data (exclude non-serializable columns)
+    csv_df = df_results.copy()
+    csv_df = csv_df.drop(columns=['model', 'y_test_pred', 'confusion_matrix'], errors='ignore')
+    
+    csv_data = csv_df.to_csv(index=False)
+    
+    col1.download_button(
+        label="📥 Download Metrics as CSV",
+        data=csv_data,
+        file_name=f"model_comparison_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+        mime="text/csv",
+        use_container_width=True
+    )
+
     # 3. Visual Comparison
     st.markdown("### 📊 Metric Analysis")
-    metric = st.selectbox("Select Metric to Visualize", ['F1-Score', 'Accuracy', 'Precision', 'Recall', 'ROC-AUC'])
+    metric = st.selectbox("Select Metric to Visualize", ['F1-Score', 'Accuracy', 'Precision', 'Recall', 'Training Time'])
     
     if metric in df_results.columns:
         chart_data = df_results[['Model', metric]].sort_values(metric, ascending=False)
         st.bar_chart(chart_data.set_index('Model'), color="#2C3E50")
+
+    # 4. ROC Curves (for binary classification)
+    st.markdown("### 📈 ROC Curves (Binary Classification)")
+    
+    # Check if we have binary classification and ROC-AUC values
+    if 'roc_auc' in df_results.columns:
+        has_roc = df_results['roc_auc'].notna().any()
+        
+        if has_roc:
+            # Recreate ROC curves for all models with predictions
+            fig, ax = plt.subplots(figsize=(10, 7))
+            
+            # Get the test set from session state (need to store it during training)
+            if hasattr(st.session_state, 'y_test') and hasattr(st.session_state, 'X_test'):
+                y_test = st.session_state.y_test
+                
+                for model_name, metrics in results.items():
+                    if isinstance(metrics, dict) and 'model' in metrics and metrics.get('roc_auc') is not None:
+                        try:
+                            model = metrics['model']
+                            X_test = st.session_state.X_test
+                            
+                            # Get probability predictions
+                            y_proba = model.predict_proba(X_test)[:, 1]
+                            
+                            # Calculate ROC curve
+                            fpr, tpr, _ = roc_curve(y_test, y_proba)
+                            roc_auc_val = auc(fpr, tpr)
+                            
+                            # Plot
+                            ax.plot(fpr, tpr, label=f'{model_name} (AUC={roc_auc_val:.3f})', linewidth=2)
+                        except Exception as e:
+                            logging.warning(f"Could not generate ROC curve for {model_name}: {str(e)}")
+                
+                # Plot diagonal line
+                ax.plot([0, 1], [0, 1], 'k--', label='Random Classifier', linewidth=1)
+                ax.set_xlabel('False Positive Rate', fontsize=12)
+                ax.set_ylabel('True Positive Rate', fontsize=12)
+                ax.set_title('ROC Curves - Model Comparison', fontsize=14, fontweight='bold')
+                ax.legend(loc='lower right', fontsize=10)
+                ax.grid(True, alpha=0.3)
+                
+                st.pyplot(fig)
+            else:
+                st.info("ℹ️ Test data not available for ROC curve visualization. ROC-AUC values are shown in the metrics table.")
+        else:
+            st.info("ℹ️ ROC-AUC only available for binary classification problems.")
+    else:
+        st.info("ℹ️ ROC-AUC values not computed (multiclass classification detected).")
+
+    # 5. Precision-Recall Curves (for binary classification)
+    st.markdown("### 📉 Precision-Recall Curves (Binary Classification)")
+    
+    if hasattr(st.session_state, 'y_test') and hasattr(st.session_state, 'X_test'):
+        from sklearn.metrics import precision_recall_curve, average_precision_score
+        
+        y_test = st.session_state.y_test
+        if len(np.unique(y_test)) == 2:
+            try:
+                fig_pr, ax_pr = plt.subplots(figsize=(10, 7))
+                
+                for model_name, metrics in results.items():
+                    if isinstance(metrics, dict) and 'model' in metrics:
+                        try:
+                            model = metrics['model']
+                            X_test = st.session_state.X_test
+                            
+                            # Get probability predictions
+                            y_proba = model.predict_proba(X_test)[:, 1]
+                            
+                            # Calculate P-R curve
+                            precision, recall, _ = precision_recall_curve(y_test, y_proba)
+                            ap = average_precision_score(y_test, y_proba)
+                            
+                            # Plot
+                            ax_pr.plot(recall, precision, label=f'{model_name} (AP={ap:.3f})', linewidth=2)
+                        except Exception as e:
+                            logging.warning(f"Could not generate P-R curve for {model_name}: {str(e)}")
+                
+                ax_pr.set_xlabel('Recall', fontsize=12)
+                ax_pr.set_ylabel('Precision', fontsize=12)
+                ax_pr.set_title('Precision-Recall Curves - Model Comparison', fontsize=14, fontweight='bold')
+                ax_pr.legend(loc='best', fontsize=10)
+                ax_pr.grid(True, alpha=0.3)
+                ax_pr.set_xlim([0, 1])
+                ax_pr.set_ylim([0, 1])
+                
+                st.pyplot(fig_pr)
+            except Exception as e:
+                st.warning(f"Could not generate Precision-Recall curves: {str(e)}")
+        else:
+            st.info("ℹ️ Precision-Recall curves only available for binary classification problems.")
+    else:
+        st.info("ℹ️ Test data not available for P-R curve visualization.")
+
+    # 6. Confusion Matrices
+    st.markdown("### 📊 Confusion Matrices")
+    
+    if hasattr(st.session_state, 'y_test'):
+        y_test = st.session_state.y_test
+        
+        # Select which models' confusion matrices to display
+        models_to_show = st.multiselect(
+            "Select models to view confusion matrices:",
+            list(results.keys()),
+            default=list(results.keys())[:3] if len(results) > 3 else list(results.keys())
+        )
+        
+        if models_to_show:
+            cols = st.columns(min(2, len(models_to_show)))
+            
+            for idx, model_name in enumerate(models_to_show):
+                metrics = results[model_name]
+                if isinstance(metrics, dict) and 'confusion_matrix' in metrics:
+                    cm = metrics['confusion_matrix']
+                    
+                    with cols[idx % 2]:
+                        fig_cm, ax_cm = plt.subplots(figsize=(6, 5))
+                        
+                        # Plot heatmap
+                        import seaborn as sns
+                        sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', ax=ax_cm, cbar=False)
+                        ax_cm.set_title(f'{model_name}', fontsize=12, fontweight='bold')
+                        ax_cm.set_ylabel('Actual', fontsize=11)
+                        ax_cm.set_xlabel('Predicted', fontsize=11)
+                        
+                        st.pyplot(fig_cm)
+
+    # 7. Feature Importance (for tree-based and ensemble models)
+    st.markdown("### 🌳 Feature Importance Analysis")
+    
+    tree_based_models = ['Random Forest', 'Decision Tree', 'AdaBoost Classifier']
+    tree_models_available = [m for m in tree_based_models if m in results.keys()]
+    
+    if tree_models_available and hasattr(st.session_state, 'X_test'):
+        selected_model = st.selectbox(
+            "Select tree-based model for feature importance:",
+            tree_models_available
+        )
+        
+        if selected_model in results:
+            metrics = results[selected_model]
+            if isinstance(metrics, dict) and 'model' in metrics:
+                model = metrics['model']
+                
+                # Get feature importances
+                if hasattr(model, 'feature_importances_'):
+                    importances = model.feature_importances_
+                    
+                    # Create feature importance dataframe
+                    feature_names = [f"Feature {i}" for i in range(len(importances))]
+                    importance_df = pd.DataFrame({
+                        'Feature': feature_names,
+                        'Importance': importances
+                    }).sort_values('Importance', ascending=True).tail(10)
+                    
+                    # Plot feature importance
+                    fig_fi, ax_fi = plt.subplots(figsize=(10, 6))
+                    ax_fi.barh(importance_df['Feature'], importance_df['Importance'], color='#3498db')
+                    ax_fi.set_xlabel('Importance Score', fontsize=12)
+                    ax_fi.set_title(f'Top 10 Feature Importances - {selected_model}', fontsize=14, fontweight='bold')
+                    ax_fi.grid(True, alpha=0.3, axis='x')
+                    
+                    st.pyplot(fig_fi)
+                else:
+                    st.info(f"ℹ️ {selected_model} does not have feature importance scores.")
+    else:
+        st.info("ℹ️ Feature importance visualization only available for tree-based models (Random Forest, Decision Tree, AdaBoost).")
 
     # Navigation Footer
     c1, _, c2 = st.columns([1, 4, 1])

@@ -3,16 +3,16 @@ import sys
 from dataclasses import dataclass
 import numpy as np
 from sklearn.ensemble import (
-    AdaBoostRegressor,
-    RandomForestRegressor,
     AdaBoostClassifier,
     RandomForestClassifier
 )
-from sklearn.linear_model import LinearRegression, LogisticRegression
-from sklearn.metrics import r2_score, accuracy_score, f1_score, silhouette_score
-from sklearn.neighbors import KNeighborsRegressor, KNeighborsClassifier
-from sklearn.tree import DecisionTreeRegressor, DecisionTreeClassifier
-from sklearn.cluster import KMeans, DBSCAN, AgglomerativeClustering
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, f1_score
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.naive_bayes import GaussianNB
+from sklearn.svm import SVC
+from mlxtend.classifier import OneRClassifier
 
 from src.exception import CustomException
 from src.logger import logging
@@ -27,41 +27,33 @@ class ModelTrainer:
     def __init__(self):
         self.model_trainer_config = ModelTrainerConfig()
 
-    def initiate_model_trainer(self, train_array, test_array, problem_type):
+    def initiate_model_trainer(self, train_array, test_array, problem_type='classification', search_type='grid'):
+        """
+        Train and optimize classification models.
+        
+        Args:
+            search_type: 'grid' for GridSearchCV or 'random' for RandomizedSearchCV (default: 'grid')
+        """
         try:
             logging.info("Split training and test input data")
             
             X_train, y_train = train_array[:, :-1], train_array[:, -1]
             X_test, y_test = test_array[:, :-1], test_array[:, -1]
 
-            if problem_type == 'regression':
-                models = {
-                    "Random Forest": RandomForestRegressor(),
-                    "Decision Tree": DecisionTreeRegressor(),
-                    "Linear Regression": LinearRegression(),
-                    "AdaBoost Regressor": AdaBoostRegressor(),
-                }
-                params = {
-                    "Decision Tree": {
-                        'criterion': ['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
-                    },
-                    "Random Forest": {
-                        'n_estimators': [8, 16, 32, 64, 128, 256]
-                    },
-                    "Linear Regression": {},
-                    "AdaBoost Regressor": {
-                        'learning_rate': [.1, .01, 0.5, .001],
-                        'n_estimators': [8, 16, 32, 64, 128, 256]
-                    }
-                }
-                metric = r2_score
-
-            elif problem_type == 'classification':
+            if problem_type == 'classification':
+                # Convert target variables to integers for classification
+                y_train = y_train.astype(int)
+                y_test = y_test.astype(int)
+                
                 models = {
                     "Random Forest": RandomForestClassifier(),
                     "Decision Tree": DecisionTreeClassifier(),
                     "Logistic Regression": LogisticRegression(),
                     "AdaBoost Classifier": AdaBoostClassifier(),
+                    "K-Nearest Neighbors": KNeighborsClassifier(),
+                    "Naive Bayes": GaussianNB(),
+                    "Support Vector Machine": SVC(probability=True),
+                    "OneR Classifier": OneRClassifier(),
                 }
                 params = {
                     "Decision Tree": {
@@ -74,50 +66,36 @@ class ModelTrainer:
                     "AdaBoost Classifier": {
                         'learning_rate': [.1, .01, 0.5, .001],
                         'n_estimators': [8, 16, 32, 64, 128, 256]
-                    }
+                    },
+                    "K-Nearest Neighbors": {
+                        'n_neighbors': [3, 5, 7, 9, 11, 13],
+                        'metric': ['euclidean', 'manhattan']
+                    },
+                    "Naive Bayes": {},
+                    "Support Vector Machine": {
+                        'C': [0.1, 1, 10, 100],
+                        'kernel': ['linear', 'rbf']
+                    },
+                    "OneR Classifier": {}
                 }
                 metric = accuracy_score
 
-            elif problem_type == 'clustering':
-                models = {
-                    "KMeans": KMeans(),
-                    "DBSCAN": DBSCAN()
-                }
-                params = {
-                    "KMeans": {'n_clusters': [2, 3, 4, 5, 6, 7, 8, 9, 10]},
-                    "DBSCAN": {
-                        'eps': [0.1, 0.5, 1.0, 1.5, 2.0],
-                        'min_samples': [3, 5, 10, 20, 30]
-                    }
-                }
-                metric = silhouette_score
-
             else:
-                raise CustomException("Unsupported problem type")
+                raise CustomException("Only classification problem type is supported")
 
             # Evaluate Models
             model_report = evaluate_models(X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test, 
-                                           models=models, param=params, metric=metric, problem_type=problem_type)
+                                           models=models, param=params, metric=metric, search_type=search_type)
 
-            # --- Logic to find Best Model (Robust to return types) ---
+            # --- Logic to find Best Model ---
             best_model_name = ""
             
-            # Helper to extract test score safely whether it's a float or a list [train_score, test_score]
-            def get_score(value):
-                if isinstance(value, list) or isinstance(value, tuple) or isinstance(value, np.ndarray):
-                    return value[-1] # Assume last item is test score
-                return value # Assume it's a single float score
-
-            if problem_type in ['regression', 'classification']:
-                # Find best model based on the extracted score
-                best_model_name = max(model_report.items(), key=lambda x: get_score(x[1]))[0]
-            else:  # clustering
-                # Clustering usually returns single silhouette score
-                best_model_name = max(model_report, key=model_report.get)
+            # Find best model based on F1-score
+            best_model_name = max(model_report.items(), key=lambda x: x[1].get('f1_score', -np.inf))[0]
 
             logging.info(f"Best found model: {best_model_name}")
 
-            # RETURN ONLY 2 ITEMS to match app.py expectation
+            # RETURN 2 ITEMS: detailed report and best model name
             return model_report, best_model_name
 
         except Exception as e:

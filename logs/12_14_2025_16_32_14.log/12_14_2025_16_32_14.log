@@ -1,0 +1,4 @@
+[ 2025-12-14 16:32:26,370 ] 14 visions.backends - INFO - Pandas backend loaded 2.3.3
+[ 2025-12-14 16:32:26,420 ] 25 visions.backends - INFO - Numpy backend loaded 2.3.5
+[ 2025-12-14 16:32:26,422 ] 37 visions.backends - INFO - Pyspark backend NOT loaded
+[ 2025-12-14 16:32:26,423 ] 43 visions.backends - INFO - Python backend loaded

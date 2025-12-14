@@ -1,0 +1,34 @@
+[ 2025-12-14 14:41:20,084 ] 14 visions.backends - INFO - Pandas backend loaded 2.3.3
+[ 2025-12-14 14:41:20,105 ] 25 visions.backends - INFO - Numpy backend loaded 2.3.5
+[ 2025-12-14 14:41:20,106 ] 37 visions.backends - INFO - Pyspark backend NOT loaded
+[ 2025-12-14 14:41:20,107 ] 43 visions.backends - INFO - Python backend loaded
+[ 2025-12-14 14:44:44,668 ] 27 root - INFO - Entered the data ingestion method or component
+[ 2025-12-14 14:44:44,669 ] 29 root - INFO - Read the Dataset as dataframe
+[ 2025-12-14 14:44:44,679 ] 35 root - INFO - Train test split initiated
+[ 2025-12-14 14:44:44,698 ] 41 root - INFO - Ingestion of the data is completed
+[ 2025-12-14 14:45:45,356 ] 104 root - INFO - Train data shape: (316, 33)
+[ 2025-12-14 14:45:45,360 ] 105 root - INFO - Train data columns: ['school', 'sex', 'age', 'address', 'famsize', 'Pstatus', 'Medu', 'Fedu', 'Mjob', 'Fjob', 'reason', 'guardian', 'traveltime', 'studytime', 'failures', 'schoolsup', 'famsup', 'paid', 'activities', 'nursery', 'higher', 'internet', 'romantic', 'famrel', 'freetime', 'goout', 'Dalc', 'Walc', 'health', 'absences', 'G1', 'G2', 'G3']
+[ 2025-12-14 14:45:45,377 ] 111 root - INFO - Test data shape: (79, 33)
+[ 2025-12-14 14:45:45,378 ] 112 root - INFO - Test data columns: ['school', 'sex', 'age', 'address', 'famsize', 'Pstatus', 'Medu', 'Fedu', 'Mjob', 'Fjob', 'reason', 'guardian', 'traveltime', 'studytime', 'failures', 'schoolsup', 'famsup', 'paid', 'activities', 'nursery', 'higher', 'internet', 'romantic', 'famrel', 'freetime', 'goout', 'Dalc', 'Walc', 'health', 'absences', 'G1', 'G2', 'G3']
+[ 2025-12-14 14:45:45,378 ] 114 root - INFO - Read train and test data completed
+[ 2025-12-14 14:45:45,382 ] 126 root - INFO - Obtaining preprocessing object
+[ 2025-12-14 14:45:45,386 ] 81 root - INFO - Categorical columns: ['school', 'sex', 'address', 'famsize', 'Pstatus', 'Mjob', 'Fjob', 'reason', 'guardian', 'schoolsup', 'famsup', 'paid', 'activities', 'nursery', 'higher', 'internet', 'romantic']
+[ 2025-12-14 14:45:45,386 ] 82 root - INFO - Numerical columns: ['age', 'Medu', 'Fedu', 'traveltime', 'studytime', 'failures', 'famrel', 'freetime', 'goout', 'Dalc', 'Walc', 'health', 'absences', 'G1', 'G2']
+[ 2025-12-14 14:45:45,391 ] 139 root - INFO - Applying preprocessing object on training and testing dataframes.
+[ 2025-12-14 14:45:45,479 ] 166 root - INFO - Saved preprocessing object.
+[ 2025-12-14 14:46:00,708 ] 38 root - INFO - Split training and test input data
+[ 2025-12-14 14:46:58,527 ] 80 root - INFO - GridSearchCV - Best model params for Random Forest: {'n_estimators': 256}
+[ 2025-12-14 14:46:58,981 ] 124 root - INFO - Random Forest - Accuracy: 0.3544, Precision: 0.3257, Recall: 0.3544, F1: 0.3116, Time: 57.82s
+[ 2025-12-14 14:46:59,225 ] 80 root - INFO - GridSearchCV - Best model params for Decision Tree: {'criterion': 'gini'}
+[ 2025-12-14 14:46:59,538 ] 124 root - INFO - Decision Tree - Accuracy: 0.2658, Precision: 0.2862, Recall: 0.2658, F1: 0.2686, Time: 0.24s
+[ 2025-12-14 14:47:00,970 ] 124 root - INFO - Logistic Regression - Accuracy: 0.2278, Precision: 0.2556, Recall: 0.2278, F1: 0.2113, Time: 1.38s
+[ 2025-12-14 14:47:39,193 ] 80 root - INFO - GridSearchCV - Best model params for AdaBoost Classifier: {'learning_rate': 0.5, 'n_estimators': 256}
+[ 2025-12-14 14:47:39,610 ] 124 root - INFO - AdaBoost Classifier - Accuracy: 0.2785, Precision: 0.1234, Recall: 0.2785, F1: 0.1654, Time: 38.22s
+[ 2025-12-14 14:47:42,798 ] 80 root - INFO - GridSearchCV - Best model params for K-Nearest Neighbors: {'metric': 'manhattan', 'n_neighbors': 13}
+[ 2025-12-14 14:47:46,524 ] 124 root - INFO - K-Nearest Neighbors - Accuracy: 0.1013, Precision: 0.0684, Recall: 0.1013, F1: 0.0702, Time: 3.19s
+[ 2025-12-14 14:47:46,558 ] 124 root - INFO - Naive Bayes - Accuracy: 0.1139, Precision: 0.0534, Recall: 0.1139, F1: 0.0658, Time: 0.01s
+[ 2025-12-14 14:47:51,168 ] 80 root - INFO - GridSearchCV - Best model params for Support Vector Machine: {'C': 0.1, 'kernel': 'linear'}
+[ 2025-12-14 14:47:51,219 ] 124 root - INFO - Support Vector Machine - Accuracy: 0.1646, Precision: 0.1630, Recall: 0.1646, F1: 0.1546, Time: 4.61s
+[ 2025-12-14 14:47:51,221 ] 128 root - ERROR - Error in evaluate_models: boolean index did not match indexed array along axis 0; size of axis is 20 but size of corresponding boolean axis is 18
+[ 2025-12-14 14:47:51,252 ] 102 root - ERROR - Exception occurred in model training: Error occured in python script name [F:\ML\Project\AutoML_Project\src\utils\__init__.py] line number [83] error message[boolean index did not match indexed array along axis 0; size of axis is 20 but size of corresponding boolean axis is 18]
+[ 2025-12-14 14:47:51,283 ] 483 root - ERROR - Training Error: Error occured in python script name [F:\ML\Project\AutoML_Project\src\components\model_trainer.py] line number [87] error message[Error occured in python script name [F:\ML\Project\AutoML_Project\src\utils\__init__.py] line number [83] error message[boolean index did not match indexed array along axis 0; size of axis is 20 but size of corresponding boolean axis is 18]]

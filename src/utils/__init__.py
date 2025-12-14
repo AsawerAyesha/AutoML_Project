@@ -3,9 +3,13 @@ import sys
 import pickle
 import numpy as np
 import logging
+import time
 from scipy.sparse import issparse
-from sklearn.metrics import make_scorer, r2_score, accuracy_score, silhouette_score
-from sklearn.model_selection import GridSearchCV, ParameterGrid
+from sklearn.metrics import (
+    make_scorer, accuracy_score,
+    precision_score, recall_score, f1_score, confusion_matrix, roc_auc_score
+)
+from sklearn.model_selection import GridSearchCV, RandomizedSearchCV
 from src.exception import CustomException
 
 def save_object(file_path, obj):
@@ -28,65 +32,106 @@ def load_object(file_path):
     except Exception as e:
         raise CustomException(e, sys)
 
-def evaluate_models(X_train, y_train, X_test, y_test, models, param, metric, problem_type):
+def evaluate_models(X_train, y_train, X_test, y_test, models, param, metric, search_type='grid'):
+    """
+    Evaluate classification models with hyperparameter optimization and compute comprehensive metrics.
+    
+    Args:
+        search_type: 'grid' for GridSearchCV or 'random' for RandomizedSearchCV
+        
+    Returns:
+        model_report: Dictionary with detailed metrics for each model
+    """
     try:
+        # Ensure target variables are integers for classification and properly shaped
+        y_train = np.ravel(y_train).astype(int)
+        y_test = np.ravel(y_test).astype(int)
+        
+        # Determine appropriate cv splits based on minimum class size
+        unique, counts = np.unique(y_train, return_counts=True)
+        min_class_size = counts.min()
+        cv_splits = min(5, min_class_size)  # Use minimum of 5 or smallest class size
+        
+        if cv_splits < 2:
+            logging.warning(f"Dataset too small or imbalanced for cross-validation. Min class size: {min_class_size}")
+            cv_splits = 2  # Use at least 2 splits
+        
         model_report = {}
         for model_name, model in models.items():
-            if problem_type in ['regression', 'classification']:
-                if param[model_name]:  # If there are hyperparameters to tune
-                    gs = GridSearchCV(model, param[model_name], cv=5, scoring=make_scorer(metric), n_jobs=-1)
-                    gs.fit(X_train, y_train)
-                    best_model = gs.best_estimator_
-                    logging.info(f"Best model params for {model_name}: {gs.best_params_}")
-                else:  # If no hyperparameters to tune (e.g., LinearRegression)
-                    best_model = model
-                    best_model.fit(X_train, y_train)
+            # Track training time
+            start_time = time.time()
+            
+            if param[model_name]:  # If there are hyperparameters to tune
+                if search_type == 'random':
+                    # Use RandomizedSearchCV
+                    search = RandomizedSearchCV(
+                        model, 
+                        param[model_name], 
+                        cv=cv_splits, 
+                        scoring=make_scorer(metric), 
+                        n_jobs=-1,
+                        n_iter=20,  # Number of combinations to try
+                        random_state=42
+                    )
+                else:
+                    # Use GridSearchCV (default)
+                    search = GridSearchCV(
+                        model, 
+                        param[model_name], 
+                        cv=cv_splits, 
+                        scoring=make_scorer(metric), 
+                        n_jobs=-1
+                    )
                 
-                y_train_pred = best_model.predict(X_train)
-                y_test_pred = best_model.predict(X_test)
-                train_score = metric(y_train, y_train_pred)
-                test_score = metric(y_test, y_test_pred)
-                model_report[model_name] = (train_score, test_score)
-                logging.info(f"{model_name} - Train Score: {train_score}, Test Score: {test_score}")
-
-            elif problem_type == 'clustering':
-                best_score = -np.inf
-                best_params = None
-                for param_combination in ParameterGrid(param[model_name]):
-                    model_instance = model.set_params(**param_combination)
-                    y_pred = model_instance.fit_predict(X_train)
-                    
-                    unique_labels = np.unique(y_pred)
-                    n_clusters = len(unique_labels[unique_labels != -1])  # Exclude noise points for DBSCAN
-                    
-                    logging.info(f"{model_name} with {param_combination}: {n_clusters} clusters found")
-                    
-                    if n_clusters <= 1:
-                        logging.warning(f"{model_name} with {param_combination} did not find multiple clusters. Skipping.")
-                        continue
-                    
-                    n_samples = X_train.shape[0] if not issparse(X_train) else X_train.shape[0]
-                    if n_clusters >= n_samples:
-                        logging.warning(f"{model_name} with {param_combination} created too many clusters. Skipping.")
-                        continue
-                    
-                    X_train_dense = X_train.toarray() if issparse(X_train) else X_train
-                    
-                    score = silhouette_score(X_train_dense, y_pred)
-                    logging.info(f"{model_name} with {param_combination}: Silhouette Score = {score}")
-                    
-                    if score > best_score:
-                        best_score = score
-                        best_params = param_combination
-                
-                if best_params is None:
-                    logging.warning(f"No valid clustering found for {model_name}. Skipping this model.")
-                    continue
-                
-                best_model = model.set_params(**best_params)
-                y_pred = best_model.fit_predict(X_train)
-                model_report[model_name] = best_score
-                logging.info(f"{model_name} - Best params: {best_params}, Silhouette Score: {best_score}")
+                search.fit(X_train, y_train)
+                best_model = search.best_estimator_
+                search_method = 'RandomizedSearchCV' if search_type == 'random' else 'GridSearchCV'
+                logging.info(f"{search_method} - Best model params for {model_name}: {search.best_params_}")
+            else:  # If no hyperparameters to tune
+                best_model = model
+                best_model.fit(X_train, y_train)
+            
+            training_time = time.time() - start_time
+            
+            y_train_pred = best_model.predict(X_train)
+            y_test_pred = best_model.predict(X_test)
+            
+            # Classification metrics
+            accuracy = accuracy_score(y_test, y_test_pred)
+            
+            # Handle both binary and multiclass
+            average_method = 'binary' if len(np.unique(y_test)) == 2 else 'weighted'
+            precision = precision_score(y_test, y_test_pred, average=average_method, zero_division=0)
+            recall = recall_score(y_test, y_test_pred, average=average_method, zero_division=0)
+            f1 = f1_score(y_test, y_test_pred, average=average_method, zero_division=0)
+            
+            # Confusion matrix
+            cm = confusion_matrix(y_test, y_test_pred)
+            
+            # ROC-AUC for binary classification
+            roc_auc = None
+            if len(np.unique(y_test)) == 2:
+                try:
+                    # For binary classification
+                    y_test_proba = best_model.predict_proba(X_test)[:, 1]
+                    roc_auc = roc_auc_score(y_test, y_test_proba)
+                except (AttributeError, IndexError):
+                    logging.warning(f"{model_name} does not support probability predictions for ROC-AUC")
+                    roc_auc = None
+            
+            model_report[model_name] = {
+                'accuracy': accuracy,
+                'precision': precision,
+                'recall': recall,
+                'f1_score': f1,
+                'confusion_matrix': cm,
+                'roc_auc': roc_auc,
+                'training_time': training_time,
+                'model': best_model,
+                'y_test_pred': y_test_pred
+            }
+            logging.info(f"{model_name} - Accuracy: {accuracy:.4f}, Precision: {precision:.4f}, Recall: {recall:.4f}, F1: {f1:.4f}, Time: {training_time:.2f}s")
+        
         return model_report
     except Exception as e:
         logging.error(f"Error in evaluate_models: {str(e)}")
