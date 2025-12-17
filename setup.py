@@ -16,12 +16,3 @@ def get_requirements(file_path:str)->List[str]:
     
     return requirements
 
-setup(
-name='Automated ML Projecte',
-version='0.0.1',
-author='DURGA PRASAD KAVALI',
-author_email='kdurgaprasadkavali@gmail.com',
-packages=find_packages(),
-install_requires=get_requirements('requirements.txt')
-
-)
