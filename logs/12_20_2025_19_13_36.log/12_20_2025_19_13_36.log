@@ -1,0 +1,23 @@
+[ 2025-12-20 19:13:36,188 ] 36 root - INFO - FeatureTypeInference initialized with 1025 rows, 14 columns
+[ 2025-12-20 19:13:36,205 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-20 19:13:36,206 ] 42 root - INFO - PreprocessingApplicator initialized with 1025 rows, 14 columns
+[ 2025-12-20 19:13:36,206 ] 332 root - INFO - Applying class imbalance handling: no action...
+[ 2025-12-20 19:13:36,211 ] 72 root - INFO - Categorical columns: []
+[ 2025-12-20 19:13:36,211 ] 73 root - INFO - Numerical columns: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal']
+[ 2025-12-20 19:13:36,231 ] 37 root - INFO - Split training and test input data
+[ 2025-12-20 19:13:43,109 ] 91 root - INFO - Search params for Random Forest: {'max_depth': 10, 'n_estimators': 32}
+[ 2025-12-20 19:13:43,134 ] 127 root - INFO - Random Forest - Acc: 1.0000, Prec: 1.0000, Rec: 1.0000, F1: 1.0000, Time: 6.88s
+[ 2025-12-20 19:13:43,236 ] 91 root - INFO - Search params for Decision Tree: {'criterion': 'gini', 'max_depth': None}
+[ 2025-12-20 19:13:43,252 ] 127 root - INFO - Decision Tree - Acc: 0.9883, Prec: 1.0000, Rec: 0.9773, F1: 0.9885, Time: 0.10s
+[ 2025-12-20 19:13:43,321 ] 91 root - INFO - Search params for Logistic Regression: {'C': 1.0, 'penalty': 'l2', 'solver': 'lbfgs'}
+[ 2025-12-20 19:13:43,335 ] 127 root - INFO - Logistic Regression - Acc: 0.8249, Prec: 0.7959, Rec: 0.8864, F1: 0.8387, Time: 0.07s
+[ 2025-12-20 19:13:45,461 ] 91 root - INFO - Search params for AdaBoost Classifier: {'learning_rate': 1.0, 'n_estimators': 128}
+[ 2025-12-20 19:13:45,520 ] 127 root - INFO - AdaBoost Classifier - Acc: 0.8949, Prec: 0.8832, Rec: 0.9167, F1: 0.8996, Time: 2.13s
+[ 2025-12-20 19:13:45,700 ] 91 root - INFO - Search params for K-Nearest Neighbors: {'metric': 'euclidean', 'n_neighbors': 3}
+[ 2025-12-20 19:13:45,732 ] 127 root - INFO - K-Nearest Neighbors - Acc: 0.9261, Prec: 0.9313, Rec: 0.9242, F1: 0.9278, Time: 0.18s
+[ 2025-12-20 19:13:45,752 ] 127 root - INFO - Naive Bayes - Acc: 0.8405, Prec: 0.8321, Rec: 0.8636, F1: 0.8476, Time: 0.00s
+[ 2025-12-20 19:13:46,288 ] 91 root - INFO - Search params for Support Vector Machine: {'C': 2.0, 'kernel': 'rbf'}
+[ 2025-12-20 19:13:46,315 ] 127 root - INFO - Support Vector Machine - Acc: 0.9455, Prec: 0.9538, Rec: 0.9394, F1: 0.9466, Time: 0.54s
+[ 2025-12-20 19:13:46,333 ] 113 root - WARNING - OneR Classifier lacks predict_proba; ROC-AUC skipped
+[ 2025-12-20 19:13:46,333 ] 127 root - INFO - OneR Classifier - Acc: 0.7393, Prec: 0.7519, Rec: 0.7348, F1: 0.7433, Time: 0.01s
+[ 2025-12-20 19:13:46,333 ] 108 root - INFO - Best found model: Random Forest
