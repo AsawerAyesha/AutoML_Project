@@ -1,0 +1,196 @@
+[ 2025-12-20 20:30:11,167 ] 36 root - INFO - FeatureTypeInference initialized with 1025 rows, 14 columns
+[ 2025-12-20 20:30:11,212 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-20 20:30:11,212 ] 49 root - INFO - IssueDetector initialized for dataset with 1025 rows, 14 columns
+[ 2025-12-20 20:30:11,212 ] 36 root - INFO - FeatureTypeInference initialized with 1025 rows, 14 columns
+[ 2025-12-20 20:30:11,238 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-20 20:30:11,238 ] 54 root - INFO - Feature types inferred: 13 features classified
+[ 2025-12-20 20:30:11,238 ] 34 root - INFO - OutlierDetector initialized with 1025 rows
+[ 2025-12-20 20:30:11,239 ] 186 root - INFO - ConstantFeatureDetector initialized (threshold=0.99)
+[ 2025-12-20 20:30:11,239 ] 69 root - INFO - Starting comprehensive issue detection...
+[ 2025-12-20 20:30:11,239 ] 83 root - INFO - Detecting missing values...
+[ 2025-12-20 20:30:11,241 ] 142 root - INFO - No missing values detected
+[ 2025-12-20 20:30:11,242 ] 147 root - INFO - Detecting outliers (continuous_numeric features only)...
+[ 2025-12-20 20:30:11,244 ] 136 root - INFO - Outlier detection for 'age': 0 outliers (0.00%), severity=low
+[ 2025-12-20 20:30:11,248 ] 136 root - INFO - Outlier detection for 'trestbps': 30 outliers (2.93%), severity=medium
+[ 2025-12-20 20:30:11,251 ] 136 root - INFO - Outlier detection for 'chol': 16 outliers (1.56%), severity=medium
+[ 2025-12-20 20:30:11,253 ] 136 root - INFO - Outlier detection for 'thalach': 4 outliers (0.39%), severity=low
+[ 2025-12-20 20:30:11,256 ] 136 root - INFO - Outlier detection for 'oldpeak': 7 outliers (0.68%), severity=low
+[ 2025-12-20 20:30:11,256 ] 161 root - INFO - Detected outliers in 4 columns
+[ 2025-12-20 20:30:11,257 ] 194 root - INFO - Detected outliers in 4 columns
+[ 2025-12-20 20:30:11,257 ] 299 root - INFO - Detecting constant/near-constant features...
+[ 2025-12-20 20:30:11,266 ] 266 root - INFO - Detected 0 constant/near-constant features
+[ 2025-12-20 20:30:11,267 ] 338 root - INFO - No constant/near-constant features detected
+[ 2025-12-20 20:30:11,267 ] 203 root - INFO - Checking for class imbalance...
+[ 2025-12-20 20:30:11,268 ] 246 root - INFO - Classes are balanced (imbalance ratio: 1.05:1)
+[ 2025-12-20 20:30:11,268 ] 251 root - INFO - Detecting high cardinality features...
+[ 2025-12-20 20:30:11,268 ] 294 root - INFO - No high cardinality features detected
+[ 2025-12-20 20:30:11,268 ] 77 root - INFO - Issue detection complete. Found 4 issues
+[ 2025-12-20 20:30:40,003 ] 36 root - INFO - FeatureTypeInference initialized with 1025 rows, 14 columns
+[ 2025-12-20 20:30:40,031 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-20 20:30:40,032 ] 49 root - INFO - IssueDetector initialized for dataset with 1025 rows, 14 columns
+[ 2025-12-20 20:30:40,032 ] 36 root - INFO - FeatureTypeInference initialized with 1025 rows, 14 columns
+[ 2025-12-20 20:30:40,063 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-20 20:30:40,064 ] 54 root - INFO - Feature types inferred: 13 features classified
+[ 2025-12-20 20:30:40,064 ] 34 root - INFO - OutlierDetector initialized with 1025 rows
+[ 2025-12-20 20:30:40,064 ] 186 root - INFO - ConstantFeatureDetector initialized (threshold=0.99)
+[ 2025-12-20 20:30:40,064 ] 69 root - INFO - Starting comprehensive issue detection...
+[ 2025-12-20 20:30:40,064 ] 83 root - INFO - Detecting missing values...
+[ 2025-12-20 20:30:40,066 ] 142 root - INFO - No missing values detected
+[ 2025-12-20 20:30:40,066 ] 147 root - INFO - Detecting outliers (continuous_numeric features only)...
+[ 2025-12-20 20:30:40,069 ] 136 root - INFO - Outlier detection for 'age': 0 outliers (0.00%), severity=low
+[ 2025-12-20 20:30:40,072 ] 136 root - INFO - Outlier detection for 'trestbps': 30 outliers (2.93%), severity=medium
+[ 2025-12-20 20:30:40,076 ] 136 root - INFO - Outlier detection for 'chol': 16 outliers (1.56%), severity=medium
+[ 2025-12-20 20:30:40,081 ] 136 root - INFO - Outlier detection for 'thalach': 4 outliers (0.39%), severity=low
+[ 2025-12-20 20:30:40,085 ] 136 root - INFO - Outlier detection for 'oldpeak': 7 outliers (0.68%), severity=low
+[ 2025-12-20 20:30:40,085 ] 161 root - INFO - Detected outliers in 4 columns
+[ 2025-12-20 20:30:40,085 ] 194 root - INFO - Detected outliers in 4 columns
+[ 2025-12-20 20:30:40,085 ] 299 root - INFO - Detecting constant/near-constant features...
+[ 2025-12-20 20:30:40,091 ] 266 root - INFO - Detected 0 constant/near-constant features
+[ 2025-12-20 20:30:40,091 ] 338 root - INFO - No constant/near-constant features detected
+[ 2025-12-20 20:30:40,091 ] 203 root - INFO - Checking for class imbalance...
+[ 2025-12-20 20:30:40,092 ] 246 root - INFO - Classes are balanced (imbalance ratio: 1.05:1)
+[ 2025-12-20 20:30:40,092 ] 251 root - INFO - Detecting high cardinality features...
+[ 2025-12-20 20:30:40,092 ] 294 root - INFO - No high cardinality features detected
+[ 2025-12-20 20:30:40,092 ] 77 root - INFO - Issue detection complete. Found 4 issues
+[ 2025-12-20 20:30:50,079 ] 36 root - INFO - FeatureTypeInference initialized with 1025 rows, 14 columns
+[ 2025-12-20 20:30:50,114 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-20 20:30:50,116 ] 49 root - INFO - IssueDetector initialized for dataset with 1025 rows, 14 columns
+[ 2025-12-20 20:30:50,116 ] 36 root - INFO - FeatureTypeInference initialized with 1025 rows, 14 columns
+[ 2025-12-20 20:30:50,151 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-20 20:30:50,152 ] 54 root - INFO - Feature types inferred: 13 features classified
+[ 2025-12-20 20:30:50,152 ] 34 root - INFO - OutlierDetector initialized with 1025 rows
+[ 2025-12-20 20:30:50,152 ] 186 root - INFO - ConstantFeatureDetector initialized (threshold=0.99)
+[ 2025-12-20 20:30:50,152 ] 69 root - INFO - Starting comprehensive issue detection...
+[ 2025-12-20 20:30:50,152 ] 83 root - INFO - Detecting missing values...
+[ 2025-12-20 20:30:50,153 ] 142 root - INFO - No missing values detected
+[ 2025-12-20 20:30:50,153 ] 147 root - INFO - Detecting outliers (continuous_numeric features only)...
+[ 2025-12-20 20:30:50,157 ] 136 root - INFO - Outlier detection for 'age': 0 outliers (0.00%), severity=low
+[ 2025-12-20 20:30:50,161 ] 136 root - INFO - Outlier detection for 'trestbps': 30 outliers (2.93%), severity=medium
+[ 2025-12-20 20:30:50,164 ] 136 root - INFO - Outlier detection for 'chol': 16 outliers (1.56%), severity=medium
+[ 2025-12-20 20:30:50,167 ] 136 root - INFO - Outlier detection for 'thalach': 4 outliers (0.39%), severity=low
+[ 2025-12-20 20:30:50,169 ] 136 root - INFO - Outlier detection for 'oldpeak': 7 outliers (0.68%), severity=low
+[ 2025-12-20 20:30:50,170 ] 161 root - INFO - Detected outliers in 4 columns
+[ 2025-12-20 20:30:50,170 ] 194 root - INFO - Detected outliers in 4 columns
+[ 2025-12-20 20:30:50,170 ] 299 root - INFO - Detecting constant/near-constant features...
+[ 2025-12-20 20:30:50,176 ] 266 root - INFO - Detected 0 constant/near-constant features
+[ 2025-12-20 20:30:50,177 ] 338 root - INFO - No constant/near-constant features detected
+[ 2025-12-20 20:30:50,177 ] 203 root - INFO - Checking for class imbalance...
+[ 2025-12-20 20:30:50,178 ] 246 root - INFO - Classes are balanced (imbalance ratio: 1.05:1)
+[ 2025-12-20 20:30:50,178 ] 251 root - INFO - Detecting high cardinality features...
+[ 2025-12-20 20:30:50,178 ] 294 root - INFO - No high cardinality features detected
+[ 2025-12-20 20:30:50,179 ] 77 root - INFO - Issue detection complete. Found 4 issues
+[ 2025-12-20 20:30:58,858 ] 36 root - INFO - FeatureTypeInference initialized with 1025 rows, 14 columns
+[ 2025-12-20 20:30:58,910 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-20 20:30:58,911 ] 49 root - INFO - IssueDetector initialized for dataset with 1025 rows, 14 columns
+[ 2025-12-20 20:30:58,911 ] 36 root - INFO - FeatureTypeInference initialized with 1025 rows, 14 columns
+[ 2025-12-20 20:30:58,955 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-20 20:30:58,956 ] 54 root - INFO - Feature types inferred: 13 features classified
+[ 2025-12-20 20:30:58,956 ] 34 root - INFO - OutlierDetector initialized with 1025 rows
+[ 2025-12-20 20:30:58,956 ] 186 root - INFO - ConstantFeatureDetector initialized (threshold=0.99)
+[ 2025-12-20 20:30:58,956 ] 69 root - INFO - Starting comprehensive issue detection...
+[ 2025-12-20 20:30:58,956 ] 83 root - INFO - Detecting missing values...
+[ 2025-12-20 20:30:58,958 ] 142 root - INFO - No missing values detected
+[ 2025-12-20 20:30:58,959 ] 147 root - INFO - Detecting outliers (continuous_numeric features only)...
+[ 2025-12-20 20:30:58,963 ] 136 root - INFO - Outlier detection for 'age': 0 outliers (0.00%), severity=low
+[ 2025-12-20 20:30:58,968 ] 136 root - INFO - Outlier detection for 'trestbps': 30 outliers (2.93%), severity=medium
+[ 2025-12-20 20:30:58,973 ] 136 root - INFO - Outlier detection for 'chol': 16 outliers (1.56%), severity=medium
+[ 2025-12-20 20:30:58,978 ] 136 root - INFO - Outlier detection for 'thalach': 4 outliers (0.39%), severity=low
+[ 2025-12-20 20:30:58,984 ] 136 root - INFO - Outlier detection for 'oldpeak': 7 outliers (0.68%), severity=low
+[ 2025-12-20 20:30:58,985 ] 161 root - INFO - Detected outliers in 4 columns
+[ 2025-12-20 20:30:58,985 ] 194 root - INFO - Detected outliers in 4 columns
+[ 2025-12-20 20:30:58,985 ] 299 root - INFO - Detecting constant/near-constant features...
+[ 2025-12-20 20:30:58,997 ] 266 root - INFO - Detected 0 constant/near-constant features
+[ 2025-12-20 20:30:58,997 ] 338 root - INFO - No constant/near-constant features detected
+[ 2025-12-20 20:30:58,997 ] 203 root - INFO - Checking for class imbalance...
+[ 2025-12-20 20:30:58,999 ] 246 root - INFO - Classes are balanced (imbalance ratio: 1.05:1)
+[ 2025-12-20 20:30:58,999 ] 251 root - INFO - Detecting high cardinality features...
+[ 2025-12-20 20:30:58,999 ] 294 root - INFO - No high cardinality features detected
+[ 2025-12-20 20:30:58,999 ] 77 root - INFO - Issue detection complete. Found 4 issues
+[ 2025-12-20 20:31:01,385 ] 36 root - INFO - FeatureTypeInference initialized with 1025 rows, 14 columns
+[ 2025-12-20 20:31:01,430 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-20 20:31:01,430 ] 49 root - INFO - IssueDetector initialized for dataset with 1025 rows, 14 columns
+[ 2025-12-20 20:31:01,431 ] 36 root - INFO - FeatureTypeInference initialized with 1025 rows, 14 columns
+[ 2025-12-20 20:31:01,470 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-20 20:31:01,471 ] 54 root - INFO - Feature types inferred: 13 features classified
+[ 2025-12-20 20:31:01,471 ] 34 root - INFO - OutlierDetector initialized with 1025 rows
+[ 2025-12-20 20:31:01,471 ] 186 root - INFO - ConstantFeatureDetector initialized (threshold=0.99)
+[ 2025-12-20 20:31:01,472 ] 69 root - INFO - Starting comprehensive issue detection...
+[ 2025-12-20 20:31:01,472 ] 83 root - INFO - Detecting missing values...
+[ 2025-12-20 20:31:01,474 ] 142 root - INFO - No missing values detected
+[ 2025-12-20 20:31:01,474 ] 147 root - INFO - Detecting outliers (continuous_numeric features only)...
+[ 2025-12-20 20:31:01,478 ] 136 root - INFO - Outlier detection for 'age': 0 outliers (0.00%), severity=low
+[ 2025-12-20 20:31:01,483 ] 136 root - INFO - Outlier detection for 'trestbps': 30 outliers (2.93%), severity=medium
+[ 2025-12-20 20:31:01,490 ] 136 root - INFO - Outlier detection for 'chol': 16 outliers (1.56%), severity=medium
+[ 2025-12-20 20:31:01,494 ] 136 root - INFO - Outlier detection for 'thalach': 4 outliers (0.39%), severity=low
+[ 2025-12-20 20:31:01,500 ] 136 root - INFO - Outlier detection for 'oldpeak': 7 outliers (0.68%), severity=low
+[ 2025-12-20 20:31:01,500 ] 161 root - INFO - Detected outliers in 4 columns
+[ 2025-12-20 20:31:01,501 ] 194 root - INFO - Detected outliers in 4 columns
+[ 2025-12-20 20:31:01,501 ] 299 root - INFO - Detecting constant/near-constant features...
+[ 2025-12-20 20:31:01,512 ] 266 root - INFO - Detected 0 constant/near-constant features
+[ 2025-12-20 20:31:01,512 ] 338 root - INFO - No constant/near-constant features detected
+[ 2025-12-20 20:31:01,512 ] 203 root - INFO - Checking for class imbalance...
+[ 2025-12-20 20:31:01,514 ] 246 root - INFO - Classes are balanced (imbalance ratio: 1.05:1)
+[ 2025-12-20 20:31:01,514 ] 251 root - INFO - Detecting high cardinality features...
+[ 2025-12-20 20:31:01,514 ] 294 root - INFO - No high cardinality features detected
+[ 2025-12-20 20:31:01,515 ] 77 root - INFO - Issue detection complete. Found 4 issues
+[ 2025-12-20 20:31:03,310 ] 36 root - INFO - FeatureTypeInference initialized with 1025 rows, 14 columns
+[ 2025-12-20 20:31:03,347 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-20 20:31:03,347 ] 49 root - INFO - IssueDetector initialized for dataset with 1025 rows, 14 columns
+[ 2025-12-20 20:31:03,347 ] 36 root - INFO - FeatureTypeInference initialized with 1025 rows, 14 columns
+[ 2025-12-20 20:31:03,371 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-20 20:31:03,371 ] 54 root - INFO - Feature types inferred: 13 features classified
+[ 2025-12-20 20:31:03,371 ] 34 root - INFO - OutlierDetector initialized with 1025 rows
+[ 2025-12-20 20:31:03,371 ] 186 root - INFO - ConstantFeatureDetector initialized (threshold=0.99)
+[ 2025-12-20 20:31:03,371 ] 69 root - INFO - Starting comprehensive issue detection...
+[ 2025-12-20 20:31:03,371 ] 83 root - INFO - Detecting missing values...
+[ 2025-12-20 20:31:03,372 ] 142 root - INFO - No missing values detected
+[ 2025-12-20 20:31:03,373 ] 147 root - INFO - Detecting outliers (continuous_numeric features only)...
+[ 2025-12-20 20:31:03,375 ] 136 root - INFO - Outlier detection for 'age': 0 outliers (0.00%), severity=low
+[ 2025-12-20 20:31:03,378 ] 136 root - INFO - Outlier detection for 'trestbps': 30 outliers (2.93%), severity=medium
+[ 2025-12-20 20:31:03,380 ] 136 root - INFO - Outlier detection for 'chol': 16 outliers (1.56%), severity=medium
+[ 2025-12-20 20:31:03,382 ] 136 root - INFO - Outlier detection for 'thalach': 4 outliers (0.39%), severity=low
+[ 2025-12-20 20:31:03,384 ] 136 root - INFO - Outlier detection for 'oldpeak': 7 outliers (0.68%), severity=low
+[ 2025-12-20 20:31:03,384 ] 161 root - INFO - Detected outliers in 4 columns
+[ 2025-12-20 20:31:03,385 ] 194 root - INFO - Detected outliers in 4 columns
+[ 2025-12-20 20:31:03,385 ] 299 root - INFO - Detecting constant/near-constant features...
+[ 2025-12-20 20:31:03,389 ] 266 root - INFO - Detected 0 constant/near-constant features
+[ 2025-12-20 20:31:03,389 ] 338 root - INFO - No constant/near-constant features detected
+[ 2025-12-20 20:31:03,389 ] 203 root - INFO - Checking for class imbalance...
+[ 2025-12-20 20:31:03,390 ] 246 root - INFO - Classes are balanced (imbalance ratio: 1.05:1)
+[ 2025-12-20 20:31:03,390 ] 251 root - INFO - Detecting high cardinality features...
+[ 2025-12-20 20:31:03,391 ] 294 root - INFO - No high cardinality features detected
+[ 2025-12-20 20:31:03,391 ] 77 root - INFO - Issue detection complete. Found 4 issues
+[ 2025-12-20 20:31:15,912 ] 28 root - INFO - Entered the data ingestion component
+[ 2025-12-20 20:31:15,954 ] 34 root - INFO - Saved raw dataset to artifacts
+[ 2025-12-20 20:31:15,975 ] 40 root - INFO - Saved train/test splits to artifacts
+[ 2025-12-20 20:31:42,402 ] 46 root - INFO - Generated EDA report
+[ 2025-12-20 20:31:42,428 ] 36 root - INFO - FeatureTypeInference initialized with 1025 rows, 14 columns
+[ 2025-12-20 20:31:42,535 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-20 20:31:42,537 ] 42 root - INFO - PreprocessingApplicator initialized with 1025 rows, 14 columns
+[ 2025-12-20 20:31:42,538 ] 181 root - INFO - Applying outlier handling...
+[ 2025-12-20 20:31:42,546 ] 254 root - INFO - Capped 30 outliers in 'trestbps'
+[ 2025-12-20 20:31:42,553 ] 254 root - INFO - Capped 16 outliers in 'chol'
+[ 2025-12-20 20:31:42,560 ] 254 root - INFO - Capped 4 outliers in 'thalach'
+[ 2025-12-20 20:31:42,566 ] 254 root - INFO - Capped 7 outliers in 'oldpeak'
+[ 2025-12-20 20:31:42,566 ] 332 root - INFO - Applying class imbalance handling: no action...
+[ 2025-12-20 20:31:42,580 ] 72 root - INFO - Categorical columns: []
+[ 2025-12-20 20:31:42,581 ] 73 root - INFO - Numerical columns: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal']
+[ 2025-12-20 20:32:30,731 ] 37 root - INFO - Split training and test input data
+[ 2025-12-20 20:33:11,189 ] 91 root - INFO - Search params for Random Forest: {'max_depth': 10, 'n_estimators': 128}
+[ 2025-12-20 20:33:11,416 ] 127 root - INFO - Random Forest - Acc: 1.0000, Prec: 1.0000, Rec: 1.0000, F1: 1.0000, Time: 40.46s
+[ 2025-12-20 20:33:12,589 ] 91 root - INFO - Search params for Decision Tree: {'criterion': 'entropy', 'max_depth': None}
+[ 2025-12-20 20:33:12,632 ] 127 root - INFO - Decision Tree - Acc: 1.0000, Prec: 1.0000, Rec: 1.0000, F1: 1.0000, Time: 1.17s
+[ 2025-12-20 20:33:12,966 ] 91 root - INFO - Search params for Logistic Regression: {'C': 0.5, 'penalty': 'l2', 'solver': 'lbfgs'}
+[ 2025-12-20 20:33:13,040 ] 127 root - INFO - Logistic Regression - Acc: 0.8098, Prec: 0.7619, Rec: 0.9143, F1: 0.8312, Time: 0.33s
+[ 2025-12-20 20:33:25,385 ] 91 root - INFO - Search params for AdaBoost Classifier: {'learning_rate': 1.0, 'n_estimators': 128}
+[ 2025-12-20 20:33:25,553 ] 127 root - INFO - AdaBoost Classifier - Acc: 0.9171, Prec: 0.9074, Rec: 0.9333, F1: 0.9202, Time: 12.35s
+[ 2025-12-20 20:33:26,627 ] 91 root - INFO - Search params for K-Nearest Neighbors: {'metric': 'euclidean', 'n_neighbors': 3}
+[ 2025-12-20 20:33:26,702 ] 127 root - INFO - K-Nearest Neighbors - Acc: 0.9463, Prec: 0.9352, Rec: 0.9619, F1: 0.9484, Time: 1.07s
+[ 2025-12-20 20:33:26,762 ] 127 root - INFO - Naive Bayes - Acc: 0.8244, Prec: 0.7949, Rec: 0.8857, F1: 0.8378, Time: 0.01s
+[ 2025-12-20 20:33:29,758 ] 91 root - INFO - Search params for Support Vector Machine: {'C': 2.0, 'kernel': 'rbf'}
+[ 2025-12-20 20:33:29,843 ] 127 root - INFO - Support Vector Machine - Acc: 0.9561, Prec: 0.9444, Rec: 0.9714, F1: 0.9577, Time: 3.00s
+[ 2025-12-20 20:33:29,939 ] 113 root - WARNING - OneR Classifier lacks predict_proba; ROC-AUC skipped
+[ 2025-12-20 20:33:29,939 ] 127 root - INFO - OneR Classifier - Acc: 0.6976, Prec: 0.6972, Rec: 0.7238, F1: 0.7103, Time: 0.06s
+[ 2025-12-20 20:33:29,940 ] 108 root - INFO - Best found model: Random Forest
+[ 2025-12-20 20:33:35,737 ] 705 root - WARNING - Could not generate P-R curve for OneR Classifier: 'OneRClassifier' object has no attribute 'predict_proba'
+[ 2025-12-20 20:35:26,696 ] 705 root - WARNING - Could not generate P-R curve for OneR Classifier: 'OneRClassifier' object has no attribute 'predict_proba'
