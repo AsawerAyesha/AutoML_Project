@@ -81,7 +81,7 @@ def test_report_generator_with_preprocessing_log():
     assert 'class_imbalance_handling' in html, "Class imbalance action not in report"
     assert 'Imputed 5 missing values' in html, "Description not in report"
     
-    print("✅ Preprocessing log properly integrated into report")
+    print(" Preprocessing log properly integrated into report")
 
 
 def test_report_generator_with_feature_types():
@@ -148,7 +148,7 @@ def test_report_generator_with_feature_types():
     assert 'categorical_encoded' in html, "Categorical type not in report"
     assert 'age' in html and 'income' in html, "Feature names missing"
     
-    print("✅ Feature types properly displayed in report")
+    print(" Feature types properly displayed in report")
 
 
 def test_report_generator_with_all_metrics():
@@ -227,7 +227,7 @@ def test_report_generator_with_all_metrics():
     assert 'Confusion Matrices by Model' in html, "Confusion matrix section missing"
     assert '45' in html and '47' in html, "Confusion matrix values not displayed"
     
-    print("✅ All metrics properly displayed in report")
+    print("All metrics properly displayed in report")
 
 
 def test_report_generator_section_numbering():
@@ -278,14 +278,14 @@ def test_report_generator_section_numbering():
     assert '<h2>7. Model Configurations' in html, "Section 7 wrong"
     assert '<h2>8. Model Performance Comparison' in html, "Section 8 wrong"
     assert '<h2>9. Confusion Matrices by Model' in html, "Section 9 wrong"
-    assert '<h2>10. 🏆 Best Model Selected' in html, "Section 10 wrong"
+    assert '<h2>10.  Best Model Selected' in html, "Section 10 wrong"
     
-    print("✅ All sections properly numbered from 1-10")
+    print(" All sections properly numbered from 1-10")
 
 
 if __name__ == "__main__":
     print("\n" + "="*70)
-    print("🧪 STEP 10: REPORT GENERATOR COMPREHENSIVE TEST")
+    print(" STEP 10: REPORT GENERATOR COMPREHENSIVE TEST")
     print("="*70)
     
     test_report_generator_with_preprocessing_log()
@@ -294,12 +294,12 @@ if __name__ == "__main__":
     test_report_generator_section_numbering()
     
     print("\n" + "="*70)
-    print("✅ ALL TESTS PASSED - STEP 10 COMPLETE")
+    print(" ALL TESTS PASSED - STEP 10 COMPLETE")
     print("="*70)
-    print("\n📊 Report Generator successfully enhanced with:")
+    print("\n Report Generator successfully enhanced with:")
     print("  - Preprocessing decisions log")
     print("  - Feature type analysis section")
     print("  - Complete metrics display (Accuracy, Precision, Recall, F1, ROC-AUC, Time)")
     print("  - Confusion matrices for all models")
     print("  - Proper section numbering (1-10)")
-    print("\n🎉 10-STEP AUTOML PIPELINE COMPLETE!")
+    print("\n 10-STEP AUTOML PIPELINE COMPLETE!")

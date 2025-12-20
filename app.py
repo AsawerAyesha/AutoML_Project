@@ -90,11 +90,11 @@ def render_progress_bar(active_step_index):
     for i, step in enumerate(steps):
         with cols[i]:
             if i == active_step_index:
-                st.markdown(f"**🔵 {step}**")  # Active
+                st.markdown(f"** {step}**")  # Active
             elif i < active_step_index:
-                st.markdown(f"✅ {step}")      # Completed
+                st.markdown(f" {step}")      # Completed
             else:
-                st.markdown(f"<span style='color:grey'>⚪ {step}</span>", unsafe_allow_html=True) # Future
+                st.markdown(f"<span style='color:grey'> {step}</span>", unsafe_allow_html=True) # Future
     st.divider()
 
 # ============================================================================
@@ -102,7 +102,7 @@ def render_progress_bar(active_step_index):
 # ============================================================================
 def page_upload_and_info():
     render_progress_bar(0)
-    st.title("📊 Data Ingestion Hub")
+    st.title(" Data Ingestion Hub")
     st.markdown("Upload your dataset to begin the automated classification pipeline.")
     
     col1, col2 = st.columns([1, 2])
@@ -122,9 +122,9 @@ def page_upload_and_info():
                     os.makedirs('artifacts', exist_ok=True)
                     df.to_csv('artifacts/data.csv', index=False)
                     
-                    st.success(f"✅ Loaded: {uploaded_file.name}")
+                    st.success(f" Loaded: {uploaded_file.name}")
                 except Exception as e:
-                    st.error(f"❌ Error: {str(e)}")
+                    st.error(f" Error: {str(e)}")
                     return
     
     with col2:
@@ -163,12 +163,12 @@ def page_upload_and_info():
 
             col_btn, _ = st.columns([1, 3])
             with col_btn:
-                if st.button("Proceed to Analysis ➡️", type="primary", use_container_width=True):
+                if st.button("Proceed to Analysis ", type="primary", use_container_width=True):
                     st.session_state.current_page = "page_eda"
                     st.rerun()
         else:
             # Placeholder content
-            st.info("👈 Please upload a CSV file to see dataset details.")
+            st.info(" Please upload a CSV file to see dataset details.")
             st.markdown("""
             **Supported Format:** CSV
             \n**Requirements:**
@@ -181,10 +181,10 @@ def page_upload_and_info():
 # ============================================================================
 def page_eda():
     render_progress_bar(1)
-    st.title("📈 Exploratory Data Analysis")
+    st.title(" Exploratory Data Analysis")
     
     if not st.session_state.df_uploaded:
-        st.error("⚠️ No data found. Please upload a dataset first.")
+        st.error(" No data found. Please upload a dataset first.")
         return
     
     df = st.session_state.df
@@ -197,7 +197,7 @@ def page_eda():
     eda_gen = EDAGenerator(df, target_column=target_col, test_size=test_size)
     
     # Modern Tab interface
-    tab_names = ["📋 Overview", "📊 Missing Data", "🔍 Outliers", "🔥 Correlations", "📉 Distributions", "📦 Categorical", "✂️ Split Info"]
+    tab_names = [" Overview", " Missing Data", " Outliers", " Correlations", " Distributions", " Categorical", " Split Info"]
     tabs = st.tabs(tab_names)
     
     with tabs[0]: # Overview
@@ -218,7 +218,7 @@ def page_eda():
             with st.expander("View Missing Data Details"):
                 st.dataframe(pd.DataFrame(missing_analysis['per_column']), use_container_width=True)
         else:
-            st.success("✨ This dataset is clean! No missing values detected.")
+            st.success(" This dataset is clean! No missing values detected.")
             
     with tabs[2]: # Outliers
         outlier_data, outlier_figs = eda_gen.generate_outlier_analysis()
@@ -268,10 +268,10 @@ def page_eda():
     # Navigation Footer
     st.divider()
     c1, _, c2 = st.columns([1, 4, 1])
-    if c1.button("⬅️ Back"):
+    if c1.button(" Back"):
         st.session_state.current_page = "page_upload"
         st.rerun()
-    if c2.button("Next: Quality Check ➡️", type="primary"):
+    if c2.button("Next: Quality Check ", type="primary"):
         st.session_state.current_page = "page_issues"
         st.rerun()
 
@@ -280,10 +280,10 @@ def page_eda():
 # ============================================================================
 def page_issue_detection():
     render_progress_bar(2)
-    st.title("⚠️ Data Quality & Integrity Check")
+    st.title(" Data Quality & Integrity Check")
     
     if not st.session_state.df_uploaded:
-        st.error("⚠️ No data loaded.")
+        st.error(" No data loaded.")
         return
         
     df = st.session_state.df
@@ -303,7 +303,7 @@ def page_issue_detection():
     
     if not issues:
         st.canvas_balloons()
-        st.success("✅ Excellent! No significant data quality issues detected.")
+        st.success(" Excellent! No significant data quality issues detected.")
     else:
         st.warning(f"Found {len(issues)} potential issues requiring attention.")
         
@@ -315,7 +315,7 @@ def page_issue_detection():
             issue_groups[grp].append(issue)
             
         for grp_name, grp_issues in issue_groups.items():
-            with st.expander(f"🔴 {grp_name} ({len(grp_issues)})", expanded=True):
+            with st.expander(f" {grp_name} ({len(grp_issues)})", expanded=True):
                 for i, issue in enumerate(grp_issues):
                     col_issue, col_ftype, col_fix = st.columns([2, 1, 1])
                     with col_issue:
@@ -350,10 +350,10 @@ def page_issue_detection():
 
     # Navigation Footer
     c1, _, c2 = st.columns([1, 4, 1])
-    if c1.button("⬅️ Back"):
+    if c1.button(" Back"):
         st.session_state.current_page = "page_eda"
         st.rerun()
-    if c2.button("Next: Configure ➡️", type="primary"):
+    if c2.button("Next: Configure ", type="primary"):
         st.session_state.current_page = "page_preprocessing"
         st.rerun()
 
@@ -362,14 +362,14 @@ def page_issue_detection():
 # ============================================================================
 def page_preprocessing_config():
     render_progress_bar(3)
-    st.title("⚙️ Pipeline Configuration")
+    st.title(" Pipeline Configuration")
     st.markdown("Customize how the AutoML pipeline handles data transformation.")
 
     with st.container(border=True):
         col1, col2 = st.columns(2)
         
         with col1:
-            st.subheader("🧹 Cleaning Strategy")
+            st.subheader(" Cleaning Strategy")
             st.session_state.preprocessing_config['missing_strategy'] = st.selectbox(
                 "Missing Values Imputation",
                 ["median", "mean", "mode", "constant"],
@@ -382,7 +382,7 @@ def page_preprocessing_config():
             )
             
         with col2:
-            st.subheader("📐 Feature Engineering")
+            st.subheader(" Feature Engineering")
             st.session_state.preprocessing_config['scaling_strategy'] = st.selectbox(
                 "Feature Scaling",
                 ["StandardScaler", "MinMaxScaler"],
@@ -395,20 +395,20 @@ def page_preprocessing_config():
             )
 
         st.divider()
-        st.subheader("✂️ Validation Split")
+        st.subheader(" Validation Split")
         split_val = st.slider("Test Set Percentage", 10, 40, 20, 5)
         st.session_state.preprocessing_config['test_size'] = split_val / 100
         st.caption(f"Training: {100-split_val}% | Testing: {split_val}%")
 
     # Navigation Footer
     c1, _, c2 = st.columns([1, 4, 1])
-    if c1.button("⬅️ Back"):
+    if c1.button(" Back"):
         st.session_state.current_page = "page_issues"
         st.rerun()
-    if c2.button("Start Pipeline 🚀", type="primary"):
-        with st.status("🔄 Initializing Pipeline...", expanded=True) as status:
+    if c2.button("Start Pipeline ", type="primary"):
+        with st.status(" Initializing Pipeline...", expanded=True) as status:
             try:
-                st.write("📥 Ingesting Data...")
+                st.write(" Ingesting Data...")
                 data_ingestor = DataIngestion()
                 # Pass test_size from config
                 test_size = st.session_state.preprocessing_config.get('test_size', 0.2)
@@ -420,7 +420,7 @@ def page_preprocessing_config():
                 st.session_state.test_path = test_path
                 st.session_state.eda_report_path = eda_path
                 
-                st.write("🛠️ Applying Transformations...")
+                st.write(" Applying Transformations...")
                 data_transformer = DataTransformation(
                     imputation_strategy=st.session_state.preprocessing_config.get('missing_strategy', 'median'),
                     scaling_strategy=st.session_state.preprocessing_config.get('scaling_strategy', 'StandardScaler'),
@@ -443,18 +443,18 @@ def page_preprocessing_config():
                 st.session_state.train_array = train_arr
                 st.session_state.test_array = test_arr
                 
-                st.write(f"✅ Preprocessing applied: {len(preprocessing_log)} steps")
+                st.write(f"Preprocessing applied: {len(preprocessing_log)} steps")
                 with st.expander("View Preprocessing Log"):
                     for step in preprocessing_log:
                         st.json(step)
                 
-                status.update(label="✅ Preprocessing Complete!", state="complete", expanded=False)
+                status.update(label=" Preprocessing Complete!", state="complete", expanded=False)
                 time.sleep(1)
                 st.session_state.current_page = "page_model_training"
                 st.rerun()
                 
             except Exception as e:
-                status.update(label="❌ Pipeline Failed", state="error")
+                status.update(label=" Pipeline Failed", state="error")
                 st.error(f"Error: {str(e)}")
                 logging.error(f"Pipeline Error: {str(e)}")
 
@@ -463,10 +463,10 @@ def page_preprocessing_config():
 # ============================================================================
 def page_model_training():
     render_progress_bar(4)
-    st.title("🧠 Model Training Lab")
+    st.title(" Model Training Lab")
     
     if st.session_state.train_array is None:
-        st.warning("⚠️ Pipeline not initialized. Go back to Configuration.")
+        st.warning(" Pipeline not initialized. Go back to Configuration.")
         return
 
     st.markdown("""
@@ -481,16 +481,16 @@ def page_model_training():
         for i, m in enumerate(models):
             cols[i%4].markdown(f"- {m}")
             
-    if st.button("▶️ Begin Training Sequence", type="primary", use_container_width=True):
-        with st.status("🤖 AutoML Engine Running...", expanded=True) as status:
+    if st.button(" Begin Training Sequence", type="primary", use_container_width=True):
+        with st.status(" AutoML Engine Running...", expanded=True) as status:
             try:
                 model_trainer = ModelTrainer()
                 
-                st.write("⚙️ Training Base Models...")
+                st.write(" Training Base Models...")
                 # Simulate steps for UX
                 time.sleep(0.5)
                 
-                st.write("🔧 Optimizing Hyperparameters...")
+                st.write(" Optimizing Hyperparameters...")
                 
                 # Train model and capture results
                 train_results = model_trainer.initiate_model_trainer(
@@ -510,8 +510,8 @@ def page_model_training():
                 st.session_state.X_test = test_array[:, :-1]
                 st.session_state.y_test = test_array[:, -1]
                 
-                st.write("📊 Calculating Metrics...")
-                status.update(label="✅ Training Successfully Completed!", state="complete", expanded=False)
+                st.write(" Calculating Metrics...")
+                status.update(label=" Training Successfully Completed!", state="complete", expanded=False)
                 time.sleep(1)
                 st.session_state.current_page = "page_comparison"
                 st.rerun()
@@ -528,7 +528,7 @@ def page_model_comparison():
     from sklearn.metrics import roc_curve, auc
     
     render_progress_bar(5)
-    st.title("🏆 Leaderboard & Analysis")
+    st.title(" Leaderboard & Analysis")
     
     if not st.session_state.model_results:
         st.error("No results found.")
@@ -569,7 +569,7 @@ def page_model_comparison():
         best_model = df_results.loc[best_idx]
         st.session_state.best_model = best_model
         
-        st.markdown("### 🥇 Champion Model")
+        st.markdown("###  Champion Model")
         with st.container(border=True):
             col1, col2, col3, col4 = st.columns(4)
             col1.metric("Algorithm", best_model['Model'])
@@ -578,7 +578,7 @@ def page_model_comparison():
             col4.metric("Recall", f"{best_model['recall']:.4f}")
 
     # 2. Detailed Table with Styling
-    st.markdown("### 📋 Comparative Metrics")
+    st.markdown("###  Comparative Metrics")
     
     # Get numeric columns only (exclude non-numeric/object columns and non-serializable)
     numeric_cols = df_results.select_dtypes(include=['number']).columns.tolist()
@@ -598,7 +598,7 @@ def page_model_comparison():
     st.dataframe(styled_df, use_container_width=True, hide_index=True)
 
     # CSV Download Button
-    st.markdown("### 📥 Export Results")
+    st.markdown("###  Export Results")
     col1, col2, col3 = st.columns([2, 1, 1])
     
     # Prepare CSV data (exclude non-serializable columns)
@@ -608,7 +608,7 @@ def page_model_comparison():
     csv_data = csv_df.to_csv(index=False)
     
     col1.download_button(
-        label="📥 Download Metrics as CSV",
+        label=" Download Metrics as CSV",
         data=csv_data,
         file_name=f"model_comparison_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
         mime="text/csv",
@@ -616,7 +616,7 @@ def page_model_comparison():
     )
 
     # 3. Visual Comparison
-    st.markdown("### 📊 Metric Analysis")
+    st.markdown("###  Metric Analysis")
     available_metrics = [m for m in ['f1_score', 'accuracy', 'precision', 'recall', 'training_time'] if m in df_results.columns]
     metric = st.selectbox("Select Metric to Visualize", available_metrics) if available_metrics else None
     
@@ -625,7 +625,7 @@ def page_model_comparison():
         st.bar_chart(chart_data.set_index('Model'), color="#2C3E50")
 
     # 4. ROC Curves (for binary classification)
-    st.markdown("### 📈 ROC Curves (Binary Classification)")
+    st.markdown("###  ROC Curves (Binary Classification)")
     
     # Check if we have binary classification and roc_auc values
     if 'roc_auc' in df_results.columns:
@@ -668,14 +668,14 @@ def page_model_comparison():
                 
                 st.pyplot(fig)
             else:
-                st.info("ℹ️ Test data not available for ROC curve visualization. ROC-AUC values are shown in the metrics table.")
+                st.info(" Test data not available for ROC curve visualization. ROC-AUC values are shown in the metrics table.")
         else:
-            st.info("ℹ️ ROC-AUC only available for binary classification problems.")
+            st.info(" ROC-AUC only available for binary classification problems.")
     else:
-        st.info("ℹ️ ROC-AUC values not computed (multiclass classification detected).")
+        st.info("ROC-AUC values not computed (multiclass classification detected).")
 
     # 5. Precision-Recall Curves (for binary classification)
-    st.markdown("### 📉 Precision-Recall Curves (Binary Classification)")
+    st.markdown("###  Precision-Recall Curves (Binary Classification)")
     
     if hasattr(st.session_state, 'y_test') and hasattr(st.session_state, 'X_test'):
         from sklearn.metrics import precision_recall_curve, average_precision_score
@@ -716,12 +716,12 @@ def page_model_comparison():
             except Exception as e:
                 st.warning(f"Could not generate Precision-Recall curves: {str(e)}")
         else:
-            st.info("ℹ️ Precision-Recall curves only available for binary classification problems.")
+            st.info(" Precision-Recall curves only available for binary classification problems.")
     else:
-        st.info("ℹ️ Test data not available for P-R curve visualization.")
+        st.info(" Test data not available for P-R curve visualization.")
 
     # 6. Confusion Matrices
-    st.markdown("### 📊 Confusion Matrices")
+    st.markdown("###  Confusion Matrices")
     
     if hasattr(st.session_state, 'y_test'):
         y_test = st.session_state.y_test
@@ -754,7 +754,7 @@ def page_model_comparison():
                         st.pyplot(fig_cm)
 
     # 7. Feature Importance (for tree-based and ensemble models)
-    st.markdown("### 🌳 Feature Importance Analysis")
+    st.markdown("###  Feature Importance Analysis")
     
     tree_based_models = ['Random Forest', 'Decision Tree', 'AdaBoost Classifier']
     tree_models_available = [m for m in tree_based_models if m in results.keys()]
@@ -789,16 +789,16 @@ def page_model_comparison():
                 
                 st.pyplot(fig_fi)
             else:
-                st.info(f"ℹ️ {selected_model} does not have feature importance scores.")
+                st.info(f" {selected_model} does not have feature importance scores.")
     else:
-        st.info("ℹ️ Feature importance visualization only available for tree-based models (Random Forest, Decision Tree, AdaBoost).")
+        st.info(" Feature importance visualization only available for tree-based models (Random Forest, Decision Tree, AdaBoost).")
 
     # Navigation Footer
     c1, _, c2 = st.columns([1, 4, 1])
-    if c1.button("⬅️ Retrain"):
+    if c1.button(" Retrain"):
         st.session_state.current_page = "page_model_training"
         st.rerun()
-    if c2.button("Generate Report 📑", type="primary"):
+    if c2.button("Generate Report ", type="primary"):
         st.session_state.current_page = "page_report"
         st.rerun()
 
@@ -807,10 +807,10 @@ def page_model_comparison():
 # ============================================================================
 def page_report_generation():
     render_progress_bar(6)
-    st.title("📑 Final Execution Report")
+    st.title("Final Execution Report")
     
     with st.container(border=True):
-        st.success("✅ The comprehensive pipeline report has been compiled.")
+        st.success(" The comprehensive pipeline report has been compiled.")
         st.markdown("This report includes:")
         st.markdown("""
         - Data Health Summary
@@ -834,7 +834,7 @@ def page_report_generation():
             html_report = report_gen.generate_html_report()
             
             st.download_button(
-                label="📥 Download HTML Report",
+                label=" Download HTML Report",
                 data=html_report,
                 file_name=f"AutoML_Report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.html",
                 mime="text/html",
@@ -846,7 +846,7 @@ def page_report_generation():
         except Exception as e:
             st.error(f"Generation Error: {str(e)}")
 
-    if st.button("🔄 Reset Application", type="secondary"):
+    if st.button(" Reset Application", type="secondary"):
         for key in st.session_state.keys():
             del st.session_state[key]
         initialize_session_state()
@@ -860,27 +860,27 @@ def main():
     
     # --- Professional Sidebar ---
     with st.sidebar:
-        st.title("🤖 AutoML Pro")
+        st.title(" AutoML Pro")
         st.caption("v2.0 | Enterprise Edition")
         st.divider()
         
         # Status Badge
         if st.session_state.df_uploaded:
-            st.info(f"📁 Data: Loaded\n({len(st.session_state.df)} rows)")
+            st.info(f" Data: Loaded\n({len(st.session_state.df)} rows)")
         else:
-            st.warning("📁 Data: Not Loaded")
+            st.warning(" Data: Not Loaded")
             
         st.divider()
         
         # Navigation Map
         pages = {
-            "page_upload": "📊 Upload & Info",
-            "page_eda": "📈 Analysis (EDA)",
-            "page_issues": "⚠️ Quality Check",
-            "page_preprocessing": "⚙️ Configuration",
-            "page_model_training": "🧠 Training Lab",
-            "page_comparison": "🏆 Leaderboard",
-            "page_report": "📑 Final Report"
+            "page_upload": " Upload & Info",
+            "page_eda": " Analysis (EDA)",
+            "page_issues": " Quality Check",
+            "page_preprocessing": " Configuration",
+            "page_model_training": " Training Lab",
+            "page_comparison": " Leaderboard",
+            "page_report": " Final Report"
         }
         
         # Auto-select based on session state

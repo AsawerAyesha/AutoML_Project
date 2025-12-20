@@ -28,7 +28,7 @@ def test_eda_with_test_size():
         print(f"  - test_size={test_size}: Train={summary['Train Samples']}, Test={summary['Test Samples']}, Ratio={actual_ratio:.2%}")
         assert abs(actual_ratio - test_size) < 0.01, f"Test size mismatch: expected {test_size}, got {actual_ratio}"
     
-    print("  ✅ PASS: test_size correctly propagates to EDA")
+    print("  PASS: test_size correctly propagates to EDA")
 
 def test_feature_type_inference():
     """Test feature type inference for UI display"""
@@ -46,7 +46,7 @@ def test_feature_type_inference():
     
     assert len(feature_types) > 0, "No feature types inferred"
     assert all('type' in info for info in feature_types.values()), "Missing 'type' key in feature info"
-    print("  ✅ PASS: Feature types inferred successfully")
+    print("   PASS: Feature types inferred successfully")
 
 def test_data_transformation_with_user_decisions():
     """Test data transformation with user decisions and test_size"""
@@ -93,7 +93,7 @@ def test_data_transformation_with_user_decisions():
         assert len(preprocessing_log) > 0, "No preprocessing log generated"
         assert abs(actual_test_ratio - test_size) < 0.02, f"Test ratio mismatch: expected {test_size}, got {actual_test_ratio}"
     
-    print("  ✅ PASS: Data transformation with user decisions & test_size working")
+    print("   PASS: Data transformation with user decisions & test_size working")
 
 def test_metrics_dict_structure():
     """Test that metrics dict is properly structured for dashboard"""
@@ -142,7 +142,7 @@ def test_metrics_dict_structure():
             assert key in metrics, f"Missing key '{key}' in metrics for {model_name}"
             print(f"    • {key}: {type(metrics[key]).__name__}")
     
-    print("  ✅ PASS: Metrics dict structure valid for dashboard")
+    print("  PASS: Metrics dict structure valid for dashboard")
 
 def test_preprocessing_log_structure():
     """Test preprocessing log contains actionable information"""
@@ -175,7 +175,7 @@ def test_preprocessing_log_structure():
         assert 'action' in step, "Missing 'action' in preprocessing log entry"
         assert isinstance(step, dict), "Preprocessing log entry is not a dict"
     
-    print("  ✅ PASS: Preprocessing log properly structured for UI display")
+    print("  PASS: Preprocessing log properly structured for UI display")
 
 def main():
     print("\n" + "="*70)
@@ -190,11 +190,11 @@ def main():
         test_preprocessing_log_structure()
         
         print("\n" + "="*70)
-        print("✅ ALL TESTS PASSED - STEP 9 INTEGRATION COMPLETE")
+        print(" ALL TESTS PASSED - STEP 9 INTEGRATION COMPLETE")
         print("="*70)
         
     except Exception as e:
-        print(f"\n❌ TEST FAILED: {str(e)}")
+        print(f"\n TEST FAILED: {str(e)}")
         import traceback
         traceback.print_exc()
         sys.exit(1)

@@ -14,7 +14,7 @@ feature_types = inference.infer_types()
 # Initialize preprocessing applicator
 applicator = PreprocessingApplicator(df, feature_types, target_column='target')
 
-print(f"\n✅ STEP 3 Test: Preprocessing Applicator")
+print(f"\n STEP 3 Test: Preprocessing Applicator")
 print("="*80)
 
 # Test 1: Outlier capping (non-destructive)

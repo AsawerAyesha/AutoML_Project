@@ -112,7 +112,7 @@ class ReportGenerator:
         """Generate EDA findings from dataset analysis"""
         findings_html = """
         <div class="metric-box">
-            <h3>📊 Data Distribution & Quality Metrics</h3>
+            <h3>Data Distribution & Quality Metrics</h3>
             <ul>
         """
         
@@ -165,7 +165,7 @@ class ReportGenerator:
     def _generate_feature_types_section(self):
         """Generate feature type analysis section"""
         if not self.feature_types:
-            return "<p>⚠️ No feature type information available.</p>"
+            return "<p> No feature type information available.</p>"
         
         # Normalize feature types: handle both str and dict formats
         # Expected formats:
@@ -183,14 +183,14 @@ class ReportGenerator:
         
         html = """
         <div class="metric-box">
-            <h3>📊 Feature Type Distribution</h3>
+            <h3> Feature Type Distribution</h3>
             <ul>
         """
         
         for ftype, cols in sorted(type_counts.items()):
             html += f"<li><strong>{ftype}:</strong> {len(cols)} features</li>"
         
-        html += "</ul><h3>📋 Feature Type Details</h3><table><thead><tr><th>Feature</th><th>Type</th></tr></thead><tbody>"
+        html += "</ul><h3> Feature Type Details</h3><table><thead><tr><th>Feature</th><th>Type</th></tr></thead><tbody>"
         
         for col, ftype_name in sorted(normalized_items):
             html += f"<tr><td>{col}</td><td>{ftype_name}</td></tr>"
@@ -201,11 +201,11 @@ class ReportGenerator:
     def _generate_preprocessing_log(self):
         """Generate preprocessing decisions log"""
         if not self.preprocessing_log:
-            return "<p>⚠️ No preprocessing steps were logged.</p>"
+            return "<p> No preprocessing steps were logged.</p>"
         
         html = """
         <div class="metric-box">
-            <h3>🔄 Applied Preprocessing Steps</h3>
+            <h3>Applied Preprocessing Steps</h3>
             <table>
                 <thead>
                     <tr>
@@ -258,7 +258,7 @@ class ReportGenerator:
     def _generate_issues_table(self):
         """Helper to create HTML table for issues"""
         if not self.issues:
-            return "<p>✅ No data quality issues were detected.</p>"
+            return "<p> No data quality issues were detected.</p>"
         
         rows = ""
         for i, issue in enumerate(self.issues):
@@ -302,7 +302,7 @@ class ReportGenerator:
     def _generate_model_configs(self):
         """Generate model configurations and hyperparameters section"""
         if not self.model_results:
-            return "<p>⚠️ No model results available.</p>"
+            return "<p> No model results available.</p>"
         
         configs_html = ""
         
@@ -335,7 +335,7 @@ class ReportGenerator:
     def _generate_best_model_section(self):
         """Generate best model summary with detailed justification"""
         if self.best_model is None or (hasattr(self.best_model, 'empty') and self.best_model.empty):
-            return "<p>⚠️ No best model available.</p>"
+            return "<p> No best model available.</p>"
         
         model_name = self.best_model.get('Model', 'Unknown')
         # Handle both key formats
@@ -368,7 +368,7 @@ class ReportGenerator:
         # Generate justification
         justification = f"""
         <div class="justification">
-            <h4>📊 Performance Justification:</h4>
+            <h4> Performance Justification:</h4>
             <ul>
                 <li><strong>Ranking:</strong> #{rank} out of {total_models} models</li>
                 <li><strong>Primary Metric (F1-Score):</strong> {f1_score:.4f} - Balances precision and recall effectively</li>
@@ -379,7 +379,7 @@ class ReportGenerator:
                 <li><strong>Training Time:</strong> {training_time:.4f}s - Computational efficiency</li>
             </ul>
             
-            <h4>✅ Why This Model?</h4>
+            <h4> Why This Model?</h4>
             <p>This model achieved the <strong>highest F1-score</strong>, which represents the best balance between 
             precision and recall. In classification tasks, F1-score is crucial because it avoids the pitfall of 
             high accuracy with imbalanced classes. The model demonstrates robust generalization and reliable 
@@ -389,7 +389,7 @@ class ReportGenerator:
         
         return f"""
         <div class="best-model-box">
-            <h3>🏆 {model_name}</h3>
+            <h3> {model_name}</h3>
             <table style="width: 100%; margin-top: 15px;">
                 <tr>
                     <th>Metric</th>
@@ -424,7 +424,7 @@ class ReportGenerator:
     def _generate_confusion_matrices(self):
         """Generate confusion matrices for all models as HTML tables"""
         if not self.model_results:
-            return "<p>⚠️ No confusion matrices available.</p>"
+            return "<p> No confusion matrices available.</p>"
         
         cm_html = ""
         
@@ -459,12 +459,12 @@ class ReportGenerator:
         if cm_html:
             return f"<p><strong>Confusion matrices for each model:</strong></p>{cm_html}"
         else:
-            return "<p>⚠️ No confusion matrices available.</p>"
+            return "<p> No confusion matrices available.</p>"
 
     def _generate_model_table(self):
         """Helper to create HTML table for model results"""
         if not self.model_results:
-            return "<p>⚠️ No model results available.</p>"
+            return "<p> No model results available.</p>"
         
         # Convert dict to DataFrame for easier handling
         rows_list = []
