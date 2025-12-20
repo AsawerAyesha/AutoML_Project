@@ -1,0 +1,15 @@
+[ 2025-12-20 18:09:18,537 ] 36 root - INFO - FeatureTypeInference initialized with 1025 rows, 14 columns
+[ 2025-12-20 18:09:18,552 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-20 18:09:18,553 ] 42 root - INFO - PreprocessingApplicator initialized with 1025 rows, 14 columns
+[ 2025-12-20 18:09:18,553 ] 181 root - INFO - Applying outlier handling...
+[ 2025-12-20 18:09:18,558 ] 254 root - INFO - Capped 101 outliers in 'chol'
+[ 2025-12-20 18:09:18,560 ] 254 root - INFO - Capped 0 outliers in 'trestbps'
+[ 2025-12-20 18:09:18,564 ] 42 root - INFO - PreprocessingApplicator initialized with 1025 rows, 15 columns
+[ 2025-12-20 18:09:18,564 ] 270 root - INFO - Applying constant feature removal...
+[ 2025-12-20 18:09:18,576 ] 306 root - INFO - Dropped 1 constant features: ['mock_constant']
+[ 2025-12-20 18:09:18,583 ] 42 root - INFO - PreprocessingApplicator initialized with 1025 rows, 14 columns
+[ 2025-12-20 18:09:18,583 ] 55 root - INFO - Applying missing value imputation...
+[ 2025-12-20 18:09:18,587 ] 108 root - INFO - Imputed 6 missing values in 'age' with median=56.0000
+[ 2025-12-20 18:09:18,591 ] 125 root - INFO - Imputed 4 missing values in 'chol' with mean=242.6709
+[ 2025-12-20 18:09:18,593 ] 332 root - INFO - Applying class imbalance handling: class_weights...
+[ 2025-12-20 18:09:18,594 ] 348 root - INFO - Class weights will be applied during model training: {1: 526, 0: 499}
