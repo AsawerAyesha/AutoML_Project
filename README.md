@@ -52,7 +52,7 @@ Each model goes through hyperparameter tuning using Grid Search or Randomized Se
 ## How to Run Locally
 
 **Prerequisites**
-- Python 3.8 or higher
+- Python 3.11.1 (pinned in `runtime.txt`; 3.10+ also works)
 - pip package manager
 
 **Installation Steps**
@@ -90,6 +90,14 @@ streamlit run app.py
 
 6. Open your browser and go to `http://localhost:8501`
 
+**Quick Start with Sample Data**
+
+To test the application immediately, use one of the sample datasets provided in the `datasets/` folder:
+- `heart.csv` - Heart disease classification (1,025 patients, 13 features)
+- `Churn_Modelling.csv` - Bank customer churn prediction (10,000 customers, 13 features)
+
+Simply upload one of these files in Step 1 of the application.
+
 ## How to Use
 
 **Step 1: Upload Your Data**
@@ -116,12 +124,23 @@ Review the model comparison dashboard. See which algorithm performed best, exami
 **Step 8: Download Report**
 Generate and download a comprehensive HTML report that documents everything: your data, the issues found, preprocessing decisions, model configurations, and performance results.
 
-## Example Dataset
+## Example Datasets
 
-A sample heart disease dataset is included in the `datasets` folder. Use this to test the application:
+Sample datasets are included in the `datasets/` folder for testing:
+
+**1. heart.csv**
 - 1,025 patient records
-- 13 features (age, blood pressure, cholesterol, etc.)
-- Binary classification target (heart disease present or not)
+- 13 features (age, blood pressure, cholesterol, resting ECG, etc.)
+- Binary classification: heart disease present or not
+- Good for testing binary classification workflows
+
+**2. Churn_Modelling.csv**
+- 10,000 customer records
+- 13 features (credit score, geography, age, balance, etc.)
+- Binary classification: customer churn prediction
+- Good for testing class imbalance handling
+
+Upload either dataset in the app to see the AutoML pipeline in action!
 
 ## Project Structure
 
@@ -129,8 +148,9 @@ A sample heart disease dataset is included in the `datasets` folder. Use this to
 AutoML_Project/
 ├── app.py                      # Main Streamlit application
 ├── requirements.txt            # Python dependencies
-├── datasets/                   # Sample datasets
-│   └── heart.csv
+├── datasets/                   # Sample datasets for testing
+│   ├── heart.csv              # Heart disease dataset
+│   └── Churn_Modelling.csv    # Bank churn dataset
 ├── artifacts/                  # Generated files (models, reports)
 ├── src/
 │   ├── components/            # Core pipeline components
@@ -160,12 +180,13 @@ All preprocessing happens before splitting the data to avoid leakage. The system
 The best model is selected based on F1-score, which balances precision and recall. This is particularly important for imbalanced datasets where accuracy alone can be misleading.
 
 **Hyperparameter Optimization**
-Different search strategies are used based on the algorithm. Random Forest and AdaBoost use Randomized Search for efficiency, while simpler models use Grid Search for thoroughness.
+Adaptive hyperparameter search based on dataset size. For large datasets (>20,000 rows), the system uses default parameters to ensure fast training. For smaller datasets, it performs hyperparameter tuning using Grid Search or Randomized Search for optimal performance.
 
 ## Live Application
 
-Once deployed, the application will be available at:
-[Streamlit Cloud Link - To be added after deployment]
+🚀 **Hosted App:** [Link will be added after deployment]
+
+The application is deployed on Streamlit Cloud for easy access without local installation.
 
 ## Requirements
 
