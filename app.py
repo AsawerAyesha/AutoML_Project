@@ -875,7 +875,7 @@ def main():
     # --- Professional Sidebar ---
     with st.sidebar:
         st.title(" AutoML Pro")
-        st.caption("v2.0 | Enterprise Edition")
+        st.caption("v2.0 | Classification Problems")
         st.divider()
         
         # Status Badge

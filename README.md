@@ -184,7 +184,7 @@ Adaptive hyperparameter search based on dataset size. For large datasets (>20,00
 
 ## Live Application
 
-🚀 **Hosted App:** [Link will be added after deployment]
+🚀 **Hosted App:** [(https://automl--project.streamlit.app/)]
 
 The application is deployed on Streamlit Cloud for easy access without local installation.
 
