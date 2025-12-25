@@ -134,6 +134,10 @@ Sample datasets are included in the `datasets/` folder for testing:
 - heart disease present or not
 - Good for testing binary classification workflows
 
+**2. Iris.csv**
+- 150 flower records
+- 6 columns
+
 
 ## Project Structure
 
@@ -142,7 +146,8 @@ AutoML_Project/
 ├── app.py                      # Main Streamlit application
 ├── requirements.txt            # Python dependencies
 ├── datasets/                   # Sample datasets for testing
-│   └── heart.csv              # Heart disease dataset
+    ├── heart.csv               # Heart disease dataset
+│   └── Iris.csv                # Iris dataset
 ├── artifacts/                  # Generated files (models, reports)
 ├── src/
 │   ├── components/            # Core pipeline components
