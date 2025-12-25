@@ -134,13 +134,6 @@ Sample datasets are included in the `datasets/` folder for testing:
 - heart disease present or not
 - Good for testing binary classification workflows
 
-**2. Churn_Modelling.csv**
-- 10,000 customer records
-- 13 features (credit score, geography, age, balance, etc.)
-- customer churn prediction
-- Good for testing class imbalance handling
-
-Upload either dataset in the app to see the AutoML pipeline in action!
 
 ## Project Structure
 
@@ -149,8 +142,7 @@ AutoML_Project/
 ├── app.py                      # Main Streamlit application
 ├── requirements.txt            # Python dependencies
 ├── datasets/                   # Sample datasets for testing
-│   ├── heart.csv              # Heart disease dataset
-│   └── Churn_Modelling.csv    # Bank churn dataset
+│   └── heart.csv              # Heart disease dataset
 ├── artifacts/                  # Generated files (models, reports)
 ├── src/
 │   ├── components/            # Core pipeline components

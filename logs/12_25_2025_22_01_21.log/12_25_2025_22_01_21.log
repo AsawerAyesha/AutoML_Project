@@ -1,0 +1,135 @@
+[ 2025-12-25 22:03:25,206 ] 36 root - INFO - FeatureTypeInference initialized with 10000 rows, 14 columns
+[ 2025-12-25 22:03:25,308 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-25 22:03:25,309 ] 49 root - INFO - IssueDetector initialized for dataset with 10000 rows, 14 columns
+[ 2025-12-25 22:03:25,309 ] 36 root - INFO - FeatureTypeInference initialized with 10000 rows, 14 columns
+[ 2025-12-25 22:03:25,416 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-25 22:03:25,417 ] 54 root - INFO - Feature types inferred: 13 features classified
+[ 2025-12-25 22:03:25,417 ] 34 root - INFO - OutlierDetector initialized with 10000 rows
+[ 2025-12-25 22:03:25,418 ] 186 root - INFO - ConstantFeatureDetector initialized (threshold=0.99)
+[ 2025-12-25 22:03:25,418 ] 69 root - INFO - Starting comprehensive issue detection...
+[ 2025-12-25 22:03:25,419 ] 83 root - INFO - Detecting missing values...
+[ 2025-12-25 22:03:25,429 ] 142 root - INFO - No missing values detected
+[ 2025-12-25 22:03:25,429 ] 147 root - INFO - Detecting outliers (continuous_numeric features only)...
+[ 2025-12-25 22:03:25,436 ] 136 root - INFO - Outlier detection for 'CreditScore': 15 outliers (0.15%), severity=low
+[ 2025-12-25 22:03:25,446 ] 136 root - INFO - Outlier detection for 'Age': 359 outliers (3.59%), severity=medium
+[ 2025-12-25 22:03:25,455 ] 136 root - INFO - Outlier detection for 'Balance': 0 outliers (0.00%), severity=low
+[ 2025-12-25 22:03:25,465 ] 136 root - INFO - Outlier detection for 'EstimatedSalary': 0 outliers (0.00%), severity=low
+[ 2025-12-25 22:03:25,466 ] 161 root - INFO - Detected outliers in 2 columns
+[ 2025-12-25 22:03:25,466 ] 194 root - INFO - Detected outliers in 2 columns
+[ 2025-12-25 22:03:25,467 ] 299 root - INFO - Detecting constant/near-constant features...
+[ 2025-12-25 22:03:25,534 ] 266 root - INFO - Detected 0 constant/near-constant features
+[ 2025-12-25 22:03:25,535 ] 338 root - INFO - No constant/near-constant features detected
+[ 2025-12-25 22:03:25,536 ] 203 root - INFO - Checking for class imbalance...
+[ 2025-12-25 22:03:25,543 ] 244 root - INFO - Detected class imbalance (ratio: 3.91:1, severity: medium)
+[ 2025-12-25 22:03:25,543 ] 251 root - INFO - Detecting high cardinality features...
+[ 2025-12-25 22:03:25,544 ] 292 root - INFO - Detected high cardinality in 1 features
+[ 2025-12-25 22:03:25,544 ] 77 root - INFO - Issue detection complete. Found 4 issues
+[ 2025-12-25 22:03:30,582 ] 36 root - INFO - FeatureTypeInference initialized with 10000 rows, 14 columns
+[ 2025-12-25 22:03:30,679 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-25 22:03:30,680 ] 49 root - INFO - IssueDetector initialized for dataset with 10000 rows, 14 columns
+[ 2025-12-25 22:03:30,680 ] 36 root - INFO - FeatureTypeInference initialized with 10000 rows, 14 columns
+[ 2025-12-25 22:03:30,772 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-25 22:03:30,772 ] 54 root - INFO - Feature types inferred: 13 features classified
+[ 2025-12-25 22:03:30,772 ] 34 root - INFO - OutlierDetector initialized with 10000 rows
+[ 2025-12-25 22:03:30,772 ] 186 root - INFO - ConstantFeatureDetector initialized (threshold=0.99)
+[ 2025-12-25 22:03:30,775 ] 69 root - INFO - Starting comprehensive issue detection...
+[ 2025-12-25 22:03:30,776 ] 83 root - INFO - Detecting missing values...
+[ 2025-12-25 22:03:30,787 ] 142 root - INFO - No missing values detected
+[ 2025-12-25 22:03:30,788 ] 147 root - INFO - Detecting outliers (continuous_numeric features only)...
+[ 2025-12-25 22:03:30,798 ] 136 root - INFO - Outlier detection for 'CreditScore': 15 outliers (0.15%), severity=low
+[ 2025-12-25 22:03:30,811 ] 136 root - INFO - Outlier detection for 'Age': 359 outliers (3.59%), severity=medium
+[ 2025-12-25 22:03:30,823 ] 136 root - INFO - Outlier detection for 'Balance': 0 outliers (0.00%), severity=low
+[ 2025-12-25 22:03:30,834 ] 136 root - INFO - Outlier detection for 'EstimatedSalary': 0 outliers (0.00%), severity=low
+[ 2025-12-25 22:03:30,834 ] 161 root - INFO - Detected outliers in 2 columns
+[ 2025-12-25 22:03:30,835 ] 194 root - INFO - Detected outliers in 2 columns
+[ 2025-12-25 22:03:30,835 ] 299 root - INFO - Detecting constant/near-constant features...
+[ 2025-12-25 22:03:30,878 ] 266 root - INFO - Detected 0 constant/near-constant features
+[ 2025-12-25 22:03:30,878 ] 338 root - INFO - No constant/near-constant features detected
+[ 2025-12-25 22:03:30,879 ] 203 root - INFO - Checking for class imbalance...
+[ 2025-12-25 22:03:30,881 ] 244 root - INFO - Detected class imbalance (ratio: 3.91:1, severity: medium)
+[ 2025-12-25 22:03:30,881 ] 251 root - INFO - Detecting high cardinality features...
+[ 2025-12-25 22:03:30,882 ] 292 root - INFO - Detected high cardinality in 1 features
+[ 2025-12-25 22:03:30,882 ] 77 root - INFO - Issue detection complete. Found 4 issues
+[ 2025-12-25 22:03:32,974 ] 36 root - INFO - FeatureTypeInference initialized with 10000 rows, 14 columns
+[ 2025-12-25 22:03:33,063 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-25 22:03:33,063 ] 49 root - INFO - IssueDetector initialized for dataset with 10000 rows, 14 columns
+[ 2025-12-25 22:03:33,064 ] 36 root - INFO - FeatureTypeInference initialized with 10000 rows, 14 columns
+[ 2025-12-25 22:03:33,144 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-25 22:03:33,144 ] 54 root - INFO - Feature types inferred: 13 features classified
+[ 2025-12-25 22:03:33,144 ] 34 root - INFO - OutlierDetector initialized with 10000 rows
+[ 2025-12-25 22:03:33,144 ] 186 root - INFO - ConstantFeatureDetector initialized (threshold=0.99)
+[ 2025-12-25 22:03:33,145 ] 69 root - INFO - Starting comprehensive issue detection...
+[ 2025-12-25 22:03:33,145 ] 83 root - INFO - Detecting missing values...
+[ 2025-12-25 22:03:33,153 ] 142 root - INFO - No missing values detected
+[ 2025-12-25 22:03:33,153 ] 147 root - INFO - Detecting outliers (continuous_numeric features only)...
+[ 2025-12-25 22:03:33,161 ] 136 root - INFO - Outlier detection for 'CreditScore': 15 outliers (0.15%), severity=low
+[ 2025-12-25 22:03:33,169 ] 136 root - INFO - Outlier detection for 'Age': 359 outliers (3.59%), severity=medium
+[ 2025-12-25 22:03:33,177 ] 136 root - INFO - Outlier detection for 'Balance': 0 outliers (0.00%), severity=low
+[ 2025-12-25 22:03:33,185 ] 136 root - INFO - Outlier detection for 'EstimatedSalary': 0 outliers (0.00%), severity=low
+[ 2025-12-25 22:03:33,186 ] 161 root - INFO - Detected outliers in 2 columns
+[ 2025-12-25 22:03:33,186 ] 194 root - INFO - Detected outliers in 2 columns
+[ 2025-12-25 22:03:33,186 ] 299 root - INFO - Detecting constant/near-constant features...
+[ 2025-12-25 22:03:33,234 ] 266 root - INFO - Detected 0 constant/near-constant features
+[ 2025-12-25 22:03:33,234 ] 338 root - INFO - No constant/near-constant features detected
+[ 2025-12-25 22:03:33,234 ] 203 root - INFO - Checking for class imbalance...
+[ 2025-12-25 22:03:33,238 ] 244 root - INFO - Detected class imbalance (ratio: 3.91:1, severity: medium)
+[ 2025-12-25 22:03:33,238 ] 251 root - INFO - Detecting high cardinality features...
+[ 2025-12-25 22:03:33,238 ] 292 root - INFO - Detected high cardinality in 1 features
+[ 2025-12-25 22:03:33,238 ] 77 root - INFO - Issue detection complete. Found 4 issues
+[ 2025-12-25 22:03:35,479 ] 36 root - INFO - FeatureTypeInference initialized with 10000 rows, 14 columns
+[ 2025-12-25 22:03:35,567 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-25 22:03:35,568 ] 49 root - INFO - IssueDetector initialized for dataset with 10000 rows, 14 columns
+[ 2025-12-25 22:03:35,568 ] 36 root - INFO - FeatureTypeInference initialized with 10000 rows, 14 columns
+[ 2025-12-25 22:03:35,638 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-25 22:03:35,638 ] 54 root - INFO - Feature types inferred: 13 features classified
+[ 2025-12-25 22:03:35,639 ] 34 root - INFO - OutlierDetector initialized with 10000 rows
+[ 2025-12-25 22:03:35,639 ] 186 root - INFO - ConstantFeatureDetector initialized (threshold=0.99)
+[ 2025-12-25 22:03:35,639 ] 69 root - INFO - Starting comprehensive issue detection...
+[ 2025-12-25 22:03:35,640 ] 83 root - INFO - Detecting missing values...
+[ 2025-12-25 22:03:35,646 ] 142 root - INFO - No missing values detected
+[ 2025-12-25 22:03:35,647 ] 147 root - INFO - Detecting outliers (continuous_numeric features only)...
+[ 2025-12-25 22:03:35,654 ] 136 root - INFO - Outlier detection for 'CreditScore': 15 outliers (0.15%), severity=low
+[ 2025-12-25 22:03:35,662 ] 136 root - INFO - Outlier detection for 'Age': 359 outliers (3.59%), severity=medium
+[ 2025-12-25 22:03:35,668 ] 136 root - INFO - Outlier detection for 'Balance': 0 outliers (0.00%), severity=low
+[ 2025-12-25 22:03:35,675 ] 136 root - INFO - Outlier detection for 'EstimatedSalary': 0 outliers (0.00%), severity=low
+[ 2025-12-25 22:03:35,675 ] 161 root - INFO - Detected outliers in 2 columns
+[ 2025-12-25 22:03:35,676 ] 194 root - INFO - Detected outliers in 2 columns
+[ 2025-12-25 22:03:35,676 ] 299 root - INFO - Detecting constant/near-constant features...
+[ 2025-12-25 22:03:35,714 ] 266 root - INFO - Detected 0 constant/near-constant features
+[ 2025-12-25 22:03:35,714 ] 338 root - INFO - No constant/near-constant features detected
+[ 2025-12-25 22:03:35,715 ] 203 root - INFO - Checking for class imbalance...
+[ 2025-12-25 22:03:35,717 ] 244 root - INFO - Detected class imbalance (ratio: 3.91:1, severity: medium)
+[ 2025-12-25 22:03:35,717 ] 251 root - INFO - Detecting high cardinality features...
+[ 2025-12-25 22:03:35,717 ] 292 root - INFO - Detected high cardinality in 1 features
+[ 2025-12-25 22:03:35,718 ] 77 root - INFO - Issue detection complete. Found 4 issues
+[ 2025-12-25 22:04:04,013 ] 28 root - INFO - Entered the data ingestion component
+[ 2025-12-25 22:04:04,334 ] 34 root - INFO - Saved raw dataset to artifacts
+[ 2025-12-25 22:04:04,685 ] 40 root - INFO - Saved train/test splits to artifacts
+[ 2025-12-25 22:05:01,950 ] 46 root - INFO - Generated EDA report
+[ 2025-12-25 22:05:02,047 ] 36 root - INFO - FeatureTypeInference initialized with 10000 rows, 14 columns
+[ 2025-12-25 22:05:02,134 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-25 22:05:02,134 ] 216 root - INFO - Column groups \u2192 numeric:['CreditScore', 'Age', 'Tenure', 'Balance', 'EstimatedSalary'], categorical:['Surname', 'Geography', 'Gender', 'NumOfProducts', 'HasCrCard', 'IsActiveMember'], datetime(dropped):[], id_like(dropped):['RowNumber', 'CustomerId']
+[ 2025-12-25 22:05:02,145 ] 42 root - INFO - PreprocessingApplicator initialized with 10000 rows, 12 columns
+[ 2025-12-25 22:05:02,146 ] 190 root - INFO - Applying outlier handling...
+[ 2025-12-25 22:05:02,147 ] 346 root - INFO - Applying class imbalance handling: class_weights...
+[ 2025-12-25 22:05:02,148 ] 363 root - INFO - Class weights will be applied during model training: {0: 7963, 1: 2037}
+[ 2025-12-25 22:05:02,178 ] 75 root - INFO - Categorical columns: ['Surname', 'Geography', 'Gender', 'NumOfProducts', 'HasCrCard', 'IsActiveMember']
+[ 2025-12-25 22:05:02,178 ] 76 root - INFO - Numerical columns: ['CreditScore', 'Age', 'Tenure', 'Balance', 'EstimatedSalary']
+[ 2025-12-25 22:05:39,695 ] 37 root - INFO - Split training and test input data
+[ 2025-12-25 22:06:03,151 ] 91 root - INFO - Search params for Random Forest: {'n_estimators': 16, 'max_depth': 5}
+[ 2025-12-25 22:06:03,419 ] 127 root - INFO - Random Forest - Acc: 0.7045, Prec: 0.3740, Rec: 0.6708, F1: 0.4802, Time: 23.43s
+[ 2025-12-25 22:06:25,520 ] 91 root - INFO - Search params for Decision Tree: {'max_depth': 5, 'criterion': 'gini'}
+[ 2025-12-25 22:06:25,688 ] 127 root - INFO - Decision Tree - Acc: 0.7470, Prec: 0.4334, Rec: 0.7912, F1: 0.5600, Time: 22.10s
+[ 2025-12-25 22:06:55,472 ] 91 root - INFO - Search params for Logistic Regression: {'solver': 'lbfgs', 'penalty': 'l2', 'C': 1.0}
+[ 2025-12-25 22:06:55,603 ] 127 root - INFO - Logistic Regression - Acc: 0.7380, Prec: 0.3868, Rec: 0.4914, F1: 0.4329, Time: 29.78s
+[ 2025-12-25 22:11:35,290 ] 37 root - INFO - Split training and test input data
+[ 2025-12-25 22:11:54,689 ] 91 root - INFO - Search params for Random Forest: {'n_estimators': 16, 'max_depth': 5}
+[ 2025-12-25 22:11:55,763 ] 127 root - INFO - Random Forest - Acc: 0.7110, Prec: 0.3876, Rec: 0.7248, F1: 0.5051, Time: 19.16s
+[ 2025-12-25 22:13:00,705 ] 91 root - INFO - Search params for Decision Tree: {'max_depth': 5, 'criterion': 'gini'}
+[ 2025-12-25 22:13:01,141 ] 127 root - INFO - Decision Tree - Acc: 0.7470, Prec: 0.4334, Rec: 0.7912, F1: 0.5600, Time: 64.94s
+[ 2025-12-25 22:13:28,573 ] 91 root - INFO - Search params for Logistic Regression: {'solver': 'lbfgs', 'penalty': 'l2', 'C': 1.0}
+[ 2025-12-25 22:13:28,664 ] 127 root - INFO - Logistic Regression - Acc: 0.7380, Prec: 0.3868, Rec: 0.4914, F1: 0.4329, Time: 27.43s
+[ 2025-12-25 22:15:12,086 ] 171 root - ERROR - Error in evaluate_models: A task has failed to un-serialize. Please ensure that the arguments of the function are all picklable.
+[ 2025-12-25 22:15:12,086 ] 171 root - ERROR - Error in evaluate_models: A task has failed to un-serialize. Please ensure that the arguments of the function are all picklable.
+[ 2025-12-25 22:15:12,087 ] 132 root - ERROR - Exception occurred in model training: Error occured in python script name [F:\ML\Project\AutoML_Project\src\utils\__init__.py] line number [89] error message[A task has failed to un-serialize. Please ensure that the arguments of the function are all picklable.]
+[ 2025-12-25 22:15:12,087 ] 132 root - ERROR - Exception occurred in model training: Error occured in python script name [F:\ML\Project\AutoML_Project\src\utils\__init__.py] line number [89] error message[A task has failed to un-serialize. Please ensure that the arguments of the function are all picklable.]
