@@ -20,7 +20,7 @@ from src.exception import CustomException
 # CONFIGURATION & STYLING
 # ============================================================================
 st.set_page_config(
-    page_title="AutoML Pro | Enterprise Classification",
+    page_title="AutoML Pro | Classification Problems",
     page_icon="🤖",
     layout="wide",
     initial_sidebar_state="expanded"
