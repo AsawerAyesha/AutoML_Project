@@ -61,7 +61,15 @@ def evaluate_models(
 
             unique, counts = np.unique(y_train, return_counts=True)
             min_class_size = counts.min()
-            cv_splits = min(5, min_class_size) if min_class_size >= 2 else 2
+            
+            # ADAPTIVE CV FOLDS: Reduce folds for large datasets to prevent timeout
+            n_samples = len(y_train)
+            if n_samples > 50000:
+                cv_splits = 2  # Large dataset: use 2 folds only
+            elif n_samples > 10000:
+                cv_splits = 3  # Medium-large dataset: use 3 folds
+            else:
+                cv_splits = min(5, min_class_size) if min_class_size >= 2 else 2  # Small dataset: use 5 folds
 
             model_report = {}
             for model_name, model in models.items():
@@ -74,7 +82,7 @@ def evaluate_models(
                             param[model_name],
                             cv=cv_splits,
                             scoring=make_scorer(metric),
-                            n_jobs=-1,
+                            n_jobs=2,  # Use 2 cores instead of all cores for stability
                             n_iter=min(20, len(ParameterGrid(param[model_name]))),
                             random_state=42,
                         )
@@ -84,7 +92,7 @@ def evaluate_models(
                             param[model_name],
                             cv=cv_splits,
                             scoring=make_scorer(metric),
-                            n_jobs=-1,
+                            n_jobs=2,  # Use 2 cores instead of all cores for stability
                         )
                     search.fit(X_train, y_train)
                     best_model = search.best_estimator_

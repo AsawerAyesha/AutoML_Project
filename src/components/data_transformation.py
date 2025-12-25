@@ -248,14 +248,19 @@ class DataTransformation:
             processed_df = applicator.get_processed_dataframe()
             preprocessing_log = applicator.get_preprocessing_log()
 
-            # Log column grouping decisions
+            # Log column grouping decisions with proper structure
+            all_grouped_cols = numeric_cols + categorical_cols
             preprocessing_log.append(
                 {
                     "action": "column_grouping",
-                    "numeric_columns": numeric_cols,
-                    "categorical_columns": categorical_cols,
-                    "dropped_datetime_columns": datetime_cols,
-                    "dropped_id_like_columns": id_like_cols,
+                    "columns_affected": all_grouped_cols,
+                    "details": {
+                        "numeric_columns": numeric_cols,
+                        "categorical_columns": categorical_cols,
+                        "dropped_datetime_columns": datetime_cols,
+                        "dropped_id_like_columns": id_like_cols,
+                    },
+                    "description": f"Grouped {len(numeric_cols)} numeric, {len(categorical_cols)} categorical. Dropped {len(datetime_cols)} datetime, {len(id_like_cols)} ID-like columns."
                 }
             )
 

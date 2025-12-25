@@ -3,7 +3,7 @@ import sys
 from dataclasses import dataclass
 
 import numpy as np
-from sklearn.ensemble import AdaBoostClassifier, RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 from sklearn.naive_bayes import GaussianNB
@@ -48,46 +48,58 @@ class ModelTrainer:
 
             # Base models (inject class weights where supported)
             models = {
-                "Random Forest": RandomForestClassifier(class_weight=class_weights),
+                "Random Forest": RandomForestClassifier(class_weight=class_weights, n_jobs=1),
                 "Decision Tree": DecisionTreeClassifier(class_weight=class_weights),
-                "Logistic Regression": LogisticRegression(class_weight=class_weights, max_iter=500),
-                "AdaBoost Classifier": AdaBoostClassifier(),
-                "K-Nearest Neighbors": KNeighborsClassifier(),
-                "Naive Bayes": GaussianNB(),
+                "Logistic Regression": LogisticRegression(class_weight=class_weights, max_iter=500, n_jobs=1),
                 "Support Vector Machine": SVC(probability=True, class_weight=class_weights),
+                "K-Nearest Neighbors": KNeighborsClassifier(n_jobs=1),
+                "Naive Bayes": GaussianNB(),
                 "OneR Classifier": OneRClassifier(),
             }
 
-            # Slim grids for speed; can be expanded later
-            params = {
-                "Decision Tree": {
-                    "criterion": ["gini", "entropy"],
-                    "max_depth": [None, 5, 10],
-                },
-                "Random Forest": {
-                    "n_estimators": [32, 64, 128],
-                    "max_depth": [None, 5, 10],
-                },
-                "Logistic Regression": {
-                    "C": [0.5, 1.0, 2.0],
-                    "penalty": ["l2"],
-                    "solver": ["lbfgs"],
-                },
-                "AdaBoost Classifier": {
-                    "learning_rate": [0.1, 0.5, 1.0],
-                    "n_estimators": [32, 64, 128],
-                },
-                "K-Nearest Neighbors": {
-                    "n_neighbors": [3, 5, 9],
-                    "metric": ["euclidean", "manhattan"],
-                },
-                "Naive Bayes": {},
-                "Support Vector Machine": {
-                    "C": [0.5, 1.0, 2.0],
-                    "kernel": ["linear", "rbf"],
-                },
-                "OneR Classifier": {},
-            }
+            # Optimized grids for FAST training - skip tuning for large datasets
+            n_samples = len(X_train)
+            skip_tuning = n_samples > 20000  # Skip tuning for very large datasets
+            
+            if skip_tuning:
+                # Large dataset: no hyperparameter tuning, use defaults only
+                params = {
+                    "Decision Tree": {},
+                    "Random Forest": {},
+                    "Logistic Regression": {},
+                    "Support Vector Machine": {},
+                    "K-Nearest Neighbors": {},
+                    "Naive Bayes": {},
+                    "OneR Classifier": {},
+                }
+                logging.info(f"Large dataset ({n_samples} rows): Skipping hyperparameter tuning for speed")
+            else:
+                # Standard grids for smaller datasets
+                params = {
+                    "Decision Tree": {
+                        "criterion": ["gini"],
+                        "max_depth": [5],
+                    },
+                    "Random Forest": {
+                        "n_estimators": [16],  # Reduced from 32
+                        "max_depth": [5],
+                    },
+                    "Logistic Regression": {
+                        "C": [1.0],
+                        "penalty": ["l2"],
+                        "solver": ["lbfgs"],
+                    },
+                    "Support Vector Machine": {
+                        "C": [1.0],
+                        "kernel": ["linear"],  # Linear is much faster than RBF
+                    },
+                    "K-Nearest Neighbors": {
+                        "n_neighbors": [5],
+                        "metric": ["euclidean"],
+                    },
+                    "Naive Bayes": {},
+                    "OneR Classifier": {},
+                }
 
             metric = accuracy_score
 

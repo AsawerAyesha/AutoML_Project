@@ -347,6 +347,7 @@ class PreprocessingApplicator:
         
         summary = {
             'action': 'class_imbalance_handling',
+            'columns_affected': [target_col] if target_col else [],
             'target_column': target_col,
             'method': imbalance_action,
             'details': {}

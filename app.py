@@ -491,7 +491,7 @@ def page_model_training():
     with st.container(border=True):
         st.write("### Algorithms Queued")
         cols = st.columns(4)
-        models = ["Logistic Regression", "Decision Tree", "Random Forest", "SVM", "KNN", "Naive Bayes", "OneR"]
+        models = ["Logistic Regression", "Decision Tree", "Random Forest", "SVM", "KNN", "Naive Bayes", "Rule Based Classifier"]
         for i, m in enumerate(models):
             cols[i%4].markdown(f"- {m}")
             
@@ -511,7 +511,7 @@ def page_model_training():
                     st.session_state.train_array,
                     st.session_state.test_array,
                     'classification',
-                    search_type='grid',
+                    search_type='random',  # Random search is faster than grid search
                     class_weights=st.session_state.class_weights
                 )
 
@@ -770,7 +770,7 @@ def page_model_comparison():
     # 7. Feature Importance (for tree-based and ensemble models)
     st.markdown("###  Feature Importance Analysis")
     
-    tree_based_models = ['Random Forest', 'Decision Tree', 'AdaBoost Classifier']
+    tree_based_models = ['Random Forest', 'Decision Tree']
     tree_models_available = [m for m in tree_based_models if m in results.keys()]
     
     if tree_models_available and hasattr(st.session_state, 'X_test'):
@@ -805,7 +805,7 @@ def page_model_comparison():
             else:
                 st.info(f" {selected_model} does not have feature importance scores.")
     else:
-        st.info(" Feature importance visualization only available for tree-based models (Random Forest, Decision Tree, AdaBoost).")
+        st.info(" Feature importance visualization only available for tree-based models (Random Forest, Decision Tree).")
 
     # Navigation Footer
     c1, _, c2 = st.columns([1, 4, 1])

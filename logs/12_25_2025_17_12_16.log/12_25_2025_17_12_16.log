@@ -1,0 +1,164 @@
+[ 2025-12-25 17:13:41,763 ] 36 root - INFO - FeatureTypeInference initialized with 50000 rows, 21 columns
+[ 2025-12-25 17:13:42,301 ] 53 root - INFO - Feature type inference complete. Classified 20 features
+[ 2025-12-25 17:13:42,302 ] 49 root - INFO - IssueDetector initialized for dataset with 50000 rows, 21 columns
+[ 2025-12-25 17:13:42,302 ] 36 root - INFO - FeatureTypeInference initialized with 50000 rows, 21 columns
+[ 2025-12-25 17:13:42,721 ] 53 root - INFO - Feature type inference complete. Classified 20 features
+[ 2025-12-25 17:13:42,722 ] 54 root - INFO - Feature types inferred: 20 features classified
+[ 2025-12-25 17:13:42,722 ] 34 root - INFO - OutlierDetector initialized with 50000 rows
+[ 2025-12-25 17:13:42,763 ] 186 root - INFO - ConstantFeatureDetector initialized (threshold=0.99)
+[ 2025-12-25 17:13:42,764 ] 69 root - INFO - Starting comprehensive issue detection...
+[ 2025-12-25 17:13:42,764 ] 83 root - INFO - Detecting missing values...
+[ 2025-12-25 17:13:42,788 ] 142 root - INFO - No missing values detected
+[ 2025-12-25 17:13:42,789 ] 147 root - INFO - Detecting outliers (continuous_numeric features only)...
+[ 2025-12-25 17:13:42,796 ] 136 root - INFO - Outlier detection for 'severity_index': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:13:42,803 ] 136 root - INFO - Outlier detection for 'casualties': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:13:42,810 ] 136 root - INFO - Outlier detection for 'economic_loss_usd': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:13:42,821 ] 136 root - INFO - Outlier detection for 'response_time_hours': 2522 outliers (5.04%), severity=high
+[ 2025-12-25 17:13:42,833 ] 136 root - INFO - Outlier detection for 'aid_amount_usd': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:13:42,843 ] 136 root - INFO - Outlier detection for 'response_efficiency_score': 2015 outliers (4.03%), severity=medium
+[ 2025-12-25 17:13:42,854 ] 136 root - INFO - Outlier detection for 'recovery_days': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:13:42,865 ] 136 root - INFO - Outlier detection for 'latitude': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:13:42,879 ] 136 root - INFO - Outlier detection for 'longitude': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:13:42,891 ] 136 root - INFO - Outlier detection for 'aid_per_casualty': 4652 outliers (9.30%), severity=high
+[ 2025-12-25 17:13:42,903 ] 136 root - INFO - Outlier detection for 'loss_per_casualty': 4461 outliers (8.92%), severity=high
+[ 2025-12-25 17:13:42,903 ] 161 root - INFO - Detected outliers in 4 columns
+[ 2025-12-25 17:13:42,904 ] 194 root - INFO - Detected outliers in 4 columns
+[ 2025-12-25 17:13:42,904 ] 299 root - INFO - Detecting constant/near-constant features...
+[ 2025-12-25 17:13:43,165 ] 266 root - INFO - Detected 0 constant/near-constant features
+[ 2025-12-25 17:13:43,165 ] 338 root - INFO - No constant/near-constant features detected
+[ 2025-12-25 17:13:43,165 ] 203 root - INFO - Checking for class imbalance...
+[ 2025-12-25 17:13:43,183 ] 244 root - INFO - Detected class imbalance (ratio: 7.41:1, severity: medium)
+[ 2025-12-25 17:13:43,184 ] 251 root - INFO - Detecting high cardinality features...
+[ 2025-12-25 17:13:43,184 ] 292 root - INFO - Detected high cardinality in 1 features
+[ 2025-12-25 17:13:43,184 ] 77 root - INFO - Issue detection complete. Found 6 issues
+[ 2025-12-25 17:14:23,744 ] 36 root - INFO - FeatureTypeInference initialized with 50000 rows, 21 columns
+[ 2025-12-25 17:14:24,145 ] 53 root - INFO - Feature type inference complete. Classified 20 features
+[ 2025-12-25 17:14:24,146 ] 49 root - INFO - IssueDetector initialized for dataset with 50000 rows, 21 columns
+[ 2025-12-25 17:14:24,146 ] 36 root - INFO - FeatureTypeInference initialized with 50000 rows, 21 columns
+[ 2025-12-25 17:14:24,540 ] 53 root - INFO - Feature type inference complete. Classified 20 features
+[ 2025-12-25 17:14:24,540 ] 54 root - INFO - Feature types inferred: 20 features classified
+[ 2025-12-25 17:14:24,541 ] 34 root - INFO - OutlierDetector initialized with 50000 rows
+[ 2025-12-25 17:14:24,541 ] 186 root - INFO - ConstantFeatureDetector initialized (threshold=0.99)
+[ 2025-12-25 17:14:24,541 ] 69 root - INFO - Starting comprehensive issue detection...
+[ 2025-12-25 17:14:24,542 ] 83 root - INFO - Detecting missing values...
+[ 2025-12-25 17:14:24,592 ] 142 root - INFO - No missing values detected
+[ 2025-12-25 17:14:24,592 ] 147 root - INFO - Detecting outliers (continuous_numeric features only)...
+[ 2025-12-25 17:14:24,604 ] 136 root - INFO - Outlier detection for 'severity_index': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:14:24,618 ] 136 root - INFO - Outlier detection for 'casualties': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:14:24,631 ] 136 root - INFO - Outlier detection for 'economic_loss_usd': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:14:24,648 ] 136 root - INFO - Outlier detection for 'response_time_hours': 2522 outliers (5.04%), severity=high
+[ 2025-12-25 17:14:24,663 ] 136 root - INFO - Outlier detection for 'aid_amount_usd': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:14:24,680 ] 136 root - INFO - Outlier detection for 'response_efficiency_score': 2015 outliers (4.03%), severity=medium
+[ 2025-12-25 17:14:24,695 ] 136 root - INFO - Outlier detection for 'recovery_days': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:14:24,712 ] 136 root - INFO - Outlier detection for 'latitude': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:14:24,727 ] 136 root - INFO - Outlier detection for 'longitude': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:14:24,744 ] 136 root - INFO - Outlier detection for 'aid_per_casualty': 4652 outliers (9.30%), severity=high
+[ 2025-12-25 17:14:24,762 ] 136 root - INFO - Outlier detection for 'loss_per_casualty': 4461 outliers (8.92%), severity=high
+[ 2025-12-25 17:14:24,762 ] 161 root - INFO - Detected outliers in 4 columns
+[ 2025-12-25 17:14:24,762 ] 194 root - INFO - Detected outliers in 4 columns
+[ 2025-12-25 17:14:24,764 ] 299 root - INFO - Detecting constant/near-constant features...
+[ 2025-12-25 17:14:25,059 ] 266 root - INFO - Detected 0 constant/near-constant features
+[ 2025-12-25 17:14:25,060 ] 338 root - INFO - No constant/near-constant features detected
+[ 2025-12-25 17:14:25,060 ] 203 root - INFO - Checking for class imbalance...
+[ 2025-12-25 17:14:25,078 ] 244 root - INFO - Detected class imbalance (ratio: 7.41:1, severity: medium)
+[ 2025-12-25 17:14:25,079 ] 251 root - INFO - Detecting high cardinality features...
+[ 2025-12-25 17:14:25,080 ] 292 root - INFO - Detected high cardinality in 1 features
+[ 2025-12-25 17:14:25,080 ] 77 root - INFO - Issue detection complete. Found 6 issues
+[ 2025-12-25 17:15:52,943 ] 36 root - INFO - FeatureTypeInference initialized with 50000 rows, 21 columns
+[ 2025-12-25 17:15:53,216 ] 53 root - INFO - Feature type inference complete. Classified 20 features
+[ 2025-12-25 17:15:53,217 ] 49 root - INFO - IssueDetector initialized for dataset with 50000 rows, 21 columns
+[ 2025-12-25 17:15:53,217 ] 36 root - INFO - FeatureTypeInference initialized with 50000 rows, 21 columns
+[ 2025-12-25 17:15:53,491 ] 53 root - INFO - Feature type inference complete. Classified 20 features
+[ 2025-12-25 17:15:53,492 ] 54 root - INFO - Feature types inferred: 20 features classified
+[ 2025-12-25 17:15:53,492 ] 34 root - INFO - OutlierDetector initialized with 50000 rows
+[ 2025-12-25 17:15:53,492 ] 186 root - INFO - ConstantFeatureDetector initialized (threshold=0.99)
+[ 2025-12-25 17:15:53,492 ] 69 root - INFO - Starting comprehensive issue detection...
+[ 2025-12-25 17:15:53,492 ] 83 root - INFO - Detecting missing values...
+[ 2025-12-25 17:15:53,519 ] 142 root - INFO - No missing values detected
+[ 2025-12-25 17:15:53,519 ] 147 root - INFO - Detecting outliers (continuous_numeric features only)...
+[ 2025-12-25 17:15:53,527 ] 136 root - INFO - Outlier detection for 'severity_index': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:15:53,534 ] 136 root - INFO - Outlier detection for 'casualties': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:15:53,544 ] 136 root - INFO - Outlier detection for 'economic_loss_usd': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:15:53,554 ] 136 root - INFO - Outlier detection for 'response_time_hours': 2522 outliers (5.04%), severity=high
+[ 2025-12-25 17:15:53,569 ] 136 root - INFO - Outlier detection for 'aid_amount_usd': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:15:53,579 ] 136 root - INFO - Outlier detection for 'response_efficiency_score': 2015 outliers (4.03%), severity=medium
+[ 2025-12-25 17:15:53,590 ] 136 root - INFO - Outlier detection for 'recovery_days': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:15:53,599 ] 136 root - INFO - Outlier detection for 'latitude': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:15:53,609 ] 136 root - INFO - Outlier detection for 'longitude': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:15:53,619 ] 136 root - INFO - Outlier detection for 'aid_per_casualty': 4652 outliers (9.30%), severity=high
+[ 2025-12-25 17:15:53,632 ] 136 root - INFO - Outlier detection for 'loss_per_casualty': 4461 outliers (8.92%), severity=high
+[ 2025-12-25 17:15:53,633 ] 161 root - INFO - Detected outliers in 4 columns
+[ 2025-12-25 17:15:53,634 ] 194 root - INFO - Detected outliers in 4 columns
+[ 2025-12-25 17:15:53,634 ] 299 root - INFO - Detecting constant/near-constant features...
+[ 2025-12-25 17:15:53,824 ] 266 root - INFO - Detected 0 constant/near-constant features
+[ 2025-12-25 17:15:53,825 ] 338 root - INFO - No constant/near-constant features detected
+[ 2025-12-25 17:15:53,826 ] 203 root - INFO - Checking for class imbalance...
+[ 2025-12-25 17:15:53,837 ] 244 root - INFO - Detected class imbalance (ratio: 7.41:1, severity: medium)
+[ 2025-12-25 17:15:53,838 ] 251 root - INFO - Detecting high cardinality features...
+[ 2025-12-25 17:15:53,840 ] 292 root - INFO - Detected high cardinality in 1 features
+[ 2025-12-25 17:15:53,840 ] 77 root - INFO - Issue detection complete. Found 6 issues
+[ 2025-12-25 17:15:54,105 ] 36 root - INFO - FeatureTypeInference initialized with 50000 rows, 21 columns
+[ 2025-12-25 17:15:54,492 ] 53 root - INFO - Feature type inference complete. Classified 20 features
+[ 2025-12-25 17:15:54,493 ] 49 root - INFO - IssueDetector initialized for dataset with 50000 rows, 21 columns
+[ 2025-12-25 17:15:54,494 ] 36 root - INFO - FeatureTypeInference initialized with 50000 rows, 21 columns
+[ 2025-12-25 17:15:54,919 ] 53 root - INFO - Feature type inference complete. Classified 20 features
+[ 2025-12-25 17:15:54,920 ] 54 root - INFO - Feature types inferred: 20 features classified
+[ 2025-12-25 17:15:54,920 ] 34 root - INFO - OutlierDetector initialized with 50000 rows
+[ 2025-12-25 17:15:54,920 ] 186 root - INFO - ConstantFeatureDetector initialized (threshold=0.99)
+[ 2025-12-25 17:15:54,921 ] 69 root - INFO - Starting comprehensive issue detection...
+[ 2025-12-25 17:15:54,921 ] 83 root - INFO - Detecting missing values...
+[ 2025-12-25 17:15:54,991 ] 142 root - INFO - No missing values detected
+[ 2025-12-25 17:15:54,992 ] 147 root - INFO - Detecting outliers (continuous_numeric features only)...
+[ 2025-12-25 17:15:55,004 ] 136 root - INFO - Outlier detection for 'severity_index': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:15:55,014 ] 136 root - INFO - Outlier detection for 'casualties': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:15:55,024 ] 136 root - INFO - Outlier detection for 'economic_loss_usd': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:15:55,034 ] 136 root - INFO - Outlier detection for 'response_time_hours': 2522 outliers (5.04%), severity=high
+[ 2025-12-25 17:15:55,044 ] 136 root - INFO - Outlier detection for 'aid_amount_usd': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:15:55,054 ] 136 root - INFO - Outlier detection for 'response_efficiency_score': 2015 outliers (4.03%), severity=medium
+[ 2025-12-25 17:15:55,063 ] 136 root - INFO - Outlier detection for 'recovery_days': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:15:55,076 ] 136 root - INFO - Outlier detection for 'latitude': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:15:55,086 ] 136 root - INFO - Outlier detection for 'longitude': 0 outliers (0.00%), severity=low
+[ 2025-12-25 17:15:55,096 ] 136 root - INFO - Outlier detection for 'aid_per_casualty': 4652 outliers (9.30%), severity=high
+[ 2025-12-25 17:15:55,107 ] 136 root - INFO - Outlier detection for 'loss_per_casualty': 4461 outliers (8.92%), severity=high
+[ 2025-12-25 17:15:55,107 ] 161 root - INFO - Detected outliers in 4 columns
+[ 2025-12-25 17:15:55,107 ] 194 root - INFO - Detected outliers in 4 columns
+[ 2025-12-25 17:15:55,108 ] 299 root - INFO - Detecting constant/near-constant features...
+[ 2025-12-25 17:15:55,362 ] 266 root - INFO - Detected 0 constant/near-constant features
+[ 2025-12-25 17:15:55,362 ] 338 root - INFO - No constant/near-constant features detected
+[ 2025-12-25 17:15:55,362 ] 203 root - INFO - Checking for class imbalance...
+[ 2025-12-25 17:15:55,378 ] 244 root - INFO - Detected class imbalance (ratio: 7.41:1, severity: medium)
+[ 2025-12-25 17:15:55,379 ] 251 root - INFO - Detecting high cardinality features...
+[ 2025-12-25 17:15:55,379 ] 292 root - INFO - Detected high cardinality in 1 features
+[ 2025-12-25 17:15:55,379 ] 77 root - INFO - Issue detection complete. Found 6 issues
+[ 2025-12-25 17:15:57,684 ] 28 root - INFO - Entered the data ingestion component
+[ 2025-12-25 17:15:59,142 ] 34 root - INFO - Saved raw dataset to artifacts
+[ 2025-12-25 17:16:00,740 ] 40 root - INFO - Saved train/test splits to artifacts
+[ 2025-12-25 17:17:57,119 ] 46 root - INFO - Generated EDA report
+[ 2025-12-25 17:17:57,682 ] 36 root - INFO - FeatureTypeInference initialized with 50000 rows, 21 columns
+[ 2025-12-25 17:17:58,133 ] 53 root - INFO - Feature type inference complete. Classified 20 features
+[ 2025-12-25 17:17:58,134 ] 216 root - INFO - Column groups \u2192 numeric:['severity_index', 'casualties', 'economic_loss_usd', 'response_time_hours', 'aid_amount_usd', 'response_efficiency_score', 'recovery_days', 'latitude', 'longitude', 'month', 'aid_per_casualty', 'loss_per_casualty'], categorical:['date', 'country', 'disaster_type', 'year', 'quarter', 'day_of_week', 'severity_category', 'efficiency_category'], datetime(dropped):[], id_like(dropped):[]
+[ 2025-12-25 17:17:58,168 ] 42 root - INFO - PreprocessingApplicator initialized with 50000 rows, 21 columns
+[ 2025-12-25 17:17:58,169 ] 190 root - INFO - Applying outlier handling...
+[ 2025-12-25 17:17:58,176 ] 268 root - INFO - Capped 2015 outliers in 'response_efficiency_score'
+[ 2025-12-25 17:17:58,177 ] 346 root - INFO - Applying class imbalance handling: class_weights...
+[ 2025-12-25 17:17:58,187 ] 362 root - INFO - Class weights will be applied during model training: {'Fast': 29288, 'Moderate': 16761, 'Slow': 3951}
+[ 2025-12-25 17:17:58,358 ] 75 root - INFO - Categorical columns: ['date', 'country', 'disaster_type', 'year', 'quarter', 'day_of_week', 'severity_category', 'efficiency_category']
+[ 2025-12-25 17:17:58,358 ] 76 root - INFO - Numerical columns: ['severity_index', 'casualties', 'economic_loss_usd', 'response_time_hours', 'aid_amount_usd', 'response_efficiency_score', 'recovery_days', 'latitude', 'longitude', 'month', 'aid_per_casualty', 'loss_per_casualty']
+[ 2025-12-25 17:17:58,380 ] 143 root - INFO - Target column is categorical with values: ['Fast' 'Moderate' 'Slow']
+[ 2025-12-25 17:17:58,381 ] 144 root - INFO - Encoding categorical target using LabelEncoder
+[ 2025-12-25 17:17:58,403 ] 149 root - INFO - Target encoded: {'Fast': np.int64(0), 'Moderate': np.int64(1), 'Slow': np.int64(2)}
+[ 2025-12-25 17:17:58,413 ] 294 root - INFO - Target encoder saved to artifacts\target_encoder.pkl
+[ 2025-12-25 17:18:23,859 ] 37 root - INFO - Split training and test input data
+[ 2025-12-25 17:19:51,114 ] 91 root - INFO - Search params for Random Forest: {'n_estimators': 32, 'max_depth': 5}
+[ 2025-12-25 17:19:52,294 ] 127 root - INFO - Random Forest - Acc: 0.7955, Prec: 0.7941, Rec: 0.7955, F1: 0.7843, Time: 87.26s
+[ 2025-12-25 17:21:02,897 ] 91 root - INFO - Search params for Decision Tree: {'max_depth': 5, 'criterion': 'gini'}
+[ 2025-12-25 17:21:03,708 ] 127 root - INFO - Decision Tree - Acc: 1.0000, Prec: 1.0000, Rec: 1.0000, F1: 1.0000, Time: 70.61s
+[ 2025-12-25 17:28:41,819 ] 91 root - INFO - Search params for Logistic Regression: {'solver': 'lbfgs', 'penalty': 'l2', 'C': 1.0}
+[ 2025-12-25 17:28:42,818 ] 127 root - INFO - Logistic Regression - Acc: 0.9568, Prec: 0.9569, Rec: 0.9568, F1: 0.9569, Time: 458.11s
+[ 2025-12-25 17:40:04,255 ] 91 root - INFO - Search params for AdaBoost Classifier: {'n_estimators': 32, 'learning_rate': 1.0}
+[ 2025-12-25 17:40:12,691 ] 127 root - INFO - AdaBoost Classifier - Acc: 1.0000, Prec: 1.0000, Rec: 1.0000, F1: 1.0000, Time: 681.44s
+[ 2025-12-25 17:42:18,687 ] 91 root - INFO - Search params for K-Nearest Neighbors: {'n_neighbors': 5, 'metric': 'euclidean'}
+[ 2025-12-25 17:42:50,960 ] 127 root - INFO - K-Nearest Neighbors - Acc: 0.6519, Prec: 0.6474, Rec: 0.6519, F1: 0.6163, Time: 126.00s
+[ 2025-12-25 17:42:55,304 ] 127 root - INFO - Naive Bayes - Acc: 0.1874, Prec: 0.4970, Rec: 0.1874, F1: 0.2105, Time: 3.15s
+[ 2025-12-25 17:42:55,359 ] 171 root - ERROR - Error in evaluate_models: cannot schedule new futures after interpreter shutdown
+[ 2025-12-25 17:42:55,363 ] 120 root - ERROR - Exception occurred in model training: Error occured in python script name [F:\ML\Project\AutoML_Project\src\utils\__init__.py] line number [89] error message[cannot schedule new futures after interpreter shutdown]

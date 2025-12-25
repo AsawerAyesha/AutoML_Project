@@ -262,17 +262,19 @@ class ReportGenerator:
         
         rows = ""
         for i, issue in enumerate(self.issues):
-            # Try multiple key formats to find user decision
             issue_type = issue['type']
             column = issue.get('column', 'global')
             
-            # Try format used in app: {type}_{i}_{column}
-            decision_key1 = f"{issue_type}_{i}_{column}"
-            # Try alternative format: {type}_{i}
-            decision_key2 = f"{issue_type}_{i}"
-            
-            decision = self.user_decisions.get(decision_key1, 
-                                              self.user_decisions.get(decision_key2, "Default/No Action"))
+            # PRIMARY: Use issue_id if available (this is what the app uses!)
+            issue_id = issue.get('issue_id')
+            if issue_id and issue_id in self.user_decisions:
+                decision = self.user_decisions[issue_id]
+            else:
+                # FALLBACK: Try legacy formats for compatibility
+                decision_key1 = f"{issue_type}_{i}_{column}"
+                decision_key2 = f"{issue_type}_{i}"
+                decision = self.user_decisions.get(decision_key1, 
+                                                  self.user_decisions.get(decision_key2, "Default/No Action"))
             
             rows += f"""
             <tr>
@@ -315,7 +317,7 @@ class ReportGenerator:
             "K-Nearest Neighbors": "n_neighbors: [3, 5, 7, 9, 11, 13], metric: ['euclidean', 'manhattan']",
             "Naive Bayes": "No hyperparameters tuned (distribution-based)",
             "Support Vector Machine": "C: [0.1, 1, 10, 100], kernel: ['linear', 'rbf']",
-            "OneR Classifier": "No hyperparameters tuned (rule-based)"
+            "OneR Rule-Based Classifier": "No hyperparameters tuned (rule-based)"
         }
         
         for model_name in self.model_results.keys():

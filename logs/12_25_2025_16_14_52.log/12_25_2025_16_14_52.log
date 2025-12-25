@@ -1,0 +1,1254 @@
+[ 2025-12-25 16:15:31,473 ] 36 root - INFO - FeatureTypeInference initialized with 1025 rows, 14 columns
+[ 2025-12-25 16:15:31,525 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-25 16:15:31,525 ] 49 root - INFO - IssueDetector initialized for dataset with 1025 rows, 14 columns
+[ 2025-12-25 16:15:31,526 ] 36 root - INFO - FeatureTypeInference initialized with 1025 rows, 14 columns
+[ 2025-12-25 16:15:31,560 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-25 16:15:31,561 ] 54 root - INFO - Feature types inferred: 13 features classified
+[ 2025-12-25 16:15:31,561 ] 34 root - INFO - OutlierDetector initialized with 1025 rows
+[ 2025-12-25 16:15:31,562 ] 186 root - INFO - ConstantFeatureDetector initialized (threshold=0.99)
+[ 2025-12-25 16:15:31,563 ] 69 root - INFO - Starting comprehensive issue detection...
+[ 2025-12-25 16:15:31,563 ] 83 root - INFO - Detecting missing values...
+[ 2025-12-25 16:15:31,564 ] 142 root - INFO - No missing values detected
+[ 2025-12-25 16:15:31,565 ] 147 root - INFO - Detecting outliers (continuous_numeric features only)...
+[ 2025-12-25 16:15:31,569 ] 136 root - INFO - Outlier detection for 'age': 0 outliers (0.00%), severity=low
+[ 2025-12-25 16:15:31,574 ] 136 root - INFO - Outlier detection for 'trestbps': 30 outliers (2.93%), severity=medium
+[ 2025-12-25 16:15:31,579 ] 136 root - INFO - Outlier detection for 'chol': 16 outliers (1.56%), severity=medium
+[ 2025-12-25 16:15:31,583 ] 136 root - INFO - Outlier detection for 'thalach': 4 outliers (0.39%), severity=low
+[ 2025-12-25 16:15:31,588 ] 136 root - INFO - Outlier detection for 'oldpeak': 7 outliers (0.68%), severity=low
+[ 2025-12-25 16:15:31,588 ] 161 root - INFO - Detected outliers in 4 columns
+[ 2025-12-25 16:15:31,589 ] 194 root - INFO - Detected outliers in 4 columns
+[ 2025-12-25 16:15:31,589 ] 299 root - INFO - Detecting constant/near-constant features...
+[ 2025-12-25 16:15:31,600 ] 266 root - INFO - Detected 0 constant/near-constant features
+[ 2025-12-25 16:15:31,600 ] 338 root - INFO - No constant/near-constant features detected
+[ 2025-12-25 16:15:31,600 ] 203 root - INFO - Checking for class imbalance...
+[ 2025-12-25 16:15:31,601 ] 246 root - INFO - Classes are balanced (imbalance ratio: 1.05:1)
+[ 2025-12-25 16:15:31,602 ] 251 root - INFO - Detecting high cardinality features...
+[ 2025-12-25 16:15:31,602 ] 294 root - INFO - No high cardinality features detected
+[ 2025-12-25 16:15:31,602 ] 77 root - INFO - Issue detection complete. Found 4 issues
+[ 2025-12-25 16:15:39,874 ] 36 root - INFO - FeatureTypeInference initialized with 1025 rows, 14 columns
+[ 2025-12-25 16:15:39,924 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-25 16:15:39,925 ] 49 root - INFO - IssueDetector initialized for dataset with 1025 rows, 14 columns
+[ 2025-12-25 16:15:39,925 ] 36 root - INFO - FeatureTypeInference initialized with 1025 rows, 14 columns
+[ 2025-12-25 16:15:39,974 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-25 16:15:39,974 ] 54 root - INFO - Feature types inferred: 13 features classified
+[ 2025-12-25 16:15:39,974 ] 34 root - INFO - OutlierDetector initialized with 1025 rows
+[ 2025-12-25 16:15:39,975 ] 186 root - INFO - ConstantFeatureDetector initialized (threshold=0.99)
+[ 2025-12-25 16:15:39,975 ] 69 root - INFO - Starting comprehensive issue detection...
+[ 2025-12-25 16:15:39,975 ] 83 root - INFO - Detecting missing values...
+[ 2025-12-25 16:15:39,977 ] 142 root - INFO - No missing values detected
+[ 2025-12-25 16:15:39,978 ] 147 root - INFO - Detecting outliers (continuous_numeric features only)...
+[ 2025-12-25 16:15:39,983 ] 136 root - INFO - Outlier detection for 'age': 0 outliers (0.00%), severity=low
+[ 2025-12-25 16:15:39,988 ] 136 root - INFO - Outlier detection for 'trestbps': 30 outliers (2.93%), severity=medium
+[ 2025-12-25 16:15:39,993 ] 136 root - INFO - Outlier detection for 'chol': 16 outliers (1.56%), severity=medium
+[ 2025-12-25 16:15:39,997 ] 136 root - INFO - Outlier detection for 'thalach': 4 outliers (0.39%), severity=low
+[ 2025-12-25 16:15:40,002 ] 136 root - INFO - Outlier detection for 'oldpeak': 7 outliers (0.68%), severity=low
+[ 2025-12-25 16:15:40,003 ] 161 root - INFO - Detected outliers in 4 columns
+[ 2025-12-25 16:15:40,003 ] 194 root - INFO - Detected outliers in 4 columns
+[ 2025-12-25 16:15:40,003 ] 299 root - INFO - Detecting constant/near-constant features...
+[ 2025-12-25 16:15:40,013 ] 266 root - INFO - Detected 0 constant/near-constant features
+[ 2025-12-25 16:15:40,014 ] 338 root - INFO - No constant/near-constant features detected
+[ 2025-12-25 16:15:40,014 ] 203 root - INFO - Checking for class imbalance...
+[ 2025-12-25 16:15:40,015 ] 246 root - INFO - Classes are balanced (imbalance ratio: 1.05:1)
+[ 2025-12-25 16:15:40,016 ] 251 root - INFO - Detecting high cardinality features...
+[ 2025-12-25 16:15:40,016 ] 294 root - INFO - No high cardinality features detected
+[ 2025-12-25 16:15:40,016 ] 77 root - INFO - Issue detection complete. Found 4 issues
+[ 2025-12-25 16:15:43,821 ] 28 root - INFO - Entered the data ingestion component
+[ 2025-12-25 16:15:43,839 ] 34 root - INFO - Saved raw dataset to artifacts
+[ 2025-12-25 16:15:43,877 ] 40 root - INFO - Saved train/test splits to artifacts
+[ 2025-12-25 16:16:08,160 ] 46 root - INFO - Generated EDA report
+[ 2025-12-25 16:16:08,177 ] 36 root - INFO - FeatureTypeInference initialized with 1025 rows, 14 columns
+[ 2025-12-25 16:16:08,242 ] 53 root - INFO - Feature type inference complete. Classified 13 features
+[ 2025-12-25 16:16:08,242 ] 216 root - INFO - Column groups \u2192 numeric:['age', 'trestbps', 'chol', 'thalach', 'oldpeak'], categorical:['sex', 'cp', 'fbs', 'restecg', 'exang', 'slope', 'ca', 'thal'], datetime(dropped):[], id_like(dropped):[]
+[ 2025-12-25 16:16:08,243 ] 42 root - INFO - PreprocessingApplicator initialized with 1025 rows, 14 columns
+[ 2025-12-25 16:16:08,243 ] 190 root - INFO - Applying outlier handling...
+[ 2025-12-25 16:16:08,249 ] 268 root - INFO - Capped 30 outliers in 'trestbps'
+[ 2025-12-25 16:16:08,254 ] 268 root - INFO - Capped 16 outliers in 'chol'
+[ 2025-12-25 16:16:08,260 ] 268 root - INFO - Capped 4 outliers in 'thalach'
+[ 2025-12-25 16:16:08,264 ] 268 root - INFO - Capped 7 outliers in 'oldpeak'
+[ 2025-12-25 16:16:08,264 ] 346 root - INFO - Applying class imbalance handling: no action...
+[ 2025-12-25 16:16:08,272 ] 75 root - INFO - Categorical columns: ['sex', 'cp', 'fbs', 'restecg', 'exang', 'slope', 'ca', 'thal']
+[ 2025-12-25 16:16:08,272 ] 76 root - INFO - Numerical columns: ['age', 'trestbps', 'chol', 'thalach', 'oldpeak']
+[ 2025-12-25 16:16:33,050 ] 37 root - INFO - Split training and test input data
+[ 2025-12-25 16:16:49,819 ] 91 root - INFO - Search params for Random Forest: {'n_estimators': 32, 'max_depth': 5}
+[ 2025-12-25 16:16:49,891 ] 127 root - INFO - Random Forest - Acc: 0.9268, Prec: 0.9167, Rec: 0.9429, F1: 0.9296, Time: 16.77s
+[ 2025-12-25 16:17:06,020 ] 91 root - INFO - Search params for Decision Tree: {'max_depth': 5, 'criterion': 'gini'}
+[ 2025-12-25 16:17:06,056 ] 127 root - INFO - Decision Tree - Acc: 0.8878, Prec: 0.9100, Rec: 0.8667, F1: 0.8878, Time: 16.13s
+[ 2025-12-25 16:17:11,911 ] 91 root - INFO - Search params for Logistic Regression: {'solver': 'lbfgs', 'penalty': 'l2', 'C': 1.0}
+[ 2025-12-25 16:17:11,945 ] 127 root - INFO - Logistic Regression - Acc: 0.8829, Prec: 0.8584, Rec: 0.9238, F1: 0.8899, Time: 5.85s
+[ 2025-12-25 16:17:12,837 ] 91 root - INFO - Search params for AdaBoost Classifier: {'n_estimators': 32, 'learning_rate': 1.0}
+[ 2025-12-25 16:17:12,905 ] 127 root - INFO - AdaBoost Classifier - Acc: 0.8829, Prec: 0.8716, Rec: 0.9048, F1: 0.8879, Time: 0.89s
+[ 2025-12-25 16:17:13,598 ] 91 root - INFO - Search params for K-Nearest Neighbors: {'n_neighbors': 5, 'metric': 'euclidean'}
+[ 2025-12-25 16:17:16,658 ] 127 root - INFO - K-Nearest Neighbors - Acc: 0.8439, Prec: 0.8763, Rec: 0.8095, F1: 0.8416, Time: 0.69s
+[ 2025-12-25 16:17:16,694 ] 127 root - INFO - Naive Bayes - Acc: 0.8244, Prec: 0.8108, Rec: 0.8571, F1: 0.8333, Time: 0.00s
+[ 2025-12-25 16:17:17,679 ] 91 root - INFO - Search params for Support Vector Machine: {'kernel': 'linear', 'C': 1.0}
+[ 2025-12-25 16:17:17,722 ] 127 root - INFO - Support Vector Machine - Acc: 0.8780, Prec: 0.8509, Rec: 0.9238, F1: 0.8858, Time: 0.98s
+[ 2025-12-25 16:17:17,807 ] 113 root - WARNING - OneR Classifier lacks predict_proba; ROC-AUC skipped
+[ 2025-12-25 16:17:17,807 ] 127 root - INFO - OneR Classifier - Acc: 0.6976, Prec: 0.6972, Rec: 0.7238, F1: 0.7103, Time: 0.05s
+[ 2025-12-25 16:17:17,808 ] 108 root - INFO - Best found model: Random Forest
+[ 2025-12-25 16:17:21,321 ] 719 root - WARNING - Could not generate P-R curve for OneR Classifier: 'OneRClassifier' object has no attribute 'predict_proba'
+[ 2025-12-25 16:17:55,299 ] 719 root - WARNING - Could not generate P-R curve for OneR Classifier: 'OneRClassifier' object has no attribute 'predict_proba'
+[ 2025-12-25 16:18:48,938 ] 36 root - INFO - FeatureTypeInference initialized with 32561 rows, 15 columns
+[ 2025-12-25 16:18:49,181 ] 53 root - INFO - Feature type inference complete. Classified 14 features
+[ 2025-12-25 16:18:49,182 ] 49 root - INFO - IssueDetector initialized for dataset with 32561 rows, 15 columns
+[ 2025-12-25 16:18:49,183 ] 36 root - INFO - FeatureTypeInference initialized with 32561 rows, 15 columns
+[ 2025-12-25 16:18:49,398 ] 53 root - INFO - Feature type inference complete. Classified 14 features
+[ 2025-12-25 16:18:49,398 ] 54 root - INFO - Feature types inferred: 14 features classified
+[ 2025-12-25 16:18:49,399 ] 34 root - INFO - OutlierDetector initialized with 32561 rows
+[ 2025-12-25 16:18:49,399 ] 186 root - INFO - ConstantFeatureDetector initialized (threshold=0.99)
+[ 2025-12-25 16:18:49,399 ] 69 root - INFO - Starting comprehensive issue detection...
+[ 2025-12-25 16:18:49,399 ] 83 root - INFO - Detecting missing values...
+[ 2025-12-25 16:18:49,448 ] 140 root - INFO - Found missing values in 3 columns (global: 0.87%)
+[ 2025-12-25 16:18:49,448 ] 147 root - INFO - Detecting outliers (continuous_numeric features only)...
+[ 2025-12-25 16:18:49,459 ] 136 root - INFO - Outlier detection for 'Age': 143 outliers (0.44%), severity=low
+[ 2025-12-25 16:18:49,470 ] 136 root - INFO - Outlier detection for 'fnlwgt': 992 outliers (3.05%), severity=medium
+[ 2025-12-25 16:18:49,499 ] 136 root - INFO - Outlier detection for 'Hours_per_week': 9008 outliers (27.66%), severity=high
+[ 2025-12-25 16:18:49,499 ] 161 root - INFO - Detected outliers in 3 columns
+[ 2025-12-25 16:18:49,500 ] 194 root - INFO - Detected outliers in 3 columns
+[ 2025-12-25 16:18:49,501 ] 299 root - INFO - Detecting constant/near-constant features...
+[ 2025-12-25 16:18:49,632 ] 266 root - INFO - Detected 0 constant/near-constant features
+[ 2025-12-25 16:18:49,632 ] 338 root - INFO - No constant/near-constant features detected
+[ 2025-12-25 16:18:49,632 ] 203 root - INFO - Checking for class imbalance...
+[ 2025-12-25 16:18:49,644 ] 244 root - INFO - Detected class imbalance (ratio: 3.15:1, severity: medium)
+[ 2025-12-25 16:18:49,645 ] 251 root - INFO - Detecting high cardinality features...
+[ 2025-12-25 16:18:49,646 ] 294 root - INFO - No high cardinality features detected
+[ 2025-12-25 16:18:49,646 ] 77 root - INFO - Issue detection complete. Found 7 issues
+[ 2025-12-25 16:20:18,425 ] 36 root - INFO - FeatureTypeInference initialized with 32561 rows, 15 columns
+[ 2025-12-25 16:20:18,575 ] 53 root - INFO - Feature type inference complete. Classified 14 features
+[ 2025-12-25 16:20:18,576 ] 49 root - INFO - IssueDetector initialized for dataset with 32561 rows, 15 columns
+[ 2025-12-25 16:20:18,576 ] 36 root - INFO - FeatureTypeInference initialized with 32561 rows, 15 columns
+[ 2025-12-25 16:20:18,721 ] 53 root - INFO - Feature type inference complete. Classified 14 features
+[ 2025-12-25 16:20:18,721 ] 54 root - INFO - Feature types inferred: 14 features classified
+[ 2025-12-25 16:20:18,722 ] 34 root - INFO - OutlierDetector initialized with 32561 rows
+[ 2025-12-25 16:20:18,722 ] 186 root - INFO - ConstantFeatureDetector initialized (threshold=0.99)
+[ 2025-12-25 16:20:18,722 ] 69 root - INFO - Starting comprehensive issue detection...
+[ 2025-12-25 16:20:18,722 ] 83 root - INFO - Detecting missing values...
+[ 2025-12-25 16:20:18,749 ] 140 root - INFO - Found missing values in 3 columns (global: 0.87%)
+[ 2025-12-25 16:20:18,749 ] 147 root - INFO - Detecting outliers (continuous_numeric features only)...
+[ 2025-12-25 16:20:18,755 ] 136 root - INFO - Outlier detection for 'Age': 143 outliers (0.44%), severity=low
+[ 2025-12-25 16:20:18,760 ] 136 root - INFO - Outlier detection for 'fnlwgt': 992 outliers (3.05%), severity=medium
+[ 2025-12-25 16:20:18,772 ] 136 root - INFO - Outlier detection for 'Hours_per_week': 9008 outliers (27.66%), severity=high
+[ 2025-12-25 16:20:18,772 ] 161 root - INFO - Detected outliers in 3 columns
+[ 2025-12-25 16:20:18,772 ] 194 root - INFO - Detected outliers in 3 columns
+[ 2025-12-25 16:20:18,772 ] 299 root - INFO - Detecting constant/near-constant features...
+[ 2025-12-25 16:20:18,845 ] 266 root - INFO - Detected 0 constant/near-constant features
+[ 2025-12-25 16:20:18,846 ] 338 root - INFO - No constant/near-constant features detected
+[ 2025-12-25 16:20:18,846 ] 203 root - INFO - Checking for class imbalance...
+[ 2025-12-25 16:20:18,851 ] 244 root - INFO - Detected class imbalance (ratio: 3.15:1, severity: medium)
+[ 2025-12-25 16:20:18,851 ] 251 root - INFO - Detecting high cardinality features...
+[ 2025-12-25 16:20:18,851 ] 294 root - INFO - No high cardinality features detected
+[ 2025-12-25 16:20:18,852 ] 77 root - INFO - Issue detection complete. Found 7 issues
+[ 2025-12-25 16:20:21,050 ] 36 root - INFO - FeatureTypeInference initialized with 32561 rows, 15 columns
+[ 2025-12-25 16:20:21,185 ] 53 root - INFO - Feature type inference complete. Classified 14 features
+[ 2025-12-25 16:20:21,185 ] 49 root - INFO - IssueDetector initialized for dataset with 32561 rows, 15 columns
+[ 2025-12-25 16:20:21,185 ] 36 root - INFO - FeatureTypeInference initialized with 32561 rows, 15 columns
+[ 2025-12-25 16:20:21,330 ] 53 root - INFO - Feature type inference complete. Classified 14 features
+[ 2025-12-25 16:20:21,331 ] 54 root - INFO - Feature types inferred: 14 features classified
+[ 2025-12-25 16:20:21,331 ] 34 root - INFO - OutlierDetector initialized with 32561 rows
+[ 2025-12-25 16:20:21,331 ] 186 root - INFO - ConstantFeatureDetector initialized (threshold=0.99)
+[ 2025-12-25 16:20:21,331 ] 69 root - INFO - Starting comprehensive issue detection...
+[ 2025-12-25 16:20:21,331 ] 83 root - INFO - Detecting missing values...
+[ 2025-12-25 16:20:21,350 ] 140 root - INFO - Found missing values in 3 columns (global: 0.87%)
+[ 2025-12-25 16:20:21,350 ] 147 root - INFO - Detecting outliers (continuous_numeric features only)...
+[ 2025-12-25 16:20:21,360 ] 136 root - INFO - Outlier detection for 'Age': 143 outliers (0.44%), severity=low
+[ 2025-12-25 16:20:21,372 ] 136 root - INFO - Outlier detection for 'fnlwgt': 992 outliers (3.05%), severity=medium
+[ 2025-12-25 16:20:21,393 ] 136 root - INFO - Outlier detection for 'Hours_per_week': 9008 outliers (27.66%), severity=high
+[ 2025-12-25 16:20:21,393 ] 161 root - INFO - Detected outliers in 3 columns
+[ 2025-12-25 16:20:21,394 ] 194 root - INFO - Detected outliers in 3 columns
+[ 2025-12-25 16:20:21,394 ] 299 root - INFO - Detecting constant/near-constant features...
+[ 2025-12-25 16:20:21,477 ] 266 root - INFO - Detected 0 constant/near-constant features
+[ 2025-12-25 16:20:21,478 ] 338 root - INFO - No constant/near-constant features detected
+[ 2025-12-25 16:20:21,478 ] 203 root - INFO - Checking for class imbalance...
+[ 2025-12-25 16:20:21,486 ] 244 root - INFO - Detected class imbalance (ratio: 3.15:1, severity: medium)
+[ 2025-12-25 16:20:21,487 ] 251 root - INFO - Detecting high cardinality features...
+[ 2025-12-25 16:20:21,487 ] 294 root - INFO - No high cardinality features detected
+[ 2025-12-25 16:20:21,487 ] 77 root - INFO - Issue detection complete. Found 7 issues
+[ 2025-12-25 16:20:23,375 ] 36 root - INFO - FeatureTypeInference initialized with 32561 rows, 15 columns
+[ 2025-12-25 16:20:23,531 ] 53 root - INFO - Feature type inference complete. Classified 14 features
+[ 2025-12-25 16:20:23,532 ] 49 root - INFO - IssueDetector initialized for dataset with 32561 rows, 15 columns
+[ 2025-12-25 16:20:23,532 ] 36 root - INFO - FeatureTypeInference initialized with 32561 rows, 15 columns
+[ 2025-12-25 16:20:23,685 ] 53 root - INFO - Feature type inference complete. Classified 14 features
+[ 2025-12-25 16:20:23,685 ] 54 root - INFO - Feature types inferred: 14 features classified
+[ 2025-12-25 16:20:23,686 ] 34 root - INFO - OutlierDetector initialized with 32561 rows
+[ 2025-12-25 16:20:23,686 ] 186 root - INFO - ConstantFeatureDetector initialized (threshold=0.99)
+[ 2025-12-25 16:20:23,686 ] 69 root - INFO - Starting comprehensive issue detection...
+[ 2025-12-25 16:20:23,686 ] 83 root - INFO - Detecting missing values...
+[ 2025-12-25 16:20:23,706 ] 140 root - INFO - Found missing values in 3 columns (global: 0.87%)
+[ 2025-12-25 16:20:23,706 ] 147 root - INFO - Detecting outliers (continuous_numeric features only)...
+[ 2025-12-25 16:20:23,712 ] 136 root - INFO - Outlier detection for 'Age': 143 outliers (0.44%), severity=low
+[ 2025-12-25 16:20:23,719 ] 136 root - INFO - Outlier detection for 'fnlwgt': 992 outliers (3.05%), severity=medium
+[ 2025-12-25 16:20:23,731 ] 136 root - INFO - Outlier detection for 'Hours_per_week': 9008 outliers (27.66%), severity=high
+[ 2025-12-25 16:20:23,731 ] 161 root - INFO - Detected outliers in 3 columns
+[ 2025-12-25 16:20:23,731 ] 194 root - INFO - Detected outliers in 3 columns
+[ 2025-12-25 16:20:23,731 ] 299 root - INFO - Detecting constant/near-constant features...
+[ 2025-12-25 16:20:23,808 ] 266 root - INFO - Detected 0 constant/near-constant features
+[ 2025-12-25 16:20:23,809 ] 338 root - INFO - No constant/near-constant features detected
+[ 2025-12-25 16:20:23,809 ] 203 root - INFO - Checking for class imbalance...
+[ 2025-12-25 16:20:23,816 ] 244 root - INFO - Detected class imbalance (ratio: 3.15:1, severity: medium)
+[ 2025-12-25 16:20:23,816 ] 251 root - INFO - Detecting high cardinality features...
+[ 2025-12-25 16:20:23,817 ] 294 root - INFO - No high cardinality features detected
+[ 2025-12-25 16:20:23,817 ] 77 root - INFO - Issue detection complete. Found 7 issues
+[ 2025-12-25 16:20:28,373 ] 36 root - INFO - FeatureTypeInference initialized with 32561 rows, 15 columns
+[ 2025-12-25 16:20:28,514 ] 53 root - INFO - Feature type inference complete. Classified 14 features
+[ 2025-12-25 16:20:28,515 ] 49 root - INFO - IssueDetector initialized for dataset with 32561 rows, 15 columns
+[ 2025-12-25 16:20:28,515 ] 36 root - INFO - FeatureTypeInference initialized with 32561 rows, 15 columns
+[ 2025-12-25 16:20:28,628 ] 53 root - INFO - Feature type inference complete. Classified 14 features
+[ 2025-12-25 16:20:28,628 ] 54 root - INFO - Feature types inferred: 14 features classified
+[ 2025-12-25 16:20:28,628 ] 34 root - INFO - OutlierDetector initialized with 32561 rows
+[ 2025-12-25 16:20:28,628 ] 186 root - INFO - ConstantFeatureDetector initialized (threshold=0.99)
+[ 2025-12-25 16:20:28,628 ] 69 root - INFO - Starting comprehensive issue detection...
+[ 2025-12-25 16:20:28,628 ] 83 root - INFO - Detecting missing values...
+[ 2025-12-25 16:20:28,648 ] 140 root - INFO - Found missing values in 3 columns (global: 0.87%)
+[ 2025-12-25 16:20:28,648 ] 147 root - INFO - Detecting outliers (continuous_numeric features only)...
+[ 2025-12-25 16:20:28,657 ] 136 root - INFO - Outlier detection for 'Age': 143 outliers (0.44%), severity=low
+[ 2025-12-25 16:20:28,667 ] 136 root - INFO - Outlier detection for 'fnlwgt': 992 outliers (3.05%), severity=medium
+[ 2025-12-25 16:20:28,684 ] 136 root - INFO - Outlier detection for 'Hours_per_week': 9008 outliers (27.66%), severity=high
+[ 2025-12-25 16:20:28,685 ] 161 root - INFO - Detected outliers in 3 columns
+[ 2025-12-25 16:20:28,685 ] 194 root - INFO - Detected outliers in 3 columns
+[ 2025-12-25 16:20:28,685 ] 299 root - INFO - Detecting constant/near-constant features...
+[ 2025-12-25 16:20:28,766 ] 266 root - INFO - Detected 0 constant/near-constant features
+[ 2025-12-25 16:20:28,766 ] 338 root - INFO - No constant/near-constant features detected
+[ 2025-12-25 16:20:28,766 ] 203 root - INFO - Checking for class imbalance...
+[ 2025-12-25 16:20:28,777 ] 244 root - INFO - Detected class imbalance (ratio: 3.15:1, severity: medium)
+[ 2025-12-25 16:20:28,777 ] 251 root - INFO - Detecting high cardinality features...
+[ 2025-12-25 16:20:28,778 ] 294 root - INFO - No high cardinality features detected
+[ 2025-12-25 16:20:28,778 ] 77 root - INFO - Issue detection complete. Found 7 issues
+[ 2025-12-25 16:20:34,952 ] 28 root - INFO - Entered the data ingestion component
+[ 2025-12-25 16:20:35,248 ] 34 root - INFO - Saved raw dataset to artifacts
+[ 2025-12-25 16:20:35,784 ] 40 root - INFO - Saved train/test splits to artifacts
+[ 2025-12-25 16:21:16,932 ] 46 root - INFO - Generated EDA report
+[ 2025-12-25 16:21:18,028 ] 36 root - INFO - FeatureTypeInference initialized with 32561 rows, 15 columns
+[ 2025-12-25 16:21:18,360 ] 53 root - INFO - Feature type inference complete. Classified 14 features
+[ 2025-12-25 16:21:18,360 ] 216 root - INFO - Column groups \u2192 numeric:['Age', 'fnlwgt', 'Education_Num', 'Capital_Gain', 'Capital_Loss', 'Hours_per_week'], categorical:['Workclass', 'Education', 'Martial_Status', 'Occupation', 'Relationship', 'Race', 'Sex', 'Country'], datetime(dropped):[], id_like(dropped):[]
+[ 2025-12-25 16:21:18,472 ] 42 root - INFO - PreprocessingApplicator initialized with 32561 rows, 15 columns
+[ 2025-12-25 16:21:18,473 ] 55 root - INFO - Applying missing value imputation...
+[ 2025-12-25 16:21:18,509 ] 151 root - INFO - Imputed 1836 missing values in 'Workclass' with mode=Private
+[ 2025-12-25 16:21:18,533 ] 151 root - INFO - Imputed 1843 missing values in 'Occupation' with mode=Prof-specialty
+[ 2025-12-25 16:21:18,558 ] 151 root - INFO - Imputed 583 missing values in 'Country' with mode=United-States
+[ 2025-12-25 16:21:18,558 ] 190 root - INFO - Applying outlier handling...
+[ 2025-12-25 16:21:18,560 ] 346 root - INFO - Applying class imbalance handling: class_weights...
+[ 2025-12-25 16:21:18,571 ] 362 root - INFO - Class weights will be applied during model training: {'<=50K': 24720, '>50K': 7841}
+[ 2025-12-25 16:21:18,766 ] 75 root - INFO - Categorical columns: ['Workclass', 'Education', 'Martial_Status', 'Occupation', 'Relationship', 'Race', 'Sex', 'Country']
+[ 2025-12-25 16:21:18,767 ] 76 root - INFO - Numerical columns: ['Age', 'fnlwgt', 'Education_Num', 'Capital_Gain', 'Capital_Loss', 'Hours_per_week']
+[ 2025-12-25 16:21:18,820 ] 143 root - INFO - Target column is categorical with values: ['>50K' '<=50K']
+[ 2025-12-25 16:21:18,820 ] 144 root - INFO - Encoding categorical target using LabelEncoder
+[ 2025-12-25 16:21:18,850 ] 149 root - INFO - Target encoded: {'<=50K': np.int64(0), '>50K': np.int64(1)}
+[ 2025-12-25 16:21:18,865 ] 294 root - INFO - Target encoder saved to artifacts\target_encoder.pkl
+[ 2025-12-25 16:21:25,992 ] 37 root - INFO - Split training and test input data
+[ 2025-12-25 16:21:30,224 ] 91 root - INFO - Search params for Random Forest: {'n_estimators': 32, 'max_depth': 5}
+[ 2025-12-25 16:21:30,411 ] 127 root - INFO - Random Forest - Acc: 0.7408, Prec: 0.4791, Rec: 0.8782, F1: 0.6200, Time: 4.23s
+[ 2025-12-25 16:21:33,206 ] 91 root - INFO - Search params for Decision Tree: {'max_depth': 5, 'criterion': 'gini'}
+[ 2025-12-25 16:21:33,269 ] 127 root - INFO - Decision Tree - Acc: 0.7815, Prec: 0.5279, Rec: 0.8756, F1: 0.6587, Time: 2.80s
+[ 2025-12-25 16:21:37,268 ] 91 root - INFO - Search params for Logistic Regression: {'solver': 'lbfgs', 'penalty': 'l2', 'C': 1.0}
+[ 2025-12-25 16:21:37,347 ] 127 root - INFO - Logistic Regression - Acc: 0.8070, Prec: 0.5659, Rec: 0.8514, F1: 0.6799, Time: 4.00s
+[ 2025-12-25 16:21:54,079 ] 91 root - INFO - Search params for AdaBoost Classifier: {'n_estimators': 32, 'learning_rate': 1.0}
+[ 2025-12-25 16:21:54,712 ] 127 root - INFO - AdaBoost Classifier - Acc: 0.8531, Prec: 0.7863, Rec: 0.5351, F1: 0.6368, Time: 16.73s
+[ 2025-12-25 16:22:05,915 ] 91 root - INFO - Search params for K-Nearest Neighbors: {'n_neighbors': 5, 'metric': 'euclidean'}
+[ 2025-12-25 16:22:11,591 ] 127 root - INFO - K-Nearest Neighbors - Acc: 0.8277, Prec: 0.6604, Rec: 0.5855, F1: 0.6207, Time: 11.20s
+[ 2025-12-25 16:22:11,974 ] 127 root - INFO - Naive Bayes - Acc: 0.4377, Prec: 0.2964, Rec: 0.9719, F1: 0.4542, Time: 0.20s
+[ 2025-12-25 16:43:01,154 ] 36 root - INFO - FeatureTypeInference initialized with 1371 rows, 5 columns
+[ 2025-12-25 16:43:01,291 ] 53 root - INFO - Feature type inference complete. Classified 4 features
+[ 2025-12-25 16:43:01,292 ] 49 root - INFO - IssueDetector initialized for dataset with 1371 rows, 5 columns
+[ 2025-12-25 16:43:01,292 ] 36 root - INFO - FeatureTypeInference initialized with 1371 rows, 5 columns
+[ 2025-12-25 16:43:01,378 ] 53 root - INFO - Feature type inference complete. Classified 4 features
+[ 2025-12-25 16:43:01,379 ] 54 root - INFO - Feature types inferred: 4 features classified
+[ 2025-12-25 16:43:01,379 ] 34 root - INFO - OutlierDetector initialized with 1371 rows
+[ 2025-12-25 16:43:01,379 ] 186 root - INFO - ConstantFeatureDetector initialized (threshold=0.99)
+[ 2025-12-25 16:43:01,379 ] 69 root - INFO - Starting comprehensive issue detection...
+[ 2025-12-25 16:43:01,380 ] 83 root - INFO - Detecting missing values...
+[ 2025-12-25 16:43:01,390 ] 142 root - INFO - No missing values detected
+[ 2025-12-25 16:43:01,392 ] 147 root - INFO - Detecting outliers (continuous_numeric features only)...
+[ 2025-12-25 16:43:01,409 ] 136 root - INFO - Outlier detection for '3.6216': 0 outliers (0.00%), severity=low
+[ 2025-12-25 16:43:01,429 ] 136 root - INFO - Outlier detection for '8.6661': 0 outliers (0.00%), severity=low
+[ 2025-12-25 16:43:01,457 ] 136 root - INFO - Outlier detection for '-2.8073': 60 outliers (4.38%), severity=medium
+[ 2025-12-25 16:43:01,479 ] 136 root - INFO - Outlier detection for '-0.44699': 33 outliers (2.41%), severity=medium
+[ 2025-12-25 16:43:01,486 ] 161 root - INFO - Detected outliers in 2 columns
+[ 2025-12-25 16:43:01,486 ] 194 root - INFO - Detected outliers in 2 columns
+[ 2025-12-25 16:43:01,487 ] 299 root - INFO - Detecting constant/near-constant features...
+[ 2025-12-25 16:43:01,555 ] 266 root - INFO - Detected 0 constant/near-constant features
+[ 2025-12-25 16:43:01,556 ] 338 root - INFO - No constant/near-constant features detected
+[ 2025-12-25 16:43:01,556 ] 203 root - INFO - Checking for class imbalance...
+[ 2025-12-25 16:43:01,562 ] 246 root - INFO - Classes are balanced (imbalance ratio: 1.25:1)
+[ 2025-12-25 16:43:01,565 ] 251 root - INFO - Detecting high cardinality features...
+[ 2025-12-25 16:43:01,566 ] 294 root - INFO - No high cardinality features detected
+[ 2025-12-25 16:43:01,566 ] 77 root - INFO - Issue detection complete. Found 2 issues
+[ 2025-12-25 16:43:07,757 ] 36 root - INFO - FeatureTypeInference initialized with 1371 rows, 5 columns
+[ 2025-12-25 16:43:07,867 ] 53 root - INFO - Feature type inference complete. Classified 4 features
+[ 2025-12-25 16:43:07,869 ] 49 root - INFO - IssueDetector initialized for dataset with 1371 rows, 5 columns
+[ 2025-12-25 16:43:07,869 ] 36 root - INFO - FeatureTypeInference initialized with 1371 rows, 5 columns
+[ 2025-12-25 16:43:07,966 ] 53 root - INFO - Feature type inference complete. Classified 4 features
+[ 2025-12-25 16:43:07,966 ] 54 root - INFO - Feature types inferred: 4 features classified
+[ 2025-12-25 16:43:07,966 ] 34 root - INFO - OutlierDetector initialized with 1371 rows
+[ 2025-12-25 16:43:07,967 ] 186 root - INFO - ConstantFeatureDetector initialized (threshold=0.99)
+[ 2025-12-25 16:43:07,967 ] 69 root - INFO - Starting comprehensive issue detection...
+[ 2025-12-25 16:43:07,967 ] 83 root - INFO - Detecting missing values...
+[ 2025-12-25 16:43:07,975 ] 142 root - INFO - No missing values detected
+[ 2025-12-25 16:43:07,978 ] 147 root - INFO - Detecting outliers (continuous_numeric features only)...
+[ 2025-12-25 16:43:08,002 ] 136 root - INFO - Outlier detection for '3.6216': 0 outliers (0.00%), severity=low
+[ 2025-12-25 16:43:08,022 ] 136 root - INFO - Outlier detection for '8.6661': 0 outliers (0.00%), severity=low
+[ 2025-12-25 16:43:08,047 ] 136 root - INFO - Outlier detection for '-2.8073': 60 outliers (4.38%), severity=medium
+[ 2025-12-25 16:43:08,070 ] 136 root - INFO - Outlier detection for '-0.44699': 33 outliers (2.41%), severity=medium
+[ 2025-12-25 16:43:08,071 ] 161 root - INFO - Detected outliers in 2 columns
+[ 2025-12-25 16:43:08,071 ] 194 root - INFO - Detected outliers in 2 columns
+[ 2025-12-25 16:43:08,074 ] 299 root - INFO - Detecting constant/near-constant features...
+[ 2025-12-25 16:43:08,108 ] 266 root - INFO - Detected 0 constant/near-constant features
+[ 2025-12-25 16:43:08,109 ] 338 root - INFO - No constant/near-constant features detected
+[ 2025-12-25 16:43:08,109 ] 203 root - INFO - Checking for class imbalance...
+[ 2025-12-25 16:43:08,115 ] 246 root - INFO - Classes are balanced (imbalance ratio: 1.25:1)
+[ 2025-12-25 16:43:08,116 ] 251 root - INFO - Detecting high cardinality features...
+[ 2025-12-25 16:43:08,120 ] 294 root - INFO - No high cardinality features detected
+[ 2025-12-25 16:43:08,120 ] 77 root - INFO - Issue detection complete. Found 2 issues
+[ 2025-12-25 16:43:11,105 ] 36 root - INFO - FeatureTypeInference initialized with 1371 rows, 5 columns
+[ 2025-12-25 16:43:11,218 ] 53 root - INFO - Feature type inference complete. Classified 4 features
+[ 2025-12-25 16:43:11,222 ] 49 root - INFO - IssueDetector initialized for dataset with 1371 rows, 5 columns
+[ 2025-12-25 16:43:11,223 ] 36 root - INFO - FeatureTypeInference initialized with 1371 rows, 5 columns
+[ 2025-12-25 16:43:11,314 ] 53 root - INFO - Feature type inference complete. Classified 4 features
+[ 2025-12-25 16:43:11,317 ] 54 root - INFO - Feature types inferred: 4 features classified
+[ 2025-12-25 16:43:11,317 ] 34 root - INFO - OutlierDetector initialized with 1371 rows
+[ 2025-12-25 16:43:11,318 ] 186 root - INFO - ConstantFeatureDetector initialized (threshold=0.99)
+[ 2025-12-25 16:43:11,318 ] 69 root - INFO - Starting comprehensive issue detection...
+[ 2025-12-25 16:43:11,318 ] 83 root - INFO - Detecting missing values...
+[ 2025-12-25 16:43:11,324 ] 142 root - INFO - No missing values detected
+[ 2025-12-25 16:43:11,325 ] 147 root - INFO - Detecting outliers (continuous_numeric features only)...
+[ 2025-12-25 16:43:11,348 ] 136 root - INFO - Outlier detection for '3.6216': 0 outliers (0.00%), severity=low
+[ 2025-12-25 16:43:11,372 ] 136 root - INFO - Outlier detection for '8.6661': 0 outliers (0.00%), severity=low
+[ 2025-12-25 16:43:11,398 ] 136 root - INFO - Outlier detection for '-2.8073': 60 outliers (4.38%), severity=medium
+[ 2025-12-25 16:43:11,421 ] 136 root - INFO - Outlier detection for '-0.44699': 33 outliers (2.41%), severity=medium
+[ 2025-12-25 16:43:11,424 ] 161 root - INFO - Detected outliers in 2 columns
+[ 2025-12-25 16:43:11,425 ] 194 root - INFO - Detected outliers in 2 columns
+[ 2025-12-25 16:43:11,425 ] 299 root - INFO - Detecting constant/near-constant features...
+[ 2025-12-25 16:43:11,460 ] 266 root - INFO - Detected 0 constant/near-constant features
+[ 2025-12-25 16:43:11,463 ] 338 root - INFO - No constant/near-constant features detected
+[ 2025-12-25 16:43:11,463 ] 203 root - INFO - Checking for class imbalance...
+[ 2025-12-25 16:43:11,470 ] 246 root - INFO - Classes are balanced (imbalance ratio: 1.25:1)
+[ 2025-12-25 16:43:11,471 ] 251 root - INFO - Detecting high cardinality features...
+[ 2025-12-25 16:43:11,471 ] 294 root - INFO - No high cardinality features detected
+[ 2025-12-25 16:43:11,472 ] 77 root - INFO - Issue detection complete. Found 2 issues
+[ 2025-12-25 16:43:12,705 ] 36 root - INFO - FeatureTypeInference initialized with 1371 rows, 5 columns
+[ 2025-12-25 16:43:12,791 ] 53 root - INFO - Feature type inference complete. Classified 4 features
+[ 2025-12-25 16:43:12,793 ] 49 root - INFO - IssueDetector initialized for dataset with 1371 rows, 5 columns
+[ 2025-12-25 16:43:12,795 ] 36 root - INFO - FeatureTypeInference initialized with 1371 rows, 5 columns
+[ 2025-12-25 16:43:12,871 ] 53 root - INFO - Feature type inference complete. Classified 4 features
+[ 2025-12-25 16:43:12,872 ] 54 root - INFO - Feature types inferred: 4 features classified
+[ 2025-12-25 16:43:12,873 ] 34 root - INFO - OutlierDetector initialized with 1371 rows
+[ 2025-12-25 16:43:12,873 ] 186 root - INFO - ConstantFeatureDetector initialized (threshold=0.99)
+[ 2025-12-25 16:43:12,873 ] 69 root - INFO - Starting comprehensive issue detection...
+[ 2025-12-25 16:43:12,873 ] 83 root - INFO - Detecting missing values...
+[ 2025-12-25 16:43:12,881 ] 142 root - INFO - No missing values detected
+[ 2025-12-25 16:43:12,882 ] 147 root - INFO - Detecting outliers (continuous_numeric features only)...
+[ 2025-12-25 16:43:12,895 ] 136 root - INFO - Outlier detection for '3.6216': 0 outliers (0.00%), severity=low
+[ 2025-12-25 16:43:12,912 ] 136 root - INFO - Outlier detection for '8.6661': 0 outliers (0.00%), severity=low
+[ 2025-12-25 16:43:12,921 ] 136 root - INFO - Outlier detection for '-2.8073': 60 outliers (4.38%), severity=medium
+[ 2025-12-25 16:43:12,946 ] 136 root - INFO - Outlier detection for '-0.44699': 33 outliers (2.41%), severity=medium
+[ 2025-12-25 16:43:12,949 ] 161 root - INFO - Detected outliers in 2 columns
+[ 2025-12-25 16:43:12,950 ] 194 root - INFO - Detected outliers in 2 columns
+[ 2025-12-25 16:43:12,950 ] 299 root - INFO - Detecting constant/near-constant features...
+[ 2025-12-25 16:43:12,974 ] 266 root - INFO - Detected 0 constant/near-constant features
+[ 2025-12-25 16:43:12,975 ] 338 root - INFO - No constant/near-constant features detected
+[ 2025-12-25 16:43:12,975 ] 203 root - INFO - Checking for class imbalance...
+[ 2025-12-25 16:43:12,979 ] 246 root - INFO - Classes are balanced (imbalance ratio: 1.25:1)
+[ 2025-12-25 16:43:12,982 ] 251 root - INFO - Detecting high cardinality features...
+[ 2025-12-25 16:43:12,982 ] 294 root - INFO - No high cardinality features detected
+[ 2025-12-25 16:43:12,983 ] 77 root - INFO - Issue detection complete. Found 2 issues
+[ 2025-12-25 16:43:23,959 ] 28 root - INFO - Entered the data ingestion component
+[ 2025-12-25 16:43:36,867 ] 34 root - INFO - Saved raw dataset to artifacts
+[ 2025-12-25 16:43:37,066 ] 40 root - INFO - Saved train/test splits to artifacts
+[ 2025-12-25 16:44:21,106 ] 46 root - INFO - Generated EDA report
+[ 2025-12-25 16:44:21,150 ] 36 root - INFO - FeatureTypeInference initialized with 1371 rows, 5 columns
+[ 2025-12-25 16:44:21,258 ] 53 root - INFO - Feature type inference complete. Classified 4 features
+[ 2025-12-25 16:44:21,261 ] 216 root - INFO - Column groups \u2192 numeric:['3.6216', '8.6661', '-2.8073', '-0.44699'], categorical:[], datetime(dropped):[], id_like(dropped):[]
+[ 2025-12-25 16:44:21,265 ] 42 root - INFO - PreprocessingApplicator initialized with 1371 rows, 5 columns
+[ 2025-12-25 16:44:21,265 ] 190 root - INFO - Applying outlier handling...
+[ 2025-12-25 16:44:21,269 ] 346 root - INFO - Applying class imbalance handling: no action...
+[ 2025-12-25 16:44:21,301 ] 75 root - INFO - Categorical columns: []
+[ 2025-12-25 16:44:21,302 ] 76 root - INFO - Numerical columns: ['3.6216', '8.6661', '-2.8073', '-0.44699']
+[ 2025-12-25 16:44:29,282 ] 37 root - INFO - Split training and test input data
+[ 2025-12-25 16:45:14,724 ] 91 root - INFO - Search params for Random Forest: {'n_estimators': 32, 'max_depth': 5}
+[ 2025-12-25 16:45:15,134 ] 127 root - INFO - Random Forest - Acc: 0.9964, Prec: 0.9919, Rec: 1.0000, F1: 0.9959, Time: 45.44s
+[ 2025-12-25 16:45:40,812 ] 91 root - INFO - Search params for Decision Tree: {'max_depth': 5, 'criterion': 'gini'}
+[ 2025-12-25 16:45:40,999 ] 127 root - INFO - Decision Tree - Acc: 0.9709, Prec: 0.9672, Rec: 0.9672, F1: 0.9672, Time: 25.68s
+[ 2025-12-25 16:45:41,578 ] 91 root - INFO - Search params for Logistic Regression: {'solver': 'lbfgs', 'penalty': 'l2', 'C': 1.0}
+[ 2025-12-25 16:45:41,825 ] 127 root - INFO - Logistic Regression - Acc: 0.9818, Prec: 0.9606, Rec: 1.0000, F1: 0.9799, Time: 0.58s
+[ 2025-12-25 16:45:44,816 ] 91 root - INFO - Search params for AdaBoost Classifier: {'n_estimators': 32, 'learning_rate': 1.0}
+[ 2025-12-25 16:45:45,149 ] 127 root - INFO - AdaBoost Classifier - Acc: 0.9927, Prec: 0.9839, Rec: 1.0000, F1: 0.9919, Time: 2.99s
+[ 2025-12-25 16:45:45,399 ] 91 root - INFO - Search params for K-Nearest Neighbors: {'n_neighbors': 5, 'metric': 'euclidean'}
+[ 2025-12-25 16:45:45,753 ] 127 root - INFO - K-Nearest Neighbors - Acc: 1.0000, Prec: 1.0000, Rec: 1.0000, F1: 1.0000, Time: 0.25s
+[ 2025-12-25 16:45:46,027 ] 127 root - INFO - Naive Bayes - Acc: 0.8618, Prec: 0.8559, Rec: 0.8279, F1: 0.8417, Time: 0.05s
+[ 2025-12-25 16:45:46,761 ] 91 root - INFO - Search params for Support Vector Machine: {'kernel': 'linear', 'C': 1.0}
+[ 2025-12-25 16:45:46,972 ] 127 root - INFO - Support Vector Machine - Acc: 0.9855, Prec: 0.9683, Rec: 1.0000, F1: 0.9839, Time: 0.73s
+[ 2025-12-25 16:45:48,825 ] 113 root - WARNING - OneR Classifier lacks predict_proba; ROC-AUC skipped
+[ 2025-12-25 16:45:48,831 ] 127 root - INFO - OneR Classifier - Acc: 0.5600, Prec: 1.0000, Rec: 0.0082, F1: 0.0163, Time: 1.70s
+[ 2025-12-25 16:45:48,832 ] 108 root - INFO - Best found model: K-Nearest Neighbors
+[ 2025-12-25 16:45:58,205 ] 719 root - WARNING - Could not generate P-R curve for OneR Classifier: 'OneRClassifier' object has no attribute 'predict_proba'
+[ 2025-12-25 16:46:36,485 ] 719 root - WARNING - Could not generate P-R curve for OneR Classifier: 'OneRClassifier' object has no attribute 'predict_proba'
+[ 2025-12-25 16:55:21,170 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13083' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,191 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13086' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,195 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13089' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,199 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13092' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,204 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13095' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,208 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13098' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,214 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13101' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,218 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13104' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,223 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13107' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,227 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13110' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,231 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13113' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,236 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13116' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,239 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13119' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,245 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13122' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,250 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13129' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,254 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13130' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,257 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13133' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,263 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13134' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,266 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13137' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,269 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13140' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,273 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13143' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,277 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13146' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,281 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13149' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,285 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13152' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,288 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13153' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,293 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13154' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,298 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13155' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,300 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13158' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,306 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13159' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,309 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13162' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,316 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13163' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,319 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13164' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,323 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13165' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,327 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13166' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,331 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13167' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,335 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13168' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,339 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13169' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,345 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13170' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,349 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13171' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:55:31,354 ] 1865 asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13172' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[ 2025-12-25 16:56:46,309 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,342 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,343 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,344 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,345 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,346 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,347 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,348 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,348 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,349 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,350 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,350 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,351 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,352 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,352 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,353 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,353 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,354 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,355 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,355 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,356 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,356 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,357 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,360 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,361 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,362 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,362 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,363 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,364 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,364 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,365 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,366 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,366 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,367 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:46,368 ] 1865 asyncio - ERROR - Exception in callback BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536
+handle: <Handle BaseIOStream.write.<locals>.<lambda>() at F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py:536>
+Traceback (most recent call last):
+  File "D:\Python\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\ML\Project\AutoML_Project\venv\Lib\site-packages\tornado\iostream.py", line 536, in <lambda>
+    future.add_done_callback(lambda f: f.exception())
+                                       ~~~~~~~~~~~^^
+asyncio.exceptions.CancelledError
+[ 2025-12-25 16:56:48,055 ] 171 root - ERROR - Error in evaluate_models: A task has failed to un-serialize. Please ensure that the arguments of the function are all picklable.
+[ 2025-12-25 16:56:48,056 ] 120 root - ERROR - Exception occurred in model training: Error occured in python script name [F:\ML\Project\AutoML_Project\src\utils\__init__.py] line number [89] error message[A task has failed to un-serialize. Please ensure that the arguments of the function are all picklable.]
